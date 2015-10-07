@@ -6,6 +6,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:targetnameSpace ="http://gradient.ru/xsd/ax-1c/salesReport"
     xmlns:tns ="http://gradient.ru/xsd/ax-1c/salesReport">
+  <!--comment-->
   <xs:complexType name="Документ">
     <!--ID документа, уникальный ключ-->
     <xs:attribute name="ИД" type="xs:string"></xs:attribute>
