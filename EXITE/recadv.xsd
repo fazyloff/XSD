@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsd="undefined">
+  <xs:element name="RECADV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NUMBER" type="number"/>
+        <xs:element name="DATE" type="xs:date"/>
+        <xs:element name="RECEPTIONDATE" type="xs:date"/>
+        <xs:element name="ORDERNUMBER" type="number" minOccurs="0"/>
+        <xs:element name="ORDERDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="DESADVNUMBER" type="number"/>
+        <xs:element name="DESADVDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="DELIVERYNOTENUMBER" type="number" minOccurs="0"/>
+        <xs:element name="DELIVERYNOTEDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="CAMPAIGNNUMBER" type="number" minOccurs="0"/>
+        <xs:element name="SUPPLIERORDENUMBER" type="number" minOccurs="0"/>
+        <xs:element name="SUPPLIERORDERDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="INFO" type="xs:string" minOccurs="0"/>
+        <xs:element ref="HEAD"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="HEAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SUPPLIER" type="gln"/>
+        <xs:element name="BUYER" type="gln"/>
+        <xs:element name="DELIVERYPLACE" type="gln" minOccurs="0"/>
+        <xs:element name="FINALRECIPIENT" type="gln" minOccurs="0"/>
+        <xs:element name="LOGISTICPARTNER" type="gln" minOccurs="0"/>
+        <xs:element name="SENDER" type="mailbox"/>
+        <xs:element name="RECIPIENT" type="mailbox"/>
+        <xs:element name="EDIINTERCHANGEID" type="edi-interchange-id"/>
+        <xs:element name="EDIMESSAGE" type="xs:string" minOccurs="0"/>
+        <xs:element ref="PACKINGSEQUENCE" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PACKINGSEQUENCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="HIERARCHICALID" type="xs:positiveInteger"/>
+        <xs:element name="HIERARCHICALPARENTID" type="xs:positiveInteger" minOccurs="0"/>
+        <xs:element ref="PACKAGES" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="POSITION" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PACKAGES">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PACKAGETYPE" type="package-type"/>
+        <xs:sequence minOccurs="0">
+          <xs:element name="DELTAQUANTITYTYPE" type="deltaquantity-type"/>
+          <xs:element name="DELTAQUANTITY" type="deltaquantity"/>
+        </xs:sequence>
+        <xs:element name="SSCC" type="sscc" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="POSITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="POSITIONNUMBER" type="xs:positiveInteger"/>
+        <xs:element name="PRODUCT" type="gln"/>
+        <xs:element name="PRODUCTIDSUPPLIER" minOccurs="0">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="16"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="PRODUCTIDBUYER" minOccurs="0">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="16"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="ACCEPTEDQUANTITY" type="amount"/>
+        <xs:sequence minOccurs="0">
+          <xs:element name="DELTAQUANTITYTYPE" type="deltaquantity-type"/>
+          <xs:element name="DELTAQUANTITY" type="deltaquantity"/>
+          <xs:element name="ACCEPTEDUNIT" minOccurs="0"/>
+        </xs:sequence>
+        <xs:element name="DELIVERQUANTITY" type="amount"/>
+        <xs:sequence minOccurs="0">
+            <xs:element name="DELTAQUANTITYTYPE" type="deltaquantity-type"/>
+            <xs:element name="DELTAQUANTITY" type="deltaquantity"/>
+            <xs:element name="DELIVERUNIT" minOccurs="0"/>
+        </xs:sequence>
+        <xs:element name="ORDERQUANTITY" type="amount"/>
+        <xs:sequence minOccurs="0">
+            <xs:element name="DELTAQUANTITYTYPE" type="deltaquantity-type"/>
+            <xs:element name="DELTAQUANTITY" type="deltaquantity"/>
+            <xs:element name="ORDERUNIT" minOccurs="0"/>
+        </xs:sequence>
+        <xs:element name="PRICE" type="amount" minOccurs="0"/>
+        <xs:element name="AMOUNT" type="amount" maxOccurs="1" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="gln">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{8}([0-9]{3}([0-9]{0,3}))?"/>  <!-- das sind entweder 8, 11, 12, 13 oder 14 Ziffern -->
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="number">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="edi-interchange-id">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="14"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mailbox">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="amount">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0"/>
+    <xs:totalDigits value="10"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="deltaquantity">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="17"/>
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="measurement-unit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GRM"/> <!-- Gramm -->
+      <xs:enumeration value="KGM"/> <!-- Kilogramm -->
+      <xs:enumeration value="LTR"/> <!-- Liter -->
+      <xs:enumeration value="MTR"/> <!-- Meter -->
+      <xs:enumeration value="MMT"/> <!-- Millimeter -->
+      <xs:enumeration value="MTK"/> <!-- Quadratmeter -->
+      <xs:enumeration value="MTQ"/> <!-- Kubikmeter -->
+      <xs:enumeration value="PCE"/> <!-- Stueck -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="length">
+  <xs:restriction base="xs:positiveInteger">
+    <xs:totalDigits value="13"/>
+  </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sscc">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{18}"/>
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="deltaquantity-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="11"/>  <!-- Teilmenge -->
+      <xs:enumeration value="113"/> <!-- Zu liefernde Menge -->
+      <xs:enumeration value="119"/> <!-- Zu wenig geliefert -->
+      <xs:enumeration value="12"/>  <!-- Ausgelieferte Menge -->
+      <xs:enumeration value="121"/> <!-- Zu viel geliefert -->
+      <xs:enumeration value="124"/> <!-- Beschädigte Waren -->
+      <xs:enumeration value="145"/> <!-- Aktueller Lagerbestand -->
+      <xs:enumeration value="191"/> <!-- Bestandskorrekturmenge -->
+      <xs:enumeration value="192"/> <!-- Menge ohne Berechnung -->
+      <xs:enumeration value="194"/> <!-- Erhalten und akzeptiert -->
+      <xs:enumeration value="195"/> <!-- Erhalten, nicht akzeptiert, zurückzusenden -->
+      <xs:enumeration value="196"/> <!-- Erhalten, nicht akzeptiert, zu vernichten -->
+      <xs:enumeration value="198"/> <!-- Menge unterwegs -->
+      <xs:enumeration value="21"/>  <!-- Bestellte Menge -->
+      <xs:enumeration value="40E"/> <!-- Getestete Menge -->
+      <xs:enumeration value="42E"/> <!-- Bestandsdifferenz -->
+      <xs:enumeration value="46"/>  <!-- Gelieferte Menge -->
+      <xs:enumeration value="47"/>  <!-- Berechnete Menge -->
+      <xs:enumeration value="65"/>  <!-- Zerstörte Menge -->
+      <xs:enumeration value="73"/>  <!-- Ausstehende Menge -->
+      <xs:enumeration value="83"/>  <!-- Nachliefermenge -->
+      <xs:enumeration value="89"/>  <!-- Qualitätskontrolle noch nicht abgeschlossen -->
+      <xs:enumeration value="96"/>  <!-- Bei Qualitätskontrolle durchgefallen -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="package-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="200"/> <!-- 1/2 EURO-Palette -->
+      <xs:enumeration value="201"/> <!-- 1/1 EURO-Palette -->
+      <xs:enumeration value="203"/> <!-- 1/4 EURO-Palette -->
+      <xs:enumeration value="204"/> <!-- 1/8 EURO-Palette -->
+      <xs:enumeration value="8"/>   <!-- Eingewpalette -->
+      <xs:enumeration value="9"/>   <!-- Mehrwegpalette -->
+      <xs:enumeration value="BC"/>  <!-- Getraenkekiste --> 
+      <xs:enumeration value="CHB"/> <!-- CHEP Eurobox -->
+      <xs:enumeration value="CHC"/> <!-- CHEP Gitterbox -->
+      <xs:enumeration value="CR"/>  <!-- Verschlag --> 
+      <xs:enumeration value="PK"/>  <!-- Packstueck -->
+      <xs:enumeration value="PMA"/> <!-- Modularer Palettenaufsetzrahmen 80*100 -->
+      <xs:enumeration value="PMB"/> <!-- Modularer Palettenaufsetzrahmen 80*120 -->
+      <xs:enumeration value="RCA"/> <!-- Rollwagen -->
+      <xs:enumeration value="ZZ1"/> <!-- Steco-Kiste -->
+      <xs:enumeration value="ZZ2"/> <!-- ZLW-Kiste -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

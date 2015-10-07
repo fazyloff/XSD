@@ -1,0 +1,2710 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Liquid Technologies; Liquid XML Data Binder">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Buyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Buyer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Buyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer.Buyer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Buyer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Buyer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Buyer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Buyer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Buyer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Buyer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Buyer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.TaxID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_TaxID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TaxID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_TaxID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TaxID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_TaxID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.AccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.AccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.AdditionalAccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AdditionalAccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AdditionalAccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AdditionalAccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.AdditionalAccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AdditionalAccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.FinancialInstitutionName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_FinancialInstitutionName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FinancialInstitutionName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_FinancialInstitutionName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.FinancialInstitutionName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_FinancialInstitutionName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.FinancialInstitutionID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_FinancialInstitutionID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FinancialInstitutionID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_FinancialInstitutionID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.FinancialInstitutionID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_FinancialInstitutionID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.UtilizationRegisterNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_UtilizationRegisterNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UtilizationRegisterNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_UtilizationRegisterNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.UtilizationRegisterNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_UtilizationRegisterNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.ManagingPerson (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ManagingPerson.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ManagingPerson (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ManagingPerson.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ManagingPerson (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ManagingPerson.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.AccountingContact (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AccountingContact.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AccountingContact (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AccountingContact.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.AccountingContact (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_AccountingContact.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer_Group.PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Buyer_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Consignor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Consignor (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Consignor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor.Consignor_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Consignor_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Consignor_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Consignor_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Consignor_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Consignor_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Consignor_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Consignor_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.TaxID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_TaxID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.AccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_AccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.AdditionalAccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_AdditionalAccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.FinancialInstitutionName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_FinancialInstitutionName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.FinancialInstitutionID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_FinancialInstitutionID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.UtilizationRegisterNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_UtilizationRegisterNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor_Group.PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Consignor_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DeliveryPoint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryPoint (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DeliveryPoint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint.DeliveryPoint_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_DeliveryPoint_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_DeliveryPoint_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryPoint_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_DeliveryPoint_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DeliveryPoint_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryPoint_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DeliveryPoint_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.CodeByBuyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_CodeByBuyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CodeByBuyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_CodeByBuyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CodeByBuyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_CodeByBuyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint_Group.PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DeliveryPoint_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Consignment (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Consignment.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Consignment (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Consignment.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Consignment.Packing_Sequence (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Consignment_Packing_Sequence.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Consignment_Packing_Sequence.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Packing_Sequence (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Consignment_Packing_Sequence.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Header.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Header (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Header.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header.DespatchAdvice_Header_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcvice_Header_DespatchAdviHeader_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcvice_Header_DespatchAdviHeader_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Header_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcvice_Header_DespatchAdviHeader_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Header_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Header_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Header_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DespatchAdviceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAde_Header_Group_DespatchAdviceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdviceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAde_Header_Group_DespatchAdviceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdviceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAde_Header_Group_DespatchAdviceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DespatchAdviceDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_DespatchAdviceDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdviceDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_DespatchAdviceDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdviceDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_DespatchAdviceDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DespatchAdviceTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_DespatchAdviceTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdviceTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_DespatchAdviceTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdviceTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_DespatchAdviceTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.EstimatedDeliveryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_EstimatedDeliveryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EstimatedDeliveryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_EstimatedDeliveryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.EstimatedDeliveryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_EstimatedDeliveryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.EstimatedDeliveryTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_EstimatedDeliveryTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EstimatedDeliveryTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_EstimatedDeliveryTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.EstimatedDeliveryTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_EstimatedDeliveryTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DeliveryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DeliveryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DeliveryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DeliveryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.CollectionDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_CollectionDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CollectionDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_CollectionDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CollectionDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_CollectionDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DeliveryScheduledDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_DeliveryScheduledDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryScheduledDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_DeliveryScheduledDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryScheduledDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchA_Header_Group_DeliveryScheduledDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.BuyerOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_BuyerOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuyerOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_BuyerOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.BuyerOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_BuyerOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.BuyerOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_BuyerOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuyerOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_BuyerOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.BuyerOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_BuyerOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.SupplierOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_SupplierOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SupplierOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_SupplierOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SupplierOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_SupplierOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.SupplierOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_SupplierOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SupplierOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_SupplierOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SupplierOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_SupplierOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DespatchNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DespatchNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DespatchNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DespatchNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DespatchDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DespatchDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DespatchDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_DespatchDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.InvoiceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_InvoiceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="InvoiceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_InvoiceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.InvoiceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_InvoiceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.ContractNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_ContractNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ContractNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_ContractNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ContractNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_ContractNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.ContractDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_ContractDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ContractDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_ContractDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ContractDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_ContractDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.PromotionReference (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_PromotionReference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PromotionReference (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_PromotionReference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PromotionReference (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvce_Header_Group_PromotionReference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.DocumentFunctionCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAde_Header_Group_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DocumentFunctionCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAde_Header_Group_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DocumentFunctionCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAde_Header_Group_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.Currency (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Currency.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Currency (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Currency.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Currency (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Currency.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.Remarks (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Remarks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Remarks (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Remarks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Remarks (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Remarks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.TransportDetails (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_TransportDetails.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_TransportDetails.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TransportDetails (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_TransportDetails.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header_Group.Order_Measurement (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Order_Measurement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Order_Measurement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Order_Measurement (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Header_Group_Order_Measurement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Lines (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Lines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Lines (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Lines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Lines.Line (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Lines_Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Lines_Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Lines_Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Parties (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties.DespatchAdvice_Parties_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcice_Parties_DespatchAdviarties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcice_Parties_DespatchAdviarties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Parties_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcice_Parties_DespatchAdviarties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Parties_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.Buyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Buyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Buyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Buyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Buyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.Seller (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Seller.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Seller.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Seller (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Seller.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.DeliveryPoint (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_DeliveryPoint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPoint (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_DeliveryPoint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryPoint (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_DeliveryPoint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.UltimateCustomer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_UltimateCustomer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UltimateCustomer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_UltimateCustomer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.UltimateCustomer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_UltimateCustomer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.OrderRecipient (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_OrderRecipient.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderRecipient (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_OrderRecipient.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OrderRecipient (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_OrderRecipient.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.Payer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Payer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Payer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Payer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Payer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.Consignor (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Consignor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Consignor (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Consignor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Consignor (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_Consignor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties_Group.ShipFrom (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_ShipFrom.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_ShipFrom.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ShipFrom (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Parties_Group_ShipFrom.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Summary.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Summary (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Summary.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary.DespatchAdvice_Summary_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcice_Summary_DespatchAdviummary_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcice_Summary_DespatchAdviummary_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Summary_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcice_Summary_DespatchAdviummary_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Summary_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Summary_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Summary_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalPackageNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdve_Summary_Group_TotalPackageNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalPackageNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdve_Summary_Group_TotalPackageNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalPackageNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdve_Summary_Group_TotalPackageNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalLines (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalLines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalLines (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalLines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalLines (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalLines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalGrossAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalGrossAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalGrossAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalGrossAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalGrossAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalGrossAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalTaxAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalTaxAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalTaxAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalTaxAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalTaxAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalTaxAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalDiscountAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdve_Summary_Group_TotalDiscountAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalDiscountAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdve_Summary_Group_TotalDiscountAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalDiscountAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdve_Summary_Group_TotalDiscountAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary_Group.TotalFinalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalFinalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TotalFinalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalFinalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TotalFinalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Summary_Group_TotalFinalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Transport (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport.DespatchAdvice_Transport_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatce_Transport_DespatchAdvinsport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatce_Transport_DespatchAdvinsport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Transport_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatce_Transport_DespatchAdvinsport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Transport_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_DespatchAdvice_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group.DeliveryType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Transport_Group_DeliveryType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Transport_Group_DeliveryType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Transport_Group_DeliveryType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group.DeliveryInstructions (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdransport_Group_DeliveryInstructions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryInstructions (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdransport_Group_DeliveryInstructions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryInstructions (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdransport_Group_DeliveryInstructions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group.TransportsNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvi_Transport_Group_TransportsNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportsNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvi_Transport_Group_TransportsNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TransportsNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvi_Transport_Group_TransportsNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group.TransportationInformation (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcsport_Group_TransportationInformation.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportationInformation (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcsport_Group_TransportationInformation.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TransportationInformation (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Despatcsport_Group_TransportationInformation.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport_Group.Transports (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Transport_Group_Transports.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transports (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Transport_Group_Transports.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Transports (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DespatchAdvice_Transport_Group_Transports.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Document_DespatchAdvice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Document_DespatchAdvice (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Document_DespatchAdvice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice.Document_DespatchAdvice_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DocumenpatchAdvice_Document_DesAdvice_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DocumenpatchAdvice_Document_DesAdvice_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Document_DespatchAdvice_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DocumenpatchAdvice_Document_DesAdvice_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Document_DespatchAdvice_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Document_DespatchAdvice_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Document_DespatchAdvice_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group.DespatchAdvice_Header (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Header.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Header (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Header.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Header (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Header.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group.DespatchAdvice_Transport (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DocumentAdvice_Group_DespatchAdvice_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Transport (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DocumentAdvice_Group_DespatchAdvice_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Transport (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_DocumentAdvice_Group_DespatchAdvice_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group.DespatchAdvice_Parties (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Parties (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Parties (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group.DespatchAdvice_Consignment (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Documendvice_Group_DespatchAdvi_Consignment.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Consignment (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Documendvice_Group_DespatchAdvi_Consignment.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Consignment (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Documendvice_Group_DespatchAdvi_Consignment.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group.DespatchAdvice_Lines (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_DchAdvice_Group_DespatchAdvice_Lines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Lines (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_DchAdvice_Group_DespatchAdvice_Lines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Lines (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_DchAdvice_Group_DespatchAdvice_Lines.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Document_DespatchAdvice_Group.DespatchAdvice_Summary (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Summary.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchAdvice_Summary (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Summary.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchAdvice_Summary (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Document_hAdvice_Group_DespatchAdvice_Summary.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Importer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Importer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Importer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer.Importer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Importer_Importer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Importer_Importer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Importer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Importer_Importer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Importer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Importer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Importer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Importer_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Importer_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line.Line_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Line_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Line_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Line_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group.Line_Item (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Item.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Item.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Item (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Item.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group.Line_Parties (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Parties (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group.Line_Measurements (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Measurements.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Measurements.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Measurements (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Measurements.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group.Line_Order (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Order.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Order.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Order (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Line_Order.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Group.Package_Reference (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Package_Reference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Package_Reference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Package_Reference (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Group_Package_Reference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Item.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Item (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Item.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item.Line_Item_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Line_Item_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Line_Item_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Item_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Line_Item_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Item_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Item_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Item_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.LineNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_LineNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LineNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_LineNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.LineNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_LineNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.OrderLineNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderLineNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderLineNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderLineNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OrderLineNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderLineNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.EAN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_EAN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EAN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_EAN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.EAN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_EAN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.BuyerItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BuyerItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuyerItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BuyerItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.BuyerItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BuyerItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.SupplierItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SupplierItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SupplierItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.ManufacturerItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ManufacturerItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ManufacturerItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ManufacturerItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ManufacturerItemCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ManufacturerItemCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.PackageEAN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_PackageEAN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageEAN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_PackageEAN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageEAN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_PackageEAN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.DiscrepancyNatureCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DiscrepancyNatureCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DiscrepancyNatureCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DiscrepancyNatureCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DiscrepancyNatureCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DiscrepancyNatureCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.DespatchedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.OrderedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OrderedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.MinimumOrderQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_MinimumOrderQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="MinimumOrderQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_MinimumOrderQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.MinimumOrderQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_MinimumOrderQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.InvoicedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_InvoicedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="InvoicedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_InvoicedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.InvoicedQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_InvoicedQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.DespatchedPackageQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedPackageQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchedPackageQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedPackageQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchedPackageQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedPackageQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.OrderedPackageQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedPackageQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderedPackageQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedPackageQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OrderedPackageQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedPackageQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.DespatchedUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DespatchedUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DespatchedUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_DespatchedUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.OrderedUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderedUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OrderedUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OrderedUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.ConsumerUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ConsumerUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ConsumerUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ConsumerUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ConsumerUnitPacksize (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ConsumerUnitPacksize.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.UnitOfMeasure (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitOfMeasure.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UnitOfMeasure (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitOfMeasure.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.UnitOfMeasure (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitOfMeasure.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.ItemDescription (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ItemDescription.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ItemDescription (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ItemDescription.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ItemDescription (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ItemDescription.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.AdditionalItemDescription (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_AdditionalItemDescription.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AdditionalItemDescription (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_AdditionalItemDescription.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.AdditionalItemDescription (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_AdditionalItemDescription.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.UnitNetPrice (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitNetPrice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UnitNetPrice (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitNetPrice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.UnitNetPrice (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitNetPrice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.UnitGrossPrice (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitGrossPrice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UnitGrossPrice (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitGrossPrice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.UnitGrossPrice (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_UnitGrossPrice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.TaxAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TaxAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TaxAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.NetAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_NetAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NetAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_NetAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.NetAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_NetAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.GrossAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_GrossAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GrossAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_GrossAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.GrossAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_GrossAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.OriginalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OriginalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OriginalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OriginalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OriginalAmount (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_OriginalAmount.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.TaxRate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxRate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TaxRate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxRate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TaxRate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxRate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.TaxCategoryCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TaxCategoryCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TaxCategoryCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.BatchNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BatchNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BatchNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BatchNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.BatchNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BatchNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.ExpiryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ExpiryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ExpiryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ExpiryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ExpiryDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ExpiryDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.BestBeforeDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BestBeforeDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BestBeforeDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BestBeforeDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.BestBeforeDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_BestBeforeDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.ProductionDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ProductionDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ProductionDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ProductionDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ProductionDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ProductionDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.CountryOfOriginCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CountryOfOriginCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CountryOfOriginCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CountryOfOriginCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CountryOfOriginCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CountryOfOriginCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.CustomsDeclarationNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CustomsDeclarationNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CustomsDeclarationNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CustomsDeclarationNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CustomsDeclarationNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CustomsDeclarationNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.ContractNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_ContractNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.CertificateNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CertificateNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CertificateNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CertificateNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CertificateNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_CertificateNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.SupplierLicenceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SupplierLicenceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SupplierLicenceNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.SupplierLicenceValidityPeriod (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceValidityPeriod.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SupplierLicenceValidityPeriod (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceValidityPeriod.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SupplierLicenceValidityPeriod (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceValidityPeriod.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Item_Group.SupplierLicenceIssuer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceIssuer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SupplierLicenceIssuer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceIssuer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SupplierLicenceIssuer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Item_Group_SupplierLicenceIssuer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Measurements.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Measurements (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Measurements.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements.Line_Measurements_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Line_Measurements_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Line_Measurements_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Measurements_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Line_Measurements_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Measurements_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Measurements_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Measurements_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements_Group.GrossWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_GrossWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GrossWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_GrossWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.GrossWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_GrossWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements_Group.EstimatedGrossWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_EstimatedGrossWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EstimatedGrossWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_EstimatedGrossWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.EstimatedGrossWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_EstimatedGrossWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Measurements_Group.NetVolume (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_NetVolume.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NetVolume (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_NetVolume.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.NetVolume (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Measurements_Group_NetVolume.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Order.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Order (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Order.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order.Line_Order_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Line_Order_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Line_Order_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Order_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Line_Order_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Order_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Order_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Order_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order_Group.BuyerOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Group_BuyerOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order_Group.BuyerOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Group_BuyerOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order_Group.SupplierOrderNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Group_SupplierOrderNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Order_Group.SupplierOrderDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Order_Group_SupplierOrderDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Parties (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Parties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties.Line_Parties_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Line_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Line_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Parties_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Line_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Line_Parties_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Line_Parties_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties_Group.Importer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Group_Importer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Importer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Group_Importer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Importer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Group_Importer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Line_Parties_Group.Manufacturer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Group_Manufacturer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Group_Manufacturer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Manufacturer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Line_Parties_Group_Manufacturer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Manufacturer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Manufacturer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Manufacturer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer.Manufacturer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Manufacturer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Manufacturer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Manufacturer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Manufacturer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Manufacturer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Manufacturer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Manufacturer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer_Group.FiscalNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Group_FiscalNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FiscalNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Group_FiscalNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.FiscalNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Group_FiscalNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Manufacturer_Group.UtilizationRegisterNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Manufacturer_Group_UtilizationRegisterNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Order_Measurement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Order_Measurement (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Order_Measurement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement.Order_Measurement_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Measurement_Order_Measurement_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Measurement_Order_Measurement_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Order_Measurement_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Measurement_Order_Measurement_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Order_Measurement_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Order_Measurement_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Order_Measurement_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement_Group.AdditionalQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Measurement_Group_AdditionalQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AdditionalQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Measurement_Group_AdditionalQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.AdditionalQuantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Measurement_Group_AdditionalQuantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Order_Measurement_Group.AdditionalUnitOfMeasure (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Meaurement_Group_AdditionalUnitOfMeasure.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AdditionalUnitOfMeasure (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Meaurement_Group_AdditionalUnitOfMeasure.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.AdditionalUnitOfMeasure (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Order_Meaurement_Group_AdditionalUnitOfMeasure.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderRecipient (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_OrderRecipient.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.OrderRecipient (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_OrderRecipient.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OrderRecipient.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_OrderRecipient_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Package_Reference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Package_Reference (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Package_Reference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference.Package_Reference_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Package_Reference_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Package_Reference_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Package_Reference_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Package_Reference_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Package_Reference_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Package_Reference_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Package_Reference_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference_Group.PackageId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Group_PackageId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Group_PackageId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Group_PackageId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Package_Reference_Group.Quantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Group_Quantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Quantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Group_Quantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Quantity (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Package_Reference_Group_Quantity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Packing_Sequence.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Packing_Sequence (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Packing_Sequence.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence.Packing_Sequence_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Packing_Sequence_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Packing_Sequence_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Packing_Sequence_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Packing_Sequence_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Packing_Sequence_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Packing_Sequence_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Packing_Sequence_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.PackageId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.ParentId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_ParentId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ParentId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_ParentId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ParentId (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_ParentId.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.PackageType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.SerialNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_SerialNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SerialNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_SerialNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.SerialNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_SerialNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.DeliveryPlace (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_DeliveryPlace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DeliveryPlace (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_DeliveryPlace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DeliveryPlace (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_DeliveryPlace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.PackageWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageWeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageWeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.PackageHeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageHeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageHeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageHeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageHeight (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageHeight.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.PackageLength (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageLength.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageLength (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageLength.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageLength (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageLength.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Packing_Sequence_Group.PackageWidth (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageWidth.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PackageWidth (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageWidth.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.PackageWidth (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Packing_Sequence_Group_PackageWidth.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Payer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Payer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Payer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer.Payer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Payer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Payer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Payer_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Payer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Payer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Payer_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Payer_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.TaxID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_TaxID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Payer_Group.PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Payer_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Seller.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Seller (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Seller.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller.Seller_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Seller_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Seller_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Seller_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Seller_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Seller_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Seller_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Seller_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.TaxID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_TaxID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.AccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_AccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.AdditionalAccountNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_AdditionalAccountNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.FinancialInstitutionName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_FinancialInstitutionName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.FinancialInstitutionID (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_FinancialInstitutionID.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.UtilizationRegisterNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_UtilizationRegisterNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.CodeByBuyer (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_CodeByBuyer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.ManagingPerson (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_ManagingPerson.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.AccountingContact (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_AccountingContact.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seller_Group.PhoneNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Seller_Group_PhoneNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_ShipFrom.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ShipFrom (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_ShipFrom.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom.ShipFrom_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_ShipFrom_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_ShipFrom_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ShipFrom_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_ShipFrom_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_ShipFrom_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ShipFrom_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_ShipFrom_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.Name (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_Name.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.StreetAndNumber (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_StreetAndNumber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.District (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_District.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.CityName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_CityName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.ProvinceCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_ProvinceCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.Province (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_Province.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShipFrom_Group.PostalCode (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_ShipFrom_Group_PostalCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Transport (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport.Transport_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Transport_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Transport_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Transport_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group.LocationName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_LocationName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LocationName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_LocationName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.LocationName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_LocationName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group.DepartureDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_DepartureDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DepartureDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_DepartureDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DepartureDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_DepartureDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group.DepartureTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_DepartureTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DepartureTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_DepartureTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.DepartureTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_DepartureTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group.ArrivalDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_ArrivalDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrivalDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_ArrivalDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ArrivalDate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_ArrivalDate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport_Group.ArrivalTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_ArrivalTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ArrivalTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_ArrivalTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.ArrivalTime (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transport_Group_ArrivalTime.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_TransportDetails.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TransportDetails (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_TransportDetails.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails.TransportDetails_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_TransportDetails_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_TransportDetails_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TransportDetails_Group (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_TransportDetails_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_TransportDetails_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.TransportDetails_Group (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_TransportDetails_Group.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails_Group.CarrierName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_CarrierName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CarrierName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_CarrierName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.CarrierName (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_CarrierName.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails_Group.VehicleType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_VehicleType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="VehicleType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_VehicleType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.VehicleType (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_VehicleType.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TransportDetails_Group.LicencePlate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_LicencePlate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LicencePlate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_LicencePlate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.LicencePlate (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_TransportDetails_Group_LicencePlate.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transports (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Transports.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Transports (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_Transports.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transports.Transport (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transports_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Transport (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transports_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.Transport (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_Transports_Transport.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UltimateCustomer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_UltimateCustomer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DESADV_XSDLib.UltimateCustomer (Class)">
+		<param name="Local" value="DESADV_XSDLib\Cls_UltimateCustomer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="UltimateCustomer.ILN (Property)">
+		<param name="Local" value="DESADV_XSDLib\Attr_UltimateCustomer_ILN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration DocumentFunctionCode">
+		<param name="Local" value="DESADV_XSDLib\Enum_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DocumentFunctionCode">
+		<param name="Local" value="DESADV_XSDLib\Enum_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="O">
+		<param name="Local" value="DESADV_XSDLib\Enum_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CHG">
+		<param name="Local" value="DESADV_XSDLib\Enum_DocumentFunctionCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration TaxCategoryCode">
+		<param name="Local" value="DESADV_XSDLib\Enum_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TaxCategoryCode">
+		<param name="Local" value="DESADV_XSDLib\Enum_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="S">
+		<param name="Local" value="DESADV_XSDLib\Enum_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Z">
+		<param name="Local" value="DESADV_XSDLib\Enum_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="E">
+		<param name="Local" value="DESADV_XSDLib\Enum_TaxCategoryCode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LtHelp.hhc">
+		<param name="Local" value="LtHelp.chm::/LtHelp.hhc">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Site.hhc">
+		<param name="Local" value="LtExamples.chm::/Site.hhc">
+		</OBJECT>
+</UL>
+</BODY></HTML>
+

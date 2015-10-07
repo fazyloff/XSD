@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="common/EDIMessageAlco.xsd"/>
+  <xsd:include schemaLocation="common/ContractorAlco.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/GlobalTradeItemIdentification.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/CountryISOCode.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/CurrencyISOCode.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/CustomsDeclarationNumber.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/Description178.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/Money.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/Quantity.xsd"/>
+  <xsd:include schemaLocation="common/simpleTypes/VATRate.xsd"/>
+  <xsd:element name="alcoholReport"  type="alcoholReportType" substitutionGroup="document"/>
+  <xsd:complexType name="alcoholReportType">
+    <xsd:complexContent>
+      <xsd:extension base="DocumentType">
+        <xsd:sequence>
+          <xsd:element name="originOrder"  type="OrderIdentificatorType" minOccurs="0">
+          </xsd:element>
+          <xsd:element name="despatchIdentificator" type="DocumentIdentificatorType" minOccurs="0">
+          </xsd:element>
+          <xsd:element name="receivingIdentificator" type="DocumentIdentificatorType" minOccurs="0">
+          </xsd:element>
+          <xsd:element name="invoiceIdentificator" type="DocumentIdentificatorType" minOccurs="0">
+          </xsd:element>
+          <xsd:element name="seller" type="ContractorAlcoType">
+          </xsd:element>
+          <xsd:element name="buyer"  type="ContractorAlcoType">
+          </xsd:element>
+          <xsd:element name="transportation" minOccurs="0">
+            <xsd:complexType>
+              <xsd:attribute name="transportMode" type="TransportModeType"></xsd:attribute>
+              <xsd:attribute name="transportIdentificator" type="xsd:string" />
+              <xsd:attribute name="vehicleCapacity" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="deliveryInfo">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice>
+                  <xsd:element name="waybill"  type="DocumentIdentificatorType">
+                  </xsd:element>
+                  <xsd:element name="customsDeclaration" type="DocumentIdentificatorType">
+                  </xsd:element>
+                </xsd:choice>
+                <xsd:element name="carrier" type="ContractorAlcoType">
+                </xsd:element>
+                <xsd:element name="shipFrom" type="ContractorAlcoType">
+                </xsd:element>
+                <xsd:element name="shipTo" type="ContractorAlcoType">
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="lineItems">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="lineItem" maxOccurs="unbounded">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="gtin" type="GlobalTradeItemIdentificationType" minOccurs="0"/>
+                      <xsd:element name="internalBuyerCode" type="Description17Type" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Код, присвоенный покупателем</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="internalSupplierCode" type="Description17Type" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Внутренний код поставщика</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+					  <xsd:element name="orderLineNumber" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Номер позиции заказа</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+                      <xsd:element name="lot" maxOccurs="unbounded">
+                        <xsd:complexType>
+                          <xsd:sequence>
+                            <xsd:element name="description" type="Description178Type">
+                              <xsd:annotation>
+                                <xsd:documentation>Наименование (описание) товара</xsd:documentation>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="volume">
+                              <xsd:complexType>
+                                <xsd:simpleContent>
+                                  <xsd:extension base="xsd:decimal">
+                                    <xsd:attribute name="volumeTypeQualifier" type="volumeTypeQualifierType" />
+                                    <xsd:attribute name="unitOfMeasure" type="unitOfMeasureType" />
+                                  </xsd:extension>
+                                </xsd:simpleContent>
+                              </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="volumeOfUnitInLiter" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="manufacturer">
+                              <xsd:complexType>
+                                <xsd:sequence>
+                                  <xsd:element name="gln" type="GlobalLocationNumberType" minOccurs="0" />
+                                  <xsd:choice>
+                                    <xsd:element name="foreignOrganization" minOccurs="0" >
+                                      <xsd:complexType>
+                                        <xsd:sequence>
+                                          <xsd:element name="tin"  type="xsd:string"/>
+                                          <xsd:element name="name" type="xsd:string"/>
+                                        </xsd:sequence>
+                                        <xsd:attribute name="countryCode" type="CountryISOCodeType" />
+                                      </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name ="organization" minOccurs="0">
+                                      <xsd:complexType>
+                                        <xsd:sequence>
+                                          <xsd:element name="inn">
+                                            <xsd:annotation>
+                                              <xsd:documentation>ИНН 10 цифр</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:simpleType >
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="\d{10}"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name="kpp">
+                                            <xsd:annotation>
+                                              <xsd:documentation>КПП 9 цифр</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:simpleType >
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="\d{9}"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name="name">
+                                            <xsd:annotation>
+                                              <xsd:documentation>Наименование организации</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:minLength value="1"/>
+                                                <xsd:maxLength value="80"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                        </xsd:sequence>
+                                      </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name ="selfEmployed" minOccurs="0">
+                                      <xsd:annotation>
+                                        <xsd:documentation>Индивидуальный предприниматель</xsd:documentation>
+                                      </xsd:annotation>
+                                      <xsd:complexType>
+                                        <xsd:sequence>
+                                          <xsd:element name="inn">
+                                            <xsd:annotation>
+                                              <xsd:documentation>ИНН 12 цифр</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:simpleType >
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="\d{12}"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name ="fullName" type ="FullNameType">
+                                            <xsd:annotation>
+                                              <xsd:documentation>ФИО</xsd:documentation>
+                                            </xsd:annotation>
+                                          </xsd:element>
+                                        </xsd:sequence>
+                                      </xsd:complexType>
+                                    </xsd:element>
+                                  </xsd:choice>
+                                </xsd:sequence>
+                              </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="foreignManufacturer">
+                              <xsd:complexType>
+                                <xsd:sequence>
+                                  <xsd:element name="gln" type="GlobalLocationNumberType" minOccurs="0" />
+                                    <xsd:element name="foreignOrganization" minOccurs="0" >
+                                      <xsd:complexType>
+                                        <xsd:sequence>
+                                          <xsd:element name="name" type="xsd:string"/>
+                                        </xsd:sequence>
+                                        <xsd:attribute name="countryCode" type="CountryISOCodeType" />
+                                      </xsd:complexType>
+                                    </xsd:element>
+                                  </xsd:sequence>
+                                 </xsd:complexType>
+                                </xsd:element>
+                            <xsd:element name="licenseSeller" minOccurs="0" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                <xsd:attribute name="seriesNumber" type="xsd:string" />
+                                <xsd:attribute name="startdate" type="xsd:string" />
+                                <xsd:attribute name="enddate" type="xsd:string" />
+                                <xsd:attribute name="issuerOf" type="xsd:string" />
+                              </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="certificate" minOccurs="0">
+                              <xsd:complexType>
+                                <xsd:attribute name="number" type="xsd:string" />
+                                <xsd:attribute name="startdate" type="xsd:string" />
+                                <xsd:attribute name="enddate" type="xsd:string" />
+                                <xsd:attribute name="issuerOf" type="xsd:string" />
+                              </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="typeOfAlco" type="TypeOfAlcoType"/>
+                            <xsd:element name="bottlingDate" type="xsd:string" minOccurs="0" />
+						               	<xsd:element name="signOfAlco" type="SignOfAlcoType" minOccurs="0"/>
+                            <xsd:element name="countryOfOriginISOCode" type="CountryISOCodeType" minOccurs="0" maxOccurs="unbounded">
+                              <xsd:annotation>
+                                <xsd:documentation>Буквенный код страны, согласно ISO alpha-2</xsd:documentation>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="customsDeclarationNumber" type="CustomsDeclarationNumberType" minOccurs="0" maxOccurs="unbounded">
+                              <xsd:annotation>
+                                <xsd:documentation>Номер таможенной декларации, формат хххххххх/хххххх/ххххххх/xxx</xsd:documentation>
+                              </xsd:annotation>
+                            </xsd:element>
+                          </xsd:sequence>
+                        </xsd:complexType>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TransportModeType">
+    <xsd:annotation>
+      <xsd:documentation>Вид перевозки</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="railTransport"/>
+      <xsd:enumeration value="roadTransport"/>
+      <xsd:enumeration value="airTransport"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="volumeTypeQualifierType">
+    <xsd:annotation>
+      <xsd:documentation>Тип отобранного количества</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="orderedVolume"/>
+      <xsd:enumeration value="despatchVolume"/>
+      <xsd:enumeration value="acceptedVolume"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="unitOfMeasureType">
+    <xsd:annotation>
+      <xsd:documentation>Единицы измерения</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DKL"/>
+      <xsd:enumeration value="LTR"/>
+      <xsd:enumeration value="PCE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TypeOfAlcoType">
+    <xsd:annotation>
+      <xsd:documentation>Вид алкогольной продукции</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="140"/>
+      <xsd:enumeration value="200"/>
+      <xsd:enumeration value="211"/>
+      <xsd:enumeration value="212"/>
+      <xsd:enumeration value="229"/>
+      <xsd:enumeration value="230"/>
+      <xsd:enumeration value="231"/>
+      <xsd:enumeration value="231"/>
+      <xsd:enumeration value="238"/>
+      <xsd:enumeration value="239"/>
+      <xsd:enumeration value="241"/>
+      <xsd:enumeration value="242"/>
+      <xsd:enumeration value="250"/>
+      <xsd:enumeration value="251"/>
+      <xsd:enumeration value="252"/>
+      <xsd:enumeration value="260"/>
+      <xsd:enumeration value="270"/>
+      <xsd:enumeration value="280"/>
+      <xsd:enumeration value="300"/>
+      <xsd:enumeration value="310"/>
+      <xsd:enumeration value="320"/>
+      <xsd:enumeration value="321"/>
+      <xsd:enumeration value="322"/>
+      <xsd:enumeration value="330"/>
+      <xsd:enumeration value="331"/>
+      <xsd:enumeration value="340"/>
+      <xsd:enumeration value="341"/>
+      <xsd:enumeration value="342"/>
+      <xsd:enumeration value="343"/>
+      <xsd:enumeration value="344"/>
+      <xsd:enumeration value="350"/>
+      <xsd:enumeration value="351"/>
+      <xsd:enumeration value="400"/>
+      <xsd:enumeration value="401"/>
+      <xsd:enumeration value="402"/>
+      <xsd:enumeration value="403"/>
+      <xsd:enumeration value="410"/>
+      <xsd:enumeration value="411"/>
+      <xsd:enumeration value="420"/>
+      <xsd:enumeration value="421"/>
+      <xsd:enumeration value="440"/>
+      <xsd:enumeration value="450"/>
+      <xsd:enumeration value="460"/>
+      <xsd:enumeration value="461"/>
+      <xsd:enumeration value="462"/>
+      <xsd:enumeration value="481"/>
+      <xsd:enumeration value="482"/>
+      <xsd:enumeration value="483"/>
+      <xsd:enumeration value="484"/>
+      <xsd:enumeration value="485"/>
+      <xsd:enumeration value="500"/>
+      <xsd:enumeration value="510"/>
+      <xsd:enumeration value="520"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+    <xsd:simpleType name="SignOfAlcoType">
+    <xsd:annotation>
+      <xsd:documentation>Признак типа алкогольной продукции, обязателен при выгрузке в сервис "Алкодекларация.Контур"</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ALCO"/>
+      <xsd:enumeration value="BEER"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

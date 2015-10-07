@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp.csproj", "{9FF988C5-B618-475D-96A0-E5F66584AF3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DESADV_XSDLib", "..\DESADV_XSDLib.csproj", "{20709F84-3CC9-4F39-9D97-AB622CDD3F02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FF988C5-B618-475D-96A0-E5F66584AF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF988C5-B618-475D-96A0-E5F66584AF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF988C5-B618-475D-96A0-E5F66584AF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF988C5-B618-475D-96A0-E5F66584AF3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20709F84-3CC9-4F39-9D97-AB622CDD3F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20709F84-3CC9-4F39-9D97-AB622CDD3F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20709F84-3CC9-4F39-9D97-AB622CDD3F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20709F84-3CC9-4F39-9D97-AB622CDD3F02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+

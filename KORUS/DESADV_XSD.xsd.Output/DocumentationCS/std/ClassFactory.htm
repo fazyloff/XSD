@@ -1,0 +1,54 @@
+
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>StringCol NarrativeCol</TITLE>
+<LINK REL=STYLESHEET HREF="schema.css" TYPE="text/css">
+</HEAD>
+<BODY topmargin=0 rightmargin=0 leftmargin=0 style="background-image:  url(file:///C%7C/CGProjects/eBisTest/Output/titletile.jpg); background-repeat:repeat-x; background-position: 0 0;" >
+<DIV CLASS="PageHeading"> static public XmlObjectBase FromXml( String xmlIn )<br>
+  static public XmlObjectBase FromXml( String xmlIn, XmlSerializationContext context )  <br>
+  static public XmlObjectBase FromXmlFile( String FileName )  <br>
+static public XmlObjectBase FromXmlFile( String FileName, XmlSerializationContext context  )<br>
+static public XmlObjectBase FromXmlStream(System.IO.Stream stream)<br>
+static public XmlObjectBase FromXmlStream(System.IO.Stream stream, XmlSerializationContext context  )<br>
+static public XmlObjectBase FromXmlElement(XmlElement xmlParent)<br>
+static public XmlObjectBase FromXmlElement(XmlElement xmlParent, XmlSerializationContext context)<br>
+<br>
+</DIV><IMG src="GradLeft.jpg" width=7 height=378 alt="" border="0" style="position:absolute; left:10; top:18;z-Index:2"> 
+<IMG src="GradTop.jpg" width=352 height=7 alt="" border="0" align="top" style="position:absolute; left:10; top:18; z-index:1"> 
+<TABLE CLASS="InfoTable" cellpadding=0 cellspacing=0> <TR height=20> <TD width=20>&nbsp;</TD><TD valign=top align=left width=9 bgcolor="#cccc66"><IMG SRC="tablecorner.jpg" align=top></TD><TD CLASS="TableLightLabel" WIDTH=206>Property</TD><TD CLASS="TableLightLabel" >Description</TD><TD width=20>&nbsp;</TD></TR> 
+<TR height=20 VALIGN="TOP"> <TD width=20>&nbsp;</TD><TD CLASS="TableLightDesc">&nbsp;</TD><TD CLASS="TableLightDesc">Description</TD>
+  <TD CLASS="TableLightDesc"> Creates the appropriate generated object, and loads the XML Data into it. </TD><TD width=20>&nbsp;</TD></TR> 
+<TR height=20 VALIGN="TOP">
+  <TD>&nbsp;</TD>
+  <TD CLASS="TableLightDesc">&nbsp;</TD>
+  <TD CLASS="TableLightDesc">Parameters</TD>
+  <TD CLASS="TableLightDesc">xmlIn - The XML String to be loaded<br>
+    FileName - The name of the XML file to load<br>
+    stream - an IO stream, that contains an XML document<br>
+    xmlParent - an XmlElement to be loaded<br>
+    context - the context information used to load the XML document. </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR height=20 VALIGN="TOP"> 
+<TD width=20>&nbsp;</TD><TD CLASS="TableLightDesc">&nbsp;</TD><TD CLASS="TableLightDesc">Remarks</TD>
+<TD CLASS="TableLightDesc"> <p>These methods can be useful if you don't initially know the type of XML document you are dealing with. <br>
+    These methods will examine the XML data provided, and create the correct generated class. <br>
+  Once created the XML Data is loaded into the class.<br>
+  Finally the class is returned.<br>
+  <br>
+  If there are no suitable classes to load the XML data into (ie the document is not described in the schema), then an exception will be raised.</p>
+  </TD><TD width=20>&nbsp;</TD></TR>
+<TR height=20 VALIGN="TOP">
+  <TD>&nbsp;</TD>
+  <TD CLASS="TableLightDesc">&nbsp;</TD>
+  <TD CLASS="TableLightDesc">Example</TD>
+  <TD CLASS="code"> // Creates an object and loads the xml from a file into it.<br>
+LiquidTechnologies.Runtime.Net20.XmlObjectBase elm = ElmAdvDerivedType.ClassFactory.FromXmlFile(filename);<br></TD>
+  <TD>&nbsp;</TD>
+</TR> 
+</TABLE>
+
+</BODY>
+</HTML>

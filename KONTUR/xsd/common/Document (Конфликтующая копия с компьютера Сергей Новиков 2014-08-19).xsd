@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="common/simpleTypes/Description17.xsd"/>
+  <xsd:element name ="document" type="DocumentType" abstract="true"/>
+  <xsd:complexType name="DocumentType" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>Абстрактный тип документа, идентифицируемого номером и датой</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name ="number" type="Description17Type" use="required" />
+    <xsd:attribute name ="date" use="required" type="xsd:date" />       
+  </xsd:complexType>
+  <xsd:complexType name="OrderIdentificatorType">
+    <xsd:annotation>
+      <xsd:documentation>Идентификация документа по номеру и дате</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name ="number" type="Description17Type" use="required" />
+    <xsd:attribute name ="date" use="required" type="xsd:date" />
+  </xsd:complexType>
+  <xsd:complexType name="DocumentIdentificatorType">
+    <xsd:annotation>
+      <xsd:documentation>Идентификация документа только по номеру</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name ="number" type="Description17Type" use="required" />
+    <xsd:attribute name ="date" type="xsd:date" />
+  </xsd:complexType>
+</xsd:schema>
+

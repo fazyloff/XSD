@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://gradient.ru/xsd/ax-1c/purchReport"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:targetnameSpace ="http://gradient.ru/xsd/ax-1c/purchReport"
+    xmlns:tns ="http://gradient.ru/xsd/ax-1c/purchReport">
+  <xs:complexType name="ДокументыПоПоставщикам" id="ДокументыПоПоставщикам">
+    <xs:sequence>
+      <xs:element name="Документ" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <!--Вид документа 1С Поступление товаров услуг, Возврат поставщику-->
+          <xs:attribute name="ВидДок" type="xs:string"></xs:attribute>
+          <!--Номер документа 1С-->
+          <xs:attribute name="НомерДок" type="xs:string"></xs:attribute>
+          <!--Дата документа 1С-->
+          <xs:attribute name="ДатаДок" type="xs:date"></xs:attribute>
+          <!--Код контрагента 1С-->
+          <xs:attribute name="КодКонтр" type="xs:string"></xs:attribute>
+          <!--название контрагента 1С-->
+          <xs:attribute name="НаимКонтр" type="xs:string"></xs:attribute>
+          <!--общая сумма документа 1С	-->
+          <xs:attribute name="Сумма" type="xs:decimal"></xs:attribute>
+          <!--сумма НДС документа 1С-->
+          <xs:attribute name="НДС" type="xs:decimal"></xs:attribute>
+          <!--Со склада 1С-->
+          <xs:attribute name="СкладС" type="xs:string"></xs:attribute>
+          <!--На склада 1С-->
+          <xs:attribute name="СкладНа" type="xs:string"></xs:attribute>
+        </xs:complexType>
+      </xs:element>                 
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ДокументыПоПОставщикам" type="ДокументыПоПоставщикам"></xs:element>
+</xs:schema>

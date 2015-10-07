@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20709F84-3CC9-4F39-9D97-AB622CDD3F02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DESADV_XSDLib</RootNamespace>
+    <AssemblyName>DESADV_XSDLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiquidTechnologies.Runtime.Net45">
+      <HintPath>C:\Program Files (x86)\Liquid Technologies\Liquid XML 2015\XmlDataBinder13\Redist13\DotNet\LiquidTechnologies.Runtime.Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClassFactory.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="XmlObjectCollection.cs" />
+    <Compile Include="XmlCommonBase.cs" />
+    <Compile Include="DESADV_XSDLib\Buyer.cs" />
+    <Compile Include="DESADV_XSDLib\Buyer_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Consignor.cs" />
+    <Compile Include="DESADV_XSDLib\Consignor_Group.cs" />
+    <Compile Include="DESADV_XSDLib\DeliveryPoint.cs" />
+    <Compile Include="DESADV_XSDLib\DeliveryPoint_Group.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Consignment.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Header.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Header_Group.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Lines.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Parties.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Parties_Group.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Summary.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Summary_Group.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Transport.cs" />
+    <Compile Include="DESADV_XSDLib\DespatchAdvice_Transport_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Document_DespatchAdvice.cs" />
+    <Compile Include="DESADV_XSDLib\Document_DespatchAdvice_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Importer.cs" />
+    <Compile Include="DESADV_XSDLib\Importer_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Line.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Item.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Item_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Measurements.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Measurements_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Order.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Order_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Parties.cs" />
+    <Compile Include="DESADV_XSDLib\Line_Parties_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Manufacturer.cs" />
+    <Compile Include="DESADV_XSDLib\Manufacturer_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Order_Measurement.cs" />
+    <Compile Include="DESADV_XSDLib\Order_Measurement_Group.cs" />
+    <Compile Include="DESADV_XSDLib\OrderRecipient.cs" />
+    <Compile Include="DESADV_XSDLib\Package_Reference.cs" />
+    <Compile Include="DESADV_XSDLib\Package_Reference_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Packing_Sequence.cs" />
+    <Compile Include="DESADV_XSDLib\Packing_Sequence_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Payer.cs" />
+    <Compile Include="DESADV_XSDLib\Payer_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Seller.cs" />
+    <Compile Include="DESADV_XSDLib\Seller_Group.cs" />
+    <Compile Include="DESADV_XSDLib\ShipFrom.cs" />
+    <Compile Include="DESADV_XSDLib\ShipFrom_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Transport.cs" />
+    <Compile Include="DESADV_XSDLib\Transport_Group.cs" />
+    <Compile Include="DESADV_XSDLib\TransportDetails.cs" />
+    <Compile Include="DESADV_XSDLib\TransportDetails_Group.cs" />
+    <Compile Include="DESADV_XSDLib\Transports.cs" />
+    <Compile Include="DESADV_XSDLib\UltimateCustomer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
+

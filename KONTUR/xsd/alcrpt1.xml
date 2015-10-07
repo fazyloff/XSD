@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<eDIMessage id="53f3add974d54f39a451e96dbdf7b3b2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ALCRPT.xsd">
+  <interchangeHeader>
+    <sender>2000000003696</sender>
+    <recipient>2000000003696</recipient>
+    <documentType>ALCRPT</documentType>
+  </interchangeHeader>
+  <alcoholReport number="УТТДК000269" date="2013-04-09">
+    <originOrder number="УТТДК000269" date="2013-04-09"/>
+    <despatchIdentificator number="1" date="2013-04-09"/>
+    <receivingIdentificator number="1" date="2013-04-09"/>
+    <invoiceIdentificator number="1" date="2013-04-09"/>
+    <seller>
+      <gln>2000000003696</gln>
+      <organization>
+        <inn>6699000000</inn>
+        <kpp>668550001</kpp>
+        <name>ООО  Торговля и Маркетинг0</name>
+      </organization>
+      <russianAddress>
+        <regionCode>66</regionCode>
+        <city>Екатеринбург г</city>
+        <street>Тверитина ул</street>
+        <house>38</house>
+        <flat>10</flat>
+        <postalCode>620026</postalCode>
+      </russianAddress>
+      <additionalIdentificator>12313</additionalIdentificator>
+    </seller>
+    <buyer>
+      <gln>2000000003696</gln>
+       <selfEmployed>
+          <inn>665900055510</inn>
+          <fullName>
+            <lastName>Фамилия</lastName>
+            <firstName>Имя</firstName>
+            <middleName>Отчество</middleName>
+          </fullName>
+        </selfEmployed>
+        <russianAddress>
+          <regionCode>66</regionCode>
+          <city>Екатеринбург г</city>
+          <street>Тверитина ул</street>
+          <house>38</house>
+          <flat>10</flat>
+          <postalCode>620026</postalCode>
+        </russianAddress>
+        <additionalIdentificator>hj</additionalIdentificator> 
+    </buyer>
+    <transportation transportMode="railTransport" transportIdentificator="21111" vehicleCapacity="2011119"/>
+    <deliveryInfo>
+      <!--<customsDeclaration number="1111111111111111222211" date="2012-01-09"/>-->
+      <waybill number="1number" date="2012-04-10"/>
+      <shipFrom>
+        <gln>2000000003696</gln>
+        <organization>
+          <inn>6699000002</inn>
+          <kpp>668550003</kpp>
+          <name>ООО  Торговля и Маркетинг1</name>
+        </organization>
+        <russianAddress>
+          <regionCode>66</regionCode>
+          <district>district19 ул</district>
+          <city>Екатеринбург г</city>
+          <settlement>settlement ул</settlement>
+          <street>Тверитина ул</street>
+          <house>38</house>
+          <flat>10</flat>
+          <postalCode>620026</postalCode>
+        </russianAddress>
+        <additionalIdentificator>111</additionalIdentificator>
+      </shipFrom>
+      <shipTo>
+        <gln>2000000003696</gln>
+        <organization>
+          <inn>6699000000</inn>
+          <kpp>668550001</kpp>
+          <name>ООО  Торговля и Маркетинг0</name>
+        </organization>
+        <russianAddress>
+          <regionCode>66</regionCode>
+          <district>district ул</district>
+          <city>Екатеринбург г</city>
+          <settlement>settlement ул</settlement>
+          <street>Тверитина ул</street>
+          <house>38</house>
+          <flat>10</flat>
+          <postalCode>620026</postalCode>
+        </russianAddress>
+        <additionalIdentificator>уууу</additionalIdentificator>
+      </shipTo>
+    </deliveryInfo>
+    <lineItems>
+      <lineItem>
+        <gtin>5412345111115</gtin>
+        <internalBuyerCode>УТ000000028</internalBuyerCode>
+        <internalSupplierCode>0000024667</internalSupplierCode>
+        <lot>
+          <description>Абсент  70% 0.7л</description>
+          <volume unitOfMeasure="DKL" volumeTypeQualifier="orderedVolume">10.123456</volume>
+          <volumeOfUnitInLiter>0.7</volumeOfUnitInLiter>
+          <manufacturer>
+            <gln>5412345111115</gln>
+            <organization>
+              <inn>6699000017</inn>
+              <kpp>668550022</kpp>
+              <name>ООО  Торговля и Маркетинг2</name>
+            </organization>
+          </manufacturer>
+          <licenseSeller seriesNumber="А,604531" startdate="2012-06-28" enddate="2017-07-25" issuerOf="Федеральная служба по регулированию алкогольного рынка1"/>
+          <certificate number="А,6045311" startdate="2012-01-28" enddate="2017-01-25" issuerOf="Федеральная служба по регулированию алкогольного рынка2"/>
+          <typeOfAlco>260</typeOfAlco>
+          <signOfAlco>ALCO</signOfAlco>
+        </lot>
+        <lot>
+          <description>Абсент  70% 0.7л</description>
+          <volume unitOfMeasure="PCE" volumeTypeQualifier="orderedVolume">1111</volume>
+          <volumeOfUnitInLiter>0.7</volumeOfUnitInLiter>
+          <manufacturer>
+            <gln>5412345111115</gln>
+            <organization>
+              <inn>6699000017</inn>
+              <kpp>668550022</kpp>
+              <name>ООО  Торговля и Маркетинг2</name>
+            </organization>
+          </manufacturer>
+          <licenseSeller seriesNumber="А,604531" startdate="2012-06-28" enddate="2017-07-25" issuerOf="Федеральная служба по регулированию алкогольного рынка1"/>
+          <certificate number="А,6045311" startdate="2012-01-28" enddate="2017-01-25" issuerOf="Федеральная служба по регулированию алкогольного рынка2"/>
+          <typeOfAlco>260</typeOfAlco>
+          <signOfAlco>BEER</signOfAlco>
+        </lot>
+      </lineItem>
+    </lineItems>
+  </alcoholReport>
+</eDIMessage>

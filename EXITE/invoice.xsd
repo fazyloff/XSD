@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsd="undefined">
+  <xs:element name="INVOICE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DOCUMENTNAME" type="invoice-type"/>
+        <xs:element name="NUMBER" type="number"/>
+        <xs:element name="DATE" type="xs:date"/>
+        <xs:element name="DELIVERYDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="CURRENCY" type="currency"/>
+        <xs:element name="VALUEDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="ORDERNUMBER" type="number"/>
+        <xs:element name="ORDERDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="DELIVERYNOTENUMBER" type="number" minOccurs="1"/>
+        <xs:element name="DELIVERYNOTEDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="RECADVNUMBER" minOccurs="0" type="number"/>
+        <xs:element name="RECADVDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="PAYMENTORDERNUMBER" type="STRING-35" minOccurs="0"/>
+        <xs:element name="FISCALNUMBER" minOccurs="0" type="STRING-35"/>
+        <xs:element name="REGISTRATIONNUMBER" maxOccurs="1" minOccurs="0" type="STRING-35"/>
+        <xs:element name="CAMPAIGNNUMBER" minOccurs="0" type="number"/>
+        <xs:element name="REFERENCEINVOICENUMBER" type="number" minOccurs="0"/>
+        <xs:element name="REFERENCEINVOICEDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="PAYMENTTIMEINDAYS" type="xs:positiveInteger" minOccurs="0"/>
+        <xs:element name="GOODSTOTALAMOUNT" type="amount"/>
+        <xs:element name="RETURNABLEITEMSDEPOSIT" type="amount" minOccurs="0"/> <!-- Gebindewert -->
+        <xs:element name="POSITIONSAMOUNT" type="amount"/>
+        <xs:element name="VATSUM" type="amount" minOccurs="0"/>
+        <xs:element name="INVOICETOTALAMOUNT" type="amount"/>
+        <xs:element name="TAXABLEAMOUNT" type="amount"/>
+        <xs:element name="DISCOUNTAMOUNT" type="amount" minOccurs="0"/>
+        <xs:element ref="DISCOUNT" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="CONDITIONSAMOUNT" minOccurs="0">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer"/>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="VAT" type="percentage" minOccurs="1"/>
+        <xs:element name="MANAGER" type="NAME" minOccurs="0"/>
+        <xs:element name="ACCOUNTING" type="NAME" minOccurs="0"/>
+        <xs:element ref="HEAD"/>
+        <xs:element name="TAX" type="TAX_HEAD" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="CONDITION" type="CONDITION_HEAD" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="HEAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SUPPLIER" type="gln"/>
+        <xs:element name="BUYER" type="gln"/>
+        <xs:element name="DELIVERYPLACE" type="gln" minOccurs="0"/>
+        <xs:element name="INVOICEPARTNER" type="gln" minOccurs="0"/>
+        <xs:element name="FINALRECIPIENT" type="gln" minOccurs="0"/>
+        <xs:element name="ORDERPARTNER" type="gln" minOccurs="0"/>
+        <xs:element name="CONSEGNOR" minOccurs="0" type="gln"/>
+        <xs:element name="CONSIGNEE" type="gln" minOccurs="0"/>
+        <xs:sequence minOccurs="0">
+          <xs:element name="SENDER" type="mailbox"/>
+          <xs:element name="RECIPIENT" type="mailbox"/>
+          <xs:element name="EDIINTERCHANGEID" type="edi-interchange-id"/>
+          <xs:element name="EDIMESSAGE" type="xs:string" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:element ref="POSITION" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="POSITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="POSITIONNUMBER" type="xs:positiveInteger"/>
+        <xs:element name="PRODUCT" type="gln"/>
+        <xs:element name="PRODUCTIDSUPPLIER" type="product-id" minOccurs="0"/>
+        <xs:element name="PRODUCTIDBUYER" type="product-id" minOccurs="0"/>
+        <xs:element name="INVOICEDQUANTITY" type="amount" minOccurs="0"/>
+        <xs:element name="INVOICEUNIT" type="measurement-unit" minOccurs="0"/>
+        <xs:element name="QUANTITYOFCUINTU" type="amount" minOccurs="0"/>
+        <xs:element name="FREESUM" type="amount" minOccurs="0"/>
+        <xs:element name="FREESUMUNIT" type="measurement-unit" minOccurs="0"/>
+        <xs:element name="UNITPRICE" type="amount"/>
+        <xs:element name="PRICEBASISUNIT" type="amount" minOccurs="0"/>
+        <xs:element name="PRICEBASISUNITUNIT" type="measurement-unit" minOccurs="0"/>
+        <xs:element name="GROSSPRICE" type="amount" minOccurs="0"/>
+        <xs:element name="GROSSPRICEBASISUNIT" type="amount" minOccurs="0"/>
+        <xs:element name="GROSSPRICEBASISUNITUNIT" type="measurement-unit" minOccurs="0"/>
+        <xs:choice>
+          <xs:element name="AMOUNT" type="amount"/>
+          <xs:element name="BARRELVALUE" type="amount"/>
+        </xs:choice>
+        <xs:element name="DISCOUNTPAYMENT" type="amount" minOccurs="0"/>
+        <xs:element name="EMPTIESCODE" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="ISDISPLAY" type="xs:boolean" default="false" nillable="true" minOccurs="0"/>
+        <xs:element name="SPECIALCOND" type="special-condition" minOccurs="0"/>
+        <xs:element name="COUNTRYORIGIN" type="COUNTRY" minOccurs="0"/>
+        <xs:element name="CUSTOMSTARIFFNUMBER" minOccurs="0">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="30"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="AMOUNTTYPE" minOccurs="0"/>
+        <xs:element name="TAX" type="TAX_POSITION" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="CONDITION" type="CONDITION_POSITION" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="CONDITION_HEAD">
+  <xs:sequence>
+    <xs:element name="SPECIALSERVICES" type="allowance-charge"/>
+      <xs:element name="TYPE" type="condition-type"/> <!-- + oder - -->
+        <xs:element name="AMOUNT" type="amount"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CONDITION_POSITION">
+    <xs:sequence>
+      <xs:element name="SPECIALSERVICES" type="allowance-charge"/>
+      <xs:element name="CALCULATIONSEQUENCE" type="calculation-sequence" minOccurs="0"/>
+      <xs:element name="TYPE" type="condition-type"/> <!-- + oder - -->
+      <xs:choice>
+        <xs:element name="AMOUNT" type="amount"/>
+        <xs:element name="PERCENTAGE" type="percentage"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="TAX_HEAD">
+    <xs:sequence>
+      <xs:element name="FUNCTION" type="xs:integer"/>
+      <xs:element name="TAXTYPECODE" type="fee"/>
+      <xs:element name="TAXRATE" type="percentage" minOccurs="0"/>
+      <xs:element name="TAXABLEAMOUNT" type="amount" minOccurs="0"/>
+      <xs:element name="TAXAMOUNT" type="amount" minOccurs="0"/>
+      <xs:element name="GOODSTOTALAMOUNT" type="amount"/>
+      <xs:element name="TAXACCOUNTIDENTIFICATION" type="fee" minOccurs="0"/>
+      <xs:element name="CONDITIONSAMOUNT" minOccurs="0">
+          <xs:simpleType>
+              <xs:restriction base="xs:integer"/>
+          </xs:simpleType>
+      </xs:element>
+      <xs:element name="CATEGORY">
+          <xs:simpleType>
+              <xs:restriction base="xs:string">
+                  <xs:enumeration value="S"/>
+                  <xs:enumeration value="A"/>
+                  <xs:enumeration value="Z"/>
+              </xs:restriction>
+          </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="TAX_POSITION">
+    <xs:sequence>
+      <xs:element name="FUNCTION" type="xs:integer"/>
+      <xs:element name="TAXTYPECODE" type="fee"/>
+      <xs:element name="TAXACCOUNTIDENTIFICATION" type="fee" minOccurs="0"/>
+      <xs:element name="TAXRATE" type="percentage" minOccurs="1"/>
+      <xs:element name="TAXAMOUNT" type="amount" minOccurs="0"/>
+      <xs:element name="CATEGORY">
+          <xs:simpleType>
+              <xs:restriction base="xs:string">
+                  <xs:enumeration value="S"/>
+                  <xs:enumeration value="A"/>
+                  <xs:enumeration value="Z"/>
+              </xs:restriction>
+          </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="DISCOUNT">
+    <xs:complexType mixed="true"> <!-- mixed, weil hier entweder direkt ein Prozensatz oder eine Kombination aus Tag-Anzahl und Prozensatz drinnen stehen kann -->
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="DISCOUNT"/>
+        <xs:element name="DAYS" type="xs:positiveInteger"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="amount">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0"/>
+    <xs:totalDigits value="10"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="gln">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{8}([0-9]{3}([0-9]{0,3}))?"/>  <!-- das sind entweder 8, 11, 12, 13 oder 14 Ziffern -->
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="measurement-unit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GRM"/> <!-- Gramm -->
+      <xs:enumeration value="KGM"/> <!-- Kilogramm -->
+      <xs:enumeration value="LTR"/> <!-- Liter -->
+      <xs:enumeration value="MMT"/> <!-- Millimeter -->
+      <xs:enumeration value="MTK"/> <!-- Quadratmeter -->
+      <xs:enumeration value="MTQ"/> <!-- Kubikmeter -->
+      <xs:enumeration value="MTR"/> <!-- Meter -->
+      <xs:enumeration value="PCE"/> <!-- Stueck -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="length">
+  <xs:restriction base="xs:positiveInteger">
+    <xs:totalDigits value="13"/>
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sscc">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{18}"/>
+  </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="number">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="currency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ATS"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="DEM"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="ITL"/>
+      <xs:enumeration value="RUB"/>
+      <xs:enumeration value="UAH"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="BYR"/>
+      <xs:enumeration value="MDL"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="invoice-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="380"/> <!-- Handelsrechnung -->
+      <xs:enumeration value="381"/> <!-- Gutschrift -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="product-id">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="percentage">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="4"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- + (A) oder - (C) bei Zu- oder Abschlag -->  
+  <xs:simpleType name="condition-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="C"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="calculation-sequence">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"/>
+      <xs:maxExclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="allowance-charge">
+    <xs:restriction base="xs:string">
+          <xs:enumeration value="AA"/>  <!-- Werbekostenzuschuss -->
+          <xs:enumeration value="AAJ"/> <!-- Kupferzuschlag -->
+          <xs:enumeration value="AAM"/> <!-- Gummizuschlag -->
+          <xs:enumeration value="AAT"/>
+          <xs:enumeration value="AAX"/> <!-- Wolframzuschlag -->
+          <xs:enumeration value="ABH"/> <!-- Absatzverguetung -->
+          <xs:enumeration value="ADO"/> <!-- Effiziente Logistik -->
+          <xs:enumeration value="ADP"/> <!-- Absatzfoerderung -->
+          <xs:enumeration value="ADS"/> <!-- Palettenweise Bestellung -->
+          <xs:enumeration value="ADT"/>
+          <xs:enumeration value="AG"/>  <!-- Silberzuschlag -->
+          <xs:enumeration value="ASS"/> <!-- Sortimentsabschlag -->
+          <xs:enumeration value="CAC"/>
+          <xs:enumeration value="CAG"/> <!-- Wettbewerbsabschlag -->
+          <xs:enumeration value="DDL"/> <!-- Direktlieferung -->
+          <xs:enumeration value="DI"/>  <!-- Abzug (Rabatt) -->
+          <xs:enumeration value="EAA"/> <!-- Fruehbezugs-Abschlag -->
+          <xs:enumeration value="FA"/>  <!-- Frachtabschlag -->
+          <xs:enumeration value="FC"/>  <!-- Frachtgebuehren -->
+          <xs:enumeration value="FG"/>  <!-- Naturalrabatt -->
+          <xs:enumeration value="HD"/>  <!-- Handhabung -->
+          <xs:enumeration value="IN"/>  <!-- Versicherung -->
+          <xs:enumeration value="INT"/> <!-- Einfuehrungsabschlag -->
+          <xs:enumeration value="IS"/>  <!-- Fakturierdienstleistung -->
+          <xs:enumeration value="MB"/>  <!-- Kombiwerbung -->
+          <xs:enumeration value="MC"/>  <!-- Materialzuschlag (spezielle Materialien) -->
+          <xs:enumeration value="PAD"/> <!-- Verkaufsfoerderungsabschlag -->
+          <xs:enumeration value="PAE"/> <!-- Verkaufsfoerderungsabzug -->
+          <xs:enumeration value="PAR"/> <!-- Partnerschafts-Abschlag -->
+          <xs:enumeration value="PI"/>  <!-- Abholabschlag -->
+          <xs:enumeration value="PL"/>  <!-- Palettierung -->
+          <xs:enumeration value="PN"/>  <!-- Palettengebuehr -->
+          <xs:enumeration value="QAA"/> <!-- Mengenaufschlag -->
+          <xs:enumeration value="QD"/>  <!-- Mengenrabatt -->
+          <xs:enumeration value="RAE"/> <!-- Wiederverkaeuferabzug -->
+          <xs:enumeration value="SER"/> <!-- Dienstleistungsgebuehren -->
+          <xs:enumeration value="SH"/>  <!-- Spezielle Handhabungsdienstleistungen -->
+          <xs:enumeration value="TAE"/> <!-- LKW-Rabatt -->
+          <xs:enumeration value="TD"/>  <!-- Handelsrabatt -->
+          <xs:enumeration value="TZ"/>  <!-- Temporaerer Abschlag -->
+          <xs:enumeration value="VAB"/> <!-- Volumenrabatt -->
+          <xs:enumeration value="WHE"/> <!-- Grosshaendlerrabatt -->
+          <xs:enumeration value="X22"/>
+          <xs:enumeration value="X26"/> <!-- Farbzuschlag -->
+          <xs:enumeration value="X28"/> <!-- Krangebuehr -->
+          <xs:enumeration value="XAA"/> <!-- Zusammenfassung aller Lieferungen eines Tages -->
+          <xs:enumeration value="ZZ1"/> <!-- Ausarbeitungszuschlag -->
+          <xs:enumeration value="ZZ3"/> <!-- Kommissionszuschlag -->
+        </xs:restriction> 
+  </xs:simpleType>
+  
+  <xs:simpleType name="fee">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BIE"/> <!-- Abgaben auf Bier -->
+      <xs:enumeration value="BRA"/> <!-- Abgaben auf Brandwein -->
+      <xs:enumeration value="GLA"/> <!-- Abgaben auf Glueckspielabgaben -->
+      <xs:enumeration value="GST"/> <!-- Getraenkesteuer (in der GUI als GET kodiert) -->
+      <xs:enumeration value="SEK"/> <!-- Abgaben auf Sekt -->
+      <xs:enumeration value="TAB"/> <!-- Abgaben auf Tabak -->
+      <xs:enumeration value="VAT"/> <!-- Mehrwertsteuer (in der GUI nicht auswaehlbar) -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="special-condition">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:enumeration value="5"/> <!-- nicht bonusfaehig -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="mailbox">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="edi-interchange-id">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="14"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="STRING-35">
+
+      <xs:restriction base="xs:string">
+
+          <xs:maxLength value="35"/>
+
+      </xs:restriction>
+
+  </xs:simpleType>
+
+  <xs:simpleType name="COUNTRY">
+      <xs:restriction base="xs:string">
+          <xs:enumeration value="UA"/>
+          <xs:enumeration value="RU"/>
+          <xs:enumeration value="BY"/>
+          <xs:enumeration value="BE"/>
+          <xs:enumeration value="BG"/>
+          <xs:enumeration value="GB"/>
+          <xs:enumeration value="HU"/>
+          <xs:enumeration value="DE"/>
+          <xs:enumeration value="AT"/>
+          <xs:enumeration value="GR"/>
+          <xs:enumeration value="GE"/>
+          <xs:enumeration value="DK"/>
+          <xs:enumeration value="EU"/>
+          <xs:enumeration value="IL"/>
+          <xs:enumeration value="IN"/>
+          <xs:enumeration value="ID"/>
+          <xs:enumeration value="IE"/>
+          <xs:enumeration value="IS"/>
+          <xs:enumeration value="ES"/>
+          <xs:enumeration value="IT"/>
+          <xs:enumeration value="KP"/>
+          <xs:enumeration value="KZ"/>
+          <xs:enumeration value="CN"/>
+          <xs:enumeration value="LV"/>
+          <xs:enumeration value="LT"/>
+          <xs:enumeration value="MD"/>
+          <xs:enumeration value="PL"/>
+          <xs:enumeration value="RO"/>
+          <xs:enumeration value="US"/>
+          <xs:enumeration value="SK"/>
+          <xs:enumeration value="SI"/>
+          <xs:enumeration value="TR"/>
+          <xs:enumeration value="UZ"/>
+          <xs:enumeration value="FR"/>
+          <xs:enumeration value="CZ"/>
+          <xs:enumeration value="CH"/>
+          <xs:enumeration value="SE"/>
+          <xs:enumeration value="KR"/>
+          <xs:enumeration value="JP"/></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NAME">
+      <xs:restriction base="xs:string">
+          <xs:maxLength value="70"/>
+      </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

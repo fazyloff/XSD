@@ -1,0 +1,1 @@
+C:\BTS\XSD\KORUS\DESADV_XSD.xsd.Output\SourceCodeCS\SampleApp\bin\Debug\SampleApp.exe.config

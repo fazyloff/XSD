@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsd="undefined">
+  <xs:element name="ORDER">
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DOCUMENTNAME" type="order-type"/>
+        <xs:element name="NUMBER" type="number" minOccurs="1"/>
+        <xs:element name="DATE" type="xs:date"/>
+        <xs:element name="DELIVERYDATE" type="xs:date" minOccurs="0"/>
+        <xs:element name="DELIVERYTIME" type="time" minOccurs="0"/>
+        <xs:element name="CAMPAIGNNUMBER" type="number" minOccurs="0"/>
+        <xs:element name="CURRENCY" type="currency" minOccurs="0"/>
+        <xs:element name="VAT" type="percentage" minOccurs="0"/>  <!-- Rahmenauftragsnummer -->
+        <xs:element name="INFO" type="xs:string" minOccurs="0"/>
+        <xs:element ref="HEAD"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="HEAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SUPPLIER" type="gln"/>
+        <xs:element name="BUYER" type="gln"/>
+        <xs:element name="DELIVERYPLACE" type="gln"/>
+        <xs:element name="SENDER" type="mailbox"/>
+        <xs:element name="RECIPIENT" type="mailbox"/>
+        <xs:element name="EDIINTERCHANGEID" type="edi-interchange-id" minOccurs="1"/>
+        <xs:element ref="POSITION" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="POSITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="POSITIONNUMBER" type="xs:positiveInteger"/>
+        <xs:element name="PRODUCT" type="gln"/>
+        <xs:element name="PRODUCTIDSUPPLIER" type="number" minOccurs="0"/>
+        <xs:element name="PRODUCTIDBUYER" type="number" minOccurs="0"/>
+        <xs:element name="ORDEREDQUANTITY" type="amount"/>
+        <xs:element name="QUANTITYOFCUINTU" type="amount" minOccurs="0"/>
+        <xs:element name="ORDERUNIT" type="measurement-unit" minOccurs="0"/>
+        <xs:element name="ORDERPRICE" type="amount" minOccurs="0"/>
+        <xs:element name="VAT" type="percentage" minOccurs="0"/>
+        <xs:element ref="CHARACTERISTIC" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="CHARACTERISTIC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="CONDITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TYPE" type="condition-type"/> <!-- + oder - -->
+        <xs:element name="CALCULATIONSEQUENCE" type="calculation-sequence" minOccurs="0"/>
+        <xs:element name="RATETYPE" type="rate-type" minOccurs="0"/>
+        <xs:element name="PERCENTAGE" type="percentage" minOccurs="0"/>
+        <xs:element name="AMOUNT" type="amount" minOccurs="0"/>
+        <xs:element name="SPECIALSERVICES" type="allowance-charge"/>
+        <xs:element name="RATEPERUNIT" type="amount" minOccurs="0"/>
+        <xs:element name="UNITPRICEBASE" type="price-basis" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="number">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="amount">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0"/>
+    <xs:totalDigits value="10"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="gln">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{8}([0-9]{3}([0-9]{0,3}))?"/>  <!-- das sind entweder 8, 11, 12, 13 oder 14 Ziffern -->
+  </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType xmlns:xs="http://www.w3.org/2001/XMLSchema" name="time">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{2}:[0-9]{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="percentage">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="4"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="measurement-unit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GRM"/> <!-- Gramm -->
+      <xs:enumeration value="KGM"/> <!-- Kilogramm -->
+      <xs:enumeration value="LTR"/> <!-- Liter -->
+      <xs:enumeration value="MMT"/> <!-- Millimeter -->
+      <xs:enumeration value="MTK"/> <!-- Quadratmeter -->
+      <xs:enumeration value="MTQ"/> <!-- Kubikmeter -->
+      <xs:enumeration value="MTR"/> <!-- Meter -->
+      <xs:enumeration value="CT"/> <!-- Korobka -->
+	  <xs:enumeration value="BH"/> <!-- Pachka -->
+      <xs:enumeration value="PF"/> <!-- Poddon -->
+      <xs:enumeration value="PK"/> <!-- Upakovka -->
+      <xs:enumeration value="PCE"/> <!-- Stueck -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mailbox">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="13"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="order-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="220"/>
+      <xs:enumeration value="224"/>
+      <xs:enumeration value="22E"/>
+      <xs:enumeration value="402"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="deliver-pickup">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1"/>   <!-- Preiskondition -->
+      <xs:enumeration value="2"/>   <!-- Auslieferbedingungen -->
+      <xs:enumeration value="3"/>   <!-- Preis- und Auslieferbedingungen -->
+      <xs:enumeration value="4"/>   <!-- Abholung durch den Kunden -->
+      <xs:enumeration value="5"/>   <!-- Transportbedingungen -->
+      <xs:enumeration value="6"/>   <!-- Lieferbedingungen -->
+      <xs:enumeration value="10E"/> <!-- Geliefert durch den Lieferanten -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="delivery-condition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="01E"/> <!-- Vor Lieferung Lieferanschrift verständigen (EAN-Code) -->
+      <xs:enumeration value="02E"/> <!-- Dringliche Auslieferung (EAN-Code) -->
+      <xs:enumeration value="03E"/> <!-- Spezielle Lieferbedingungen (EAN-Code) -->
+      <xs:enumeration value="04E"/> <!-- Lieferung per Nachnahme (EAN-Code) -->
+      <xs:enumeration value="CFR"/> <!-- Kosten und Fracht -->
+      <xs:enumeration value="CIF"/> <!-- Kosten, Versicherung und Fracht -->
+      <xs:enumeration value="CIP"/> <!-- Frachtfrei, versichert -->
+      <xs:enumeration value="CPT"/> <!-- Frachtfrei -->
+      <xs:enumeration value="DAF"/> <!-- Geliefert frei Grenze -->
+      <xs:enumeration value="DDP"/> <!-- Geliefert Bestimmungsort, verzollt -->
+      <xs:enumeration value="DDU"/> <!-- Geliefert Bestimmungsort, unverzollt -->
+      <xs:enumeration value="DEQ"/> <!-- Geliefert ab Kai -->
+      <xs:enumeration value="DES"/> <!-- Geliefert ab Schiff -->
+      <xs:enumeration value="EXW"/> <!-- Ab Werk -->
+      <xs:enumeration value="FAS"/> <!-- Frei Längsseite Seeschiff -->
+      <xs:enumeration value="FCA"/> <!-- Frei Frachtführer -->
+      <xs:enumeration value="FOA"/> <!-- FOB Airport - Named airport of departure -->
+      <xs:enumeration value="FOB"/> <!-- Frei an Bord -->
+      <xs:enumeration value="FOR"/> <!-- Free on Rail - Named departure point -->
+      <xs:enumeration value="RDN"/> <!-- Unterschriebenen Lieferschein zurücksenden (EAN-Code) -->
+      <xs:enumeration value="RPD"/> <!-- Abliefernachweisnummer des Warenempfängers zurückmelden (EAN-Code) -->
+      <xs:enumeration value="SD"/>  <!-- Sendung ist auf mehr als ein Transportmittel aufgeteilt (EAN-Code) -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="transport-route">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:enumeration value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="transport-type">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:enumeration value="10"/>  <!-- Seetransport -->
+      <xs:enumeration value="20"/>  <!-- Bahntransport -->
+      <xs:enumeration value="30"/>  <!-- Straßentransport -->
+      <xs:enumeration value="40"/>  <!-- Lufttransport -->
+      <xs:enumeration value="50"/>  <!-- Post -->
+      <xs:enumeration value="60"/>  <!-- Multimodaler Transp. / komb. Verkehr  -->
+      <xs:enumeration value="70"/>  <!-- Fixe Transportinstallationen -->
+      <xs:enumeration value="80"/>  <!-- Transport auf Binnengewässern -->
+      <xs:enumeration value="100"/> <!-- Botendienst -->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="currency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ATS"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="DEM"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="ITL"/>
+      <xs:enumeration value="UAH"/>
+      <xs:enumeration value="RUB"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="BYR"/>
+      <xs:enumeration value="MDL"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="edi-interchange-id">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="14"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="calculation-sequence">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"/>
+      <xs:maxExclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="allowance-charge">
+    <xs:restriction base="xs:string">
+          <xs:enumeration value="AA"/>  <!-- Werbekostenzuschuss -->
+          <xs:enumeration value="AAJ"/> <!-- Kupferzuschlag -->
+          <xs:enumeration value="AAM"/> <!-- Gummizuschlag -->
+          <xs:enumeration value="AAX"/> <!-- Wolframzuschlag -->
+          <xs:enumeration value="ABH"/> <!-- Absatzverguetung -->
+          <xs:enumeration value="ADO"/> <!-- Effiziente Logistik -->
+          <xs:enumeration value="ADP"/> <!-- Absatzfoerderung -->
+          <xs:enumeration value="ADS"/> <!-- Palettenweise Bestellung -->
+          <xs:enumeration value="AG"/>  <!-- Silberzuschlag -->
+          <xs:enumeration value="ASS"/> <!-- Sortimentsabschlag -->
+          <xs:enumeration value="CAG"/> <!-- Wettbewerbsabschlag -->
+          <xs:enumeration value="DDL"/> <!-- Direktlieferung -->
+          <xs:enumeration value="DI"/>  <!-- Abzug (Rabatt) -->
+          <xs:enumeration value="EAA"/> <!-- Fruehbezugs-Abschlag -->
+          <xs:enumeration value="FA"/>  <!-- Frachtabschlag -->
+          <xs:enumeration value="FC"/>  <!-- Frachtgebuehren -->
+          <xs:enumeration value="FG"/>  <!-- Naturalrabatt -->
+          <xs:enumeration value="HD"/>  <!-- Handhabung -->
+          <xs:enumeration value="IN"/>  <!-- Versicherung -->
+          <xs:enumeration value="INT"/> <!-- Einfuehrungsabschlag -->
+          <xs:enumeration value="IS"/>  <!-- Fakturierdienstleistung -->
+          <xs:enumeration value="MB"/>  <!-- Kombiwerbung -->
+          <xs:enumeration value="MC"/>  <!-- Materialzuschlag (spezielle Materialien) -->
+          <xs:enumeration value="PAD"/> <!-- Verkaufsfoerderungsabschlag -->
+          <xs:enumeration value="PAE"/> <!-- Verkaufsfoerderungsabzug -->
+          <xs:enumeration value="PAR"/> <!-- Partnerschafts-Abschlag -->
+          <xs:enumeration value="PI"/>  <!-- Abholabschlag -->
+          <xs:enumeration value="PL"/>  <!-- Palettierung -->
+          <xs:enumeration value="PN"/>  <!-- Palettengebuehr -->
+          <xs:enumeration value="QAA"/> <!-- Mengenaufschlag -->
+          <xs:enumeration value="QD"/>  <!-- Mengenrabatt -->
+          <xs:enumeration value="RAE"/> <!-- Wiederverkaeuferabzug -->
+          <xs:enumeration value="SER"/> <!-- Dienstleistungsgebuehren -->
+          <xs:enumeration value="SH"/>  <!-- Spezielle Handhabungsdienstleistungen -->
+          <xs:enumeration value="TAE"/> <!-- LKW-Rabatt -->
+          <xs:enumeration value="TD"/>  <!-- Handelsrabatt -->
+          <xs:enumeration value="TZ"/>  <!-- Temporaerer Abschlag -->
+          <xs:enumeration value="VAB"/> <!-- Volumenrabatt -->
+          <xs:enumeration value="WHE"/> <!-- Grosshaendlerrabatt -->
+          <xs:enumeration value="X26"/> <!-- Farbzuschlag -->
+          <xs:enumeration value="X28"/> <!-- Krangebuehr -->
+          <xs:enumeration value="XAA"/> <!-- Zusammenfassung aller Lieferungen eines Tages -->
+          <xs:enumeration value="ZZ1"/> <!-- Ausarbeitungszuschlag -->
+          <xs:enumeration value="ZZ3"/> <!-- Kommissionszuschlag -->
+        </xs:restriction> 
+  </xs:simpleType>
+
+  <!-- + (A) oder - (C) bei Zu- oder Abschlag -->  
+  <xs:simpleType name="condition-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="C"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="rate-type">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"/>
+      <xs:maxExclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="price-basis">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="info-code">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AKT"/>
+      <xs:enumeration value="BES"/>
+      <xs:enumeration value="MAR"/>
+      <xs:enumeration value="MUS"/>
+      <xs:enumeration value="NOR"/>
+      <xs:enumeration value="SAM"/>
+      <xs:enumeration value="SON"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="transport-means">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="1"/>   <!-- Chemikalientanker/Lastkahn -->
+    <xs:enumeration value="101"/> <!-- Kurierdienst -->
+    <xs:enumeration value="10E"/> <!-- Tautliner 25t -->
+    <xs:enumeration value="11E"/> <!-- Tautliner 25t mit abnehmbarem Dach -->
+    <xs:enumeration value="12"/>  <!-- Tankschiff -->
+    <xs:enumeration value="12E"/> <!-- Sattelzug mit Pritsche 25 t -->
+    <xs:enumeration value="13E"/> <!-- Sattelzug 24 t mit Pritsche und Kran 10m -->
+    <xs:enumeration value="14E"/> <!-- Sattelzug 24 t mit Pritsche und Kran 15m -->
+    <xs:enumeration value="15E"/> <!-- Sattelzug 24 t mit Pritsche und Kran 18m -->
+    <xs:enumeration value="16E"/> <!-- Sattelzug mit Pritsche 10 t -->
+    <xs:enumeration value="17E"/> <!-- Tautliner 25t mit Anhaenger 90m3 -->
+    <xs:enumeration value="18E"/> <!-- Tautliner 25t mit Anhaenger 120m3 -->
+    <xs:enumeration value="19E"/> <!-- LKW mit Pritsche, Anhaenger + Krank 10m -->
+    <xs:enumeration value="20E"/> <!-- Sattelzug mit Tankaufbau -->
+    <xs:enumeration value="21"/>  <!-- Tankwaggon -->
+    <xs:enumeration value="21E"/> <!-- LKW mit Pritsche 15t -->
+    <xs:enumeration value="22E"/> <!-- LKW mit Pritsche und Kran 15t -->
+    <xs:enumeration value="23"/>  <!-- Schuettgutwaggon -->
+    <xs:enumeration value="23E"/> <!-- LKW/Anhaenger mit Kippvorrichtung -->
+    <xs:enumeration value="24E"/> <!-- Tiefkuehl-LKW -->
+    <xs:enumeration value="25"/>  <!-- Bahnexpress -->
+    <xs:enumeration value="25E"/> <!-- LKW mit isoliertem Kofferaufbau -->
+    <xs:enumeration value="26E"/> <!-- Kuehl-LKW -->
+    <xs:enumeration value="27E"/> <!-- Anhaenger mit isoliertem Kofferaufbau -->
+    <xs:enumeration value="28E"/> <!-- Kuehlanhaenger -->
+    <xs:enumeration value="29E"/> <!-- Tiefkuehl-Lieferwagen -->
+    <xs:enumeration value="30E"/> <!-- Lieferwagen mit isoliertem Aufbau -->
+    <xs:enumeration value="31"/>  <!-- LKW -->
+    <xs:enumeration value="31E"/> <!-- Kuehl-Lieferwagen -->
+    <xs:enumeration value="32"/>  <!-- Tankwagen -->
+    <xs:enumeration value="32E"/> <!-- Anhaenger -->
+    <xs:enumeration value="33E"/> <!-- Anhaenger mit Tankaufbau -->
+    <xs:enumeration value="34"/>  <!-- Strassen-Paketexpress -->
+    <xs:enumeration value="34E"/> <!-- Anhaenger fuer Schuettgut -->
+    <xs:enumeration value="35"/>  <!-- LKW/Anhaenger mit Kippvorrichtung -->
+    <xs:enumeration value="35E"/> <!-- LKW fuer Schuettgut -->
+    <xs:enumeration value="36E"/> <!-- Lieferwagen -->
+    <xs:enumeration value="37E"/> <!-- Anhaenger ausziehbar -->
+    <xs:enumeration value="38E"/> <!-- Dolly-Anhaenger -->
+    <xs:enumeration value="39E"/> <!-- Tiefkuehl-Anhaenger -->
+    <xs:enumeration value="41"/>  <!-- Luftfracht -->
+    <xs:enumeration value="42"/>  <!-- Isolierter LKW -->
+    <xs:enumeration value="43"/>  <!-- Kuehl-LKW -->
+    <xs:enumeration value="51"/>  <!-- Paketdienst der Post -->
+    <xs:enumeration value="52"/>  <!-- Exppressdienst der Post -->
+    <xs:enumeration value="53"/>  <!-- Normaler Postversand -->
+    <xs:enumeration value="54"/>  <!-- Beschleunigter normaler Postversand -->
+    <xs:enumeration value="55"/>  <!-- Luftpost -->
+    <xs:enumeration value="56"/>  <!-- Drucksache -->
+    <xs:enumeration value="97E"/> <!-- LKW mit Anhaenger -->
+    <xs:enumeration value="98E"/> <!-- LKW mit Kran ebenerdig ohne Anhaenger -->
+    <xs:enumeration value="99E"/> <!-- LKW mit Kran ebenerdig mit Anhaenger -->
+    <xs:enumeration value="X01"/> <!-- LKW mit Kran Hochtr. ohne Anhaenger -->
+    <xs:enumeration value="X02"/> <!-- LKW m. Kran Hochtransp. m. Anhaenger -->
+    <xs:enumeration value="X09"/>
+    <xs:enumeration value="X13"/>
+  </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="payment-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CA"/> <!-- Vorkasse -->
+      <xs:enumeration value="CC"/> <!-- Unfrei -->
+      <xs:enumeration value="CF"/> <!-- Unfrei, Fracht f. d. zahl. Knd. kreditiert -->
+      <xs:enumeration value="DF"/> <!-- Durch Lieferant und Käufer definiert -->
+      <xs:enumeration value="MX"/> <!-- Gemischt -->
+      <xs:enumeration value="NC"/> <!-- Frachtservice, keine Gebühren -->
+      <xs:enumeration value="PC"/> <!-- Vorgestreckt, aber d. Knd. in Rech. gest. -->
+      <xs:enumeration value="PO"/> <!-- Nur Vorgestreckt -->
+      <xs:enumeration value="PP"/> <!-- Vorgestreckt (vom Lieferanten) -->
+      <xs:enumeration value="PU"/> <!-- Pickup -->
+      <xs:enumeration value="RC"/> <!-- Rückfr. d. Containers bez. durch d. Knd. -->
+      <xs:enumeration value="RF"/> <!-- Rückfracht des Containers frei -->
+      <xs:enumeration value="RS"/> <!-- Rückfr. d. Containers bez. durch d. Lief. -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="remaining-days">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

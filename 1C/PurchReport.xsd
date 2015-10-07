@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://gradient.ru/xsd/ax-1c/purchReport"
+    elementFormDefault="qualified"
+    xmlns="http://gradient.ru/xsd/ax-1c/purchReport"
+    xmlns:mstns="http://gradient.ru/xsd/ax-1c/purchReport"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:targetnameSpace ="http://gradient.ru/xsd/ax-1c/purchReport"
+    xmlns:tns ="http://gradient.ru/xsd/ax-1c/purchReport">
+  <xs:complexType name="Документ">
+          <!--ID документа, уникальный ключ-->
+          <xs:attribute name="ИД" type="xs:string"></xs:attribute>
+          <!--Номер документа 1С-->
+          <xs:attribute name="НомерДок" type="xs:string"></xs:attribute>
+          <!--Дата документа 1С-->
+          <xs:attribute name="ДатаДок" type="xs:date"></xs:attribute>
+          <!--Код контрагента 1С-->
+          <xs:attribute name="КодКонтр" type="xs:string"></xs:attribute>
+          <!--название контрагента 1С-->
+          <xs:attribute name="НаимКонтр" type="xs:string"></xs:attribute>
+          <!--общая сумма документа 1С	-->
+          <xs:attribute name="Сумма" type="xs:decimal"></xs:attribute>
+          <!--сумма НДС документа 1С-->
+          <xs:attribute name="НДС" type="xs:decimal"></xs:attribute>
+          <!--Со склада 1С-->
+          <xs:attribute name="СкладС" type="xs:string"></xs:attribute>
+          <!--На склада 1С-->
+          <xs:attribute name="СкладНа" type="xs:string"></xs:attribute>
+    </xs:complexType>
+  <xs:complexType name="ДокументыПоВидам">
+    <xs:sequence>
+      <xs:element name="Документ" type ="Документ" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+    <!--Количество документов вида-->
+    <xs:attribute name="КоличествоДокументов" type="xs:int"></xs:attribute>
+    <!--Итоговая сумма документов вида-->
+    <xs:attribute name="Сумма" type="xs:decimal"></xs:attribute>
+    <!--Итоговая сумма НДС документов вида-->
+    <xs:attribute name="НДС" type="xs:decimal"></xs:attribute>
+        
+  </xs:complexType>
+
+
+
+  <xs:complexType name="ДокументыПоПоставщикам" id="ДокументыПоПоставщикам">
+    <xs:sequence>       
+      <xs:element name="ПоступлениеТоваровУслуг" type ="ДокументыПоВидам" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="ВозвратТоваровПоставщику" type ="ДокументыПоВидам" maxOccurs="1" minOccurs="0"/>
+        
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Документы" type="ДокументыПоПоставщикам"></xs:element>
+</xs:schema>

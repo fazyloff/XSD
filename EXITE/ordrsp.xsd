@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+DOCTYPE: PRICAT
+DOCFORMAT: XSD
+TYPE: EXML
+VERSION: 1.0
+CREATOR: EXITE-UKRAINE
+RESPONSIBLE: Smirnov Alexander
+-->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsd="undefined">
+  <xs:element name="ORDRSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="NUMBER"/> <!-- Номер документа -->
+        <xs:element ref="DATE"/> <!-- Дата документа -->
+        <xs:element minOccurs="0" ref="TIME">
+        </xs:element>
+        <xs:element ref="ORDERNUMBER"/> <!-- Номер заказа -->
+        <xs:element ref="ORDERDATE"/> <!-- Дата заказа -->
+        <xs:element ref="CURRENCY" minOccurs="0"/> <!-- Валюта -->
+        <xs:element ref="HEAD"/> <!--  -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NUMBER"> <!-- Номер документа -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="14"/> 
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="DATE" type="xs:date"/> <!-- Дата документа -->
+  <xs:element name="ORDERNUMBER"> <!-- Номер заказа -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="20"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="ORDERDATE" type="xs:date"/> <!-- Дата заказа -->
+  <xs:element name="CURRENCY"> <!-- Валюта -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:enumeration value="EUR"/> <!-- Евро -->
+              <xs:enumeration value="USD"/> <!-- Доллар -->
+              <xs:enumeration value="UAH"/> <!-- Гривня -->
+              <xs:enumeration value="RUB"/> <!-- Рубль -->
+              <xs:enumeration value="BYR"/> <!-- Беларуский рубль -->
+              <xs:enumeration value="MDL"/> <!-- Малдавский лей -->
+              <xs:enumeration value="ATS"/> <!-- Австрийский шилинг -->
+              <xs:enumeration value="CHF"/> <!-- Швейцарский франк -->
+              <xs:enumeration value="ITL"/> <!-- Итальянская лира -->
+              <xs:enumeration value="DEM"/> <!-- Германская марка -->
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="HEAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BUYER"/> <!-- GLN покупателя -->
+        <xs:element ref="SUPPLIER"/> <!-- GLN поставщика -->
+        <xs:element ref="DELIVERYPLACE" minOccurs="0"/> <!-- GLN места доставки -->
+        <xs:element ref="INVOICEPARTNER" minOccurs="0"/> <!-- GLN плательщика -->
+        <xs:element ref="SENDER"/> <!-- GLN отправителя сообщения -->
+        <xs:element ref="RECIPIENT"/> <!-- GLN получателя сообщения -->
+        <xs:element name="EDIINTERCHANGEID"> <!-- Номер транзакции -->
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="14"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element ref="EDIMESSAGE" minOccurs="0"/> <!-- ... -->
+        <xs:element maxOccurs="unbounded" ref="POSITION"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BUYER" type="GLN"/>
+  <xs:element name="SUPPLIER" type="GLN"/>
+  <xs:element name="DELIVERYPLACE" type="GLN"/>
+  <xs:element name="INVOICEPARTNER" type="GLN"/>
+  <xs:element name="SENDER" type="GLN"/>
+  <xs:element name="RECIPIENT" type="GLN"/>
+  <xs:element name="EDIINTERCHANGEID">
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="20"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="EDIMESSAGE" type="xs:string"/>
+  <xs:element name="POSITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="POSITIONNUMBER" minOccurs="1" maxOccurs="1"/> <!-- Номер позиции в заказе -->
+        <xs:element ref="PRODUCT" minOccurs="1" maxOccurs="1"/> <!-- GTIN(Штрих-код) продукта-->
+        <xs:element maxOccurs="1" ref="PRODUCTIDBUYER" minOccurs="0"/> <!-- Номер продукта по БД покупателя -->
+        <xs:element minOccurs="0" ref="PRODUCTIDSUPPLIER" maxOccurs="1"/> <!-- Номер продукта по БД поставщика -->
+        <xs:element minOccurs="0" ref="DESCRIPTION" maxOccurs="1"/> <!-- Описание позиции -->
+        <xs:element ref="PRICE" minOccurs="0" maxOccurs="1"/> <!-- Цена -->
+        <xs:element ref="VAT" minOccurs="0"/>
+        <xs:element ref="PRODUCTTYPE" minOccurs="1" maxOccurs="1"/> <!-- Тип продукта -->
+        <xs:sequence minOccurs="0" maxOccurs="1">
+          <xs:element ref="ORDEREDQUANTITY" minOccurs="1" maxOccurs="1"/> <!-- Заказанное количество -->
+          <xs:element ref="ACCEPTEDQUANTITY" minOccurs="1" maxOccurs="1"/> <!-- Имеющееся количество -->
+        </xs:sequence>
+        <xs:element ref="INFO" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="POSITIONNUMBER" type="xs:positiveInteger"/> <!-- Номер позиции в заказе -->
+  <xs:element name="PRODUCT" type="GTIN"/> <!-- GTIN(Штрих-код) продукта-->
+  <xs:element name="PRODUCTIDBUYER"> <!-- Номер продукта по БД покупателя -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="16"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="PRODUCTIDSUPPLIER"> <!-- Номер продукта по БД поставщика -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="16"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="DESCRIPTION"> <!-- Описание позиции -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="70"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="PRICE"> <!-- Цена -->
+      <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+              <xs:minInclusive value="0"/>
+              <xs:totalDigits value="10"/>
+              <xs:fractionDigits value="3"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="PRODUCTTYPE"> <!-- Тип продукта -->
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:enumeration value="1"/> <!-- Продукт будет поставлен -->
+              <xs:enumeration value="2"/> <!-- Продукт будет поставлен с изменением количества поставки -->
+              <xs:enumeration value="3"/> <!-- Продукт не будет поставлен -->
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="ORDEREDQUANTITY"> <!-- Заказанное количество -->
+      <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+              <xs:minInclusive value="0"/>
+              <xs:totalDigits value="10"/>
+              <xs:fractionDigits value="3"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="ACCEPTEDQUANTITY"> <!-- Имеющееся количество -->
+      <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+              <xs:minInclusive value="0"/>
+              <xs:totalDigits value="10"/>
+              <xs:fractionDigits value="3"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:simpleType name="GLN">
+      <xs:restriction base="xs:positiveInteger">
+          <xs:totalDigits value="13"/>
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GTIN">
+      <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{8}([0-9]{3}([0-9]{0,3}))?"/>
+      </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TIME">
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{2}:[0-9]{2}"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="VAT">
+      <xs:simpleType>
+          <xs:restriction base="xs:integer"/>
+      </xs:simpleType>
+  </xs:element>
+  <xs:element name="INFO">
+      <xs:simpleType>
+          <xs:restriction base="xs:string">
+              <xs:maxLength value="70"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+</xs:schema>

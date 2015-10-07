@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eDIMessage id="ad5c4ad3-2b77-41ec-a258-6fe97da6f482"> <!-- уникальный номер сообщения (max 36 символов), задается отправителем -->
+  <interchangeHeader>
+    <sender>7564687254321</sender> <!-- GLN отправителя (поставщика) -->
+    <recipient>3564321365745</recipient> <!-- GLN получателя (сети) -->
+    <documentType>INVOIC</documentType> 
+  </interchangeHeader>
+  <invoice number="INV_87" date="2012-10-05" type="Original"> <!-- Номер и дата INVOIC (совпадает с датой и номером СФ) -->
+    <originOrder number="87_2" date="2012-01-31" /> <!-- Номер и дата заказа, к которому нужно привязать INVOIC -->
+	<despatchIdentificator number="des12045" date="2012-02-10" /> <!-- Номер и дата DESADV'а (совпадает с датой и номером ТОРГ-12) -->
+    <receivingIdentificator number="rec12045" date="2012-02-10" /> <!-- Номер и дата RECADV'а (не обязательный) -->
+    <seller> <!-- Сведения о поставщике -->
+      <gln>7564687254321</gln>
+      <organization>
+        <name>поставщик</name>
+        <inn>4444444446</inn>
+        <kpp>657657657</kpp>
+      </organization>
+      <russianAddress>
+        <regionISOCode>RU-KGN</regionISOCode>
+		<district>Курганская область</district>
+        <city>Курган</city>
+        <street>Советская</street>
+        <house>13/3</house>
+        <flat>33</flat>
+        <postalCode>640000</postalCode>
+      </russianAddress>
+	  <additionalIdentificator>21546</additionalIdentificator> <!-- Номер поставщика в системе сети (не обязательный) -->
+	  <additionalInfo> <!-- Дополнительная информация (не обязательно) -->
+	    <phone>00000</phone>
+        <fax>00000</fax>
+		<nameOfCEO>Иванов И.К.</nameOfCEO>
+	    <nameOfAccountant>Петрова К.А.</nameOfAccountant>
+      </additionalInfo>
+    </seller>
+    <buyer> <!-- Сведения о покупателе -->
+      <gln>3564321365745</gln>
+      <organization>
+        <name>покупатель</name>
+        <inn>6658033077</inn>
+        <kpp>665801001</kpp>
+      </organization>
+      <russianAddress>
+        <regionISOCode>RU-KAM</regionISOCode>
+		<district>Курганская область</district>
+        <city>Курган</city>
+        <street>Советская</street>
+        <house>13/3</house>
+        <flat>33</flat>
+        <postalCode>640000</postalCode>
+      </russianAddress>
+	  <additionalInfo> 
+	    <phone>00000</phone>
+        <fax>00000</fax>
+		<nameOfCEO>Иванов И.К.</nameOfCEO>
+	    <nameOfAccountant>Петрова К.А.</nameOfAccountant>
+      </additionalInfo>
+    </buyer>
+	<invoicee> <!-- Сведения о получателе счета (не обязательно) -->
+      <gln>3564321365745</gln>
+      <organization>
+        <name>покупатель</name>
+        <inn>6658033077</inn>
+        <kpp>665801001</kpp>
+      </organization>
+      <russianAddress>
+        <regionISOCode>RU-KAM</regionISOCode>
+		<district>Курганская область</district>
+        <city>Курган</city>
+        <street>Советская</street>
+        <house>13/3</house>
+        <flat>33</flat>
+        <postalCode>640000</postalCode>
+      </russianAddress>
+	  <additionalInfo> 
+	    <phone>00000</phone>
+        <fax>00000</fax>
+		<nameOfCEO>Иванов И.К.</nameOfCEO>
+	    <nameOfAccountant>Петрова К.А.</nameOfAccountant>
+      </additionalInfo>
+    </invoicee>
+    <deliveryInfo>
+      <shipFrom> <!-- Сведения о грузоотправителе -->
+        <gln>4444444444444</gln>
+        <organization>
+          <name>тестовый</name>
+        </organization>
+        <russianAddress>
+          <regionISOCode>RU-SVE</regionISOCode>
+          <city>г. Екатеринбург</city>
+          <street>ул. Бебеля</street>
+          <house>12а</house>
+          <flat>405</flat>
+          <postalCode>620000</postalCode>
+        </russianAddress>
+      </shipFrom>
+      <shipTo> <!-- Сведения о месте доставки (в качестве примера указаны данные о физ.лице и иностранный адрес) -->
+        <gln>4049111000000</gln>
+        <selfEmployed>
+          <fullName>
+            <lastName>Фамилия</lastName>
+            <firstName>Имя</firstName>
+            <middleName>Отчество</middleName>
+          </fullName>
+        </selfEmployed>
+        <foreignAddress countryISOCode="BE">
+          <address>Бельгия, Брюссель, Avenue Broustin 118</address>
+        </foreignAddress>
+		<additionalIdentificator>1233532</additionalIdentificator>
+      </shipTo>
+    </deliveryInfo>
+    <lineItems> <!-- Сведения о товарах -->
+      <currencyISOCode>RUB</currencyISOCode>
+      <lineItem> <!-- Сведения о товаре -->
+        <gtin>63453534534531</gtin> <!-- GTIN -->
+        <internalBuyerCode>123456</internalBuyerCode> <!-- Код товара в системе сети -->
+        <internalSupplierCode>56456</internalSupplierCode> <!-- Код товара в системе поставщика -->
+		<orderLineNumber>1</orderLineNumber>
+        <description>Молоко "Простоквашино"</description> <!-- Название товара -->
+        <quantity unitOfMeasure="PCE">12.000</quantity> <!-- Количество с единицей измерения (PCE - штука, KGM - килограмм) -->
+        <netPrice>12.4324</netPrice> <!-- Цена за единицу без НДС -->
+		<netPriceWithVAT>15.0000</netPriceWithVAT> <!-- Цена за единицу с НДС -->
+        <netAmount>149.1888</netAmount> <!-- Сумма по всей позиции без НДС -->
+		<exciseDuty>12.4324</exciseDuty> <!-- В том числе акциз (не обязательный) -->
+        <vATRate>0</vATRate> <!-- Ставка НДС (NOT_APPLICABLE - без НДС, 0 - 0%, 10 - 10%, 18 - 18%) -->
+        <vATAmount>0.0000</vATAmount> <!-- Сумма НДС. Должно отсутствовать, если ставка НДС равна “Без НДС” -->
+        <amount>149.1888</amount> <!-- Сумма по всей позиции с НДС -->
+      </lineItem>
+      <lineItem>
+        <gtin>00012000245223</gtin>
+        <internalBuyerCode>123458</internalBuyerCode>
+        <internalSupplierCode>56656</internalSupplierCode>
+		<orderLineNumber>2</orderLineNumber>
+        <description>Кефир 1%</description>
+        <quantity unitOfMeasure="PCE">8.000</quantity>
+        <netPrice>15.0000</netPrice>
+        <netAmount>120.0000</netAmount>
+        <vATRate>10</vATRate>
+        <vATAmount>12.5540</vATAmount>
+        <amount>132.5540</amount>
+        <countryOfOriginISOCode>UA</countryOfOriginISOCode> <!-- Страна происхождения (Код (2-alpha) страны происхождения, согласно ISO-3166) -->
+        <customsDeclarationNumber>23423488/051012/2224685/66</customsDeclarationNumber> <!-- Номер таможенной декларации. Должен присутствовать, если указана хотя бы одна страна происхождения, отличающаяся от “RU”, “KZ”, “BY”)  -->
+      </lineItem>
+      <totalSumExcludingTaxes>269.18</totalSumExcludingTaxes> <!-- Сумма всего без НДС -->
+      <totalVATAmount>12.55</totalVATAmount> <!-- Сумма НДС. Должно быть заполнено, если хотя бы по одной позиции ставка НДС не равна "без НДС". Равна сумме значений "Сумма НДС" по всем строкам -->
+      <totalAmount>181.73</totalAmount> <!-- Сумма к оплате всего с НДС -->
+    </lineItems>
+  </invoice>
+</eDIMessage>
