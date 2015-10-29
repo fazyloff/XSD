@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns="http://profit.ru/schema/ogp"
+            targetNamespace="http://profit.ru/schema/ogp"
+            elementFormDefault="qualified">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="ru">
+      Схема XML-файла загрузки актов приемки металлического лома, реестра актов.
+      Copyright 2012-2013 Profit.ru
+    </xsd:documentation>
+  </xsd:annotation>
+  
+  <xsd:element name="data" type="DataType"/>
+  
+  <xsd:complexType name="DataType">
+    <xsd:sequence>
+      <xsd:element name="org_id" type="xsd:long"/>
+      <xsd:element name="date_from" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="date_to" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="acts" type="ActsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="ActsType">
+    <xsd:sequence>
+      <xsd:element name="act" maxOccurs="unbounded" type="ActType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="ActType">
+    <xsd:sequence>
+			<xsd:element name="act_no" type="xsd:string"/>
+			<xsd:element name="act_date" type="xsd:date"/>
+			<xsd:element name="brutto" type="xsd:decimal"/>
+			<xsd:element name="tara" type="xsd:decimal"/>
+      <xsd:element name="weight_date" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="is_auto_weight" type="xsd:integer"/>
+      <xsd:element name="payment_type" type="xsd:integer"/>
+      <xsd:element name="delivery_date" type="xsd:date"/>
+      <xsd:element name="trash_percent" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="prod_site_id" type="xsd:integer"/>
+      <xsd:element name="prod_site" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="car_no" type="xsd:string"/>
+      <xsd:element name="is_self_removal" type="xsd:integer"/>
+      <xsd:element name="car_brand" type="xsd:string"/>
+      <xsd:element name="reg_cert" type="xsd:string"/>
+      <xsd:element name="car_owner" type="xsd:string"/>
+      <xsd:element name="contragent_code" type="xsd:string"/>
+      <xsd:element name="contragent_type" type="xsd:integer"/>
+      <xsd:element name="contragent_name" type="xsd:string"/>
+      <xsd:element name="address" type="xsd:string"/>
+      <xsd:element name="birthday" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="passport" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="inn" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="kpp" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="okpo" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="notes" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="tara_date" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="is_auto_tara" minOccurs="0" type="xsd:integer"/>
+      <xsd:element name="act_type" minOccurs="0" type="xsd:integer"/>
+      <xsd:element name="is_change_weight" minOccurs="0" type="xsd:integer"/>
+      <xsd:element name="is_raw_customer" minOccurs="0" type="xsd:integer"/>
+      <xsd:element name="brutto_corr" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="tara_corr" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="act_insert" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="act_update" minOccurs="0" type="xsd:dateTime"/>
+			<xsd:element name="rcpt_no" minOccurs="0" type="xsd:string"/>
+			<xsd:element name="rcpt_date" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="rcpt_brutto" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="rcpt_brutto_auto" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="rcpt_brutto_corr" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="rcpt_tara" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="rcpt_tara_auto" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="rcpt_tara_corr" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="rcpt_insert" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="rcpt_update" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="doc_type" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="doc_serial" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="doc_num" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="doc_date" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="doc_who" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="contract_num" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="contract_date" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="act_id" minOccurs="0" type="xsd:string"/>
+			<xsd:element name="list" type="ListType"/>
+			<xsd:element name="photos" minOccurs="0" type="PhotosType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="ListType">
+    <xsd:sequence>
+      <xsd:element name="pos" maxOccurs="unbounded" type="PosType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="PosType">
+    <xsd:sequence>
+      <xsd:element name="pos_no" type="xsd:integer"/>
+      <xsd:element name="product_id" type="xsd:integer"/>
+      <xsd:element name="netto" type="xsd:decimal"/>
+      <xsd:element name="price" type="xsd:decimal"/>
+      <xsd:element name="summa" type="xsd:decimal"/>
+      <xsd:element name="weight" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="trash" minOccurs="0" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PhotosType">
+    <xsd:sequence>
+      <xsd:element name="row" maxOccurs="unbounded" type="RowType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RowType">
+    <xsd:sequence>
+      <xsd:element name="photo_no" type="xsd:integer"/>
+      <xsd:element name="photo" type="xsd:base64Binary"/>
+      <xsd:element name="photo_date" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="photo_type" minOccurs="0" type="xsd:integer"/>
+      <xsd:element name="cam_no" minOccurs="0" type="xsd:integer"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="register" type="RegisterType"/>
+  
+  <xsd:complexType name="RegisterType">
+    <xsd:sequence>
+      <xsd:element name="org_id" type="xsd:long"/>
+      <xsd:element name="date_from" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="date_to" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="regs" type="RegsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="RegsType">
+    <xsd:sequence>
+      <xsd:element name="reg" maxOccurs="unbounded" type="RegType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="RegType">
+    <xsd:sequence>
+			<xsd:element name="act_date" type="xsd:date"/>
+			<xsd:element name="brutto" minOccurs="0" type="xsd:decimal"/>
+			<xsd:element name="tara" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="prod_site_id" type="xsd:integer"/>
+      <xsd:element name="prod_site" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="netto" type="xsd:decimal"/>
+			<xsd:element name="summa" type="xsd:decimal"/>
+      <xsd:element name="act_type" minOccurs="0" type="xsd:integer"/>
+    </xsd:sequence>
+  </xsd:complexType>
+	
+  <xsd:element name="sert" type="SertType"/>
+  
+  <xsd:complexType name="SertType">
+    <xsd:sequence>
+      <xsd:element name="org_id" type="xsd:long"/>
+      <xsd:element name="date_from" type="xsd:date"/>
+      <xsd:element name="date_to" type="xsd:date"/>
+      <xsd:element name="cars" type="CarsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="CarsType">
+    <xsd:sequence>
+      <xsd:element name="car" maxOccurs="unbounded" type="CarType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="CarType">
+    <xsd:sequence>
+      <xsd:element name="contract_id" type="xsd:integer"/>
+      <xsd:element name="product_id" type="xsd:integer"/>
+      <xsd:element name="send_date" type="xsd:date"/>
+      <xsd:element name="fr_send_id" minOccurs="0" type="xsd:integer"/>
+      <xsd:element name="station_id" type="xsd:integer"/>
+      <xsd:element name="car_no" type="xsd:string"/>
+      <xsd:element name="weight" type="xsd:decimal"/>
+      <xsd:element name="price" minOccurs="0" type="xsd:decimal"/>
+      <xsd:element name="rw_doc_no" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="rec_id" type="xsd:string"/>
+      <xsd:element name="photos" minOccurs="0" type="PhotosType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+	
+  <xsd:element name="store" type="StoreType"/>
+  
+  <xsd:complexType name="StoreType">
+    <xsd:sequence>
+      <xsd:element name="org_id" type="xsd:long"/>
+      <xsd:element name="date_from" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="date_to" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="scraps" type="ScrapsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="ScrapsType">
+    <xsd:sequence>
+      <xsd:element name="scrap" maxOccurs="unbounded" type="ScrapType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="ScrapType">
+    <xsd:sequence>
+      <xsd:element name="act_date" type="xsd:date"/>
+			<xsd:element name="prod_site_id" type="xsd:integer"/>
+			<xsd:element name="payment_type" type="xsd:integer"/>
+			<xsd:element name="rest" type="xsd:decimal"/>
+			<xsd:element name="netto" type="xsd:decimal"/>
+      <xsd:element name="summa" type="xsd:decimal"/>
+      <xsd:element name="verify" minOccurs="0" type="xsd:integer"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- for recycle car -->	
+  <xsd:element name="auto" type="AutoType"/>
+  
+  <xsd:complexType name="AutoType">
+    <xsd:sequence>
+      <xsd:element name="org_id" type="xsd:long"/>
+      <xsd:element name="date_from" type="xsd:date"/>
+      <xsd:element name="date_to" type="xsd:date"/>
+      <xsd:element name="vehicles" type="VehiclesType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="VehiclesType">
+    <xsd:sequence>
+      <xsd:element name="vehicle" maxOccurs="unbounded" type="VehicleType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="VehicleType">
+    <xsd:sequence>
+      <xsd:element name="act_id" type="xsd:string"/>
+      <xsd:element name="act_no" type="xsd:string"/>
+	  <xsd:element name="act_date" type="xsd:date"/>
+	  <xsd:element name="prod_site_id" type="xsd:integer"/>
+      <xsd:element name="person_type" type="xsd:integer"/>
+      <xsd:element name="date_util" type="xsd:date"/>
+      <xsd:element name="phone" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="car_used_since" type="xsd:date"/>
+      <xsd:element name="notes" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="reference_unique" type="xsd:integer"/>
+      <xsd:element name="reference_department" type="xsd:string"/>
+      <xsd:element name="reference_date" type="xsd:date"/>
+      <xsd:element name="vin" type="xsd:string"/>
+      <xsd:element name="body_number" type="xsd:string"/>
+      <xsd:element name="full_complect" type="xsd:integer"/>
+      <xsd:element name="vehicle_type_id" type="xsd:integer"/>
+      <xsd:element name="trust_name" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="trust_date" minOccurs="0" type="xsd:date"/>
+      <xsd:element name="trust_num" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="vehicle_insert" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="vehicle_update" minOccurs="0" type="xsd:dateTime"/>
+	  <xsd:element name="vehicle_no" minOccurs="0" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>
