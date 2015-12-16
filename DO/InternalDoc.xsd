@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://gradient.ru/xsd/ax-1sdo">
+  <xs:element name="data">
+	<xs:annotation>
+		<xs:documentation>
+			Структура для передачи данных
+		</xs:documentation>
+	</xs:annotation>
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="document">
+		<xs:annotation>
+		<xs:documentation>
+			Структура документа
+		</xs:documentation>
+	</xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+			  	<xs:annotation>
+					<xs:documentation>
+						Структура для передачи данных о подразделении
+					</xs:documentation>
+				</xs:annotation>
+                <xs:complexType>
+                  <xs:attribute name="Code" type="xs:string" use="required">
+				  <xs:annotation>
+					<xs:documentation>
+						Код подразделения, строка
+					</xs:documentation>
+				</xs:annotation>
+				</xs:attribute>
+                  <xs:attribute name="Name" type="xs:string" use="required">
+				  <xs:annotation>
+					<xs:documentation>
+						Наименование подразделения, строка
+					</xs:documentation>
+				</xs:annotation>
+				</xs:attribute>
+                  <xs:attribute name="Purpose" type="xs:string" use="required">
+				  <xs:annotation>
+					<xs:documentation>
+						Назначение, строка
+					</xs:documentation>
+				</xs:annotation>
+				</xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Route" type="xs:string" use="required"/>
+            <xs:attribute name="documentType" type="xs:string" use="required"/>
+            <xs:attribute name="operationType" type="xs:string" use="required"/>
+            <xs:attribute name="ID" type="xs:unsignedInt" use="required"/>
+            <xs:attribute name="companyID" type="xs:unsignedByte" use="required"/>
+            <xs:attribute name="holdingID" type="xs:string" use="required"/>
+            <xs:attribute name="CreatedDate" type="xs:dateTime" use="required"/>
+            <xs:attribute name="RegNumber" type="xs:string" use="optional"/>
+            <xs:attribute name="Title" type="xs:string" use="required"/>
+            <xs:attribute name="Content" type="xs:string" use="optional"/>
+            <xs:attribute name="ResponsibleEmail" type="xs:string" use="required"/>
+            <xs:attribute name="ResponsibleName" type="xs:string" use="required"/>
+            <xs:attribute name="clientID" type="xs:string" use="optional"/>
+            <xs:attribute name="StartDate" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="EndDate" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="ProlongationOrder" type="xs:unsignedByte" use="optional"/>
+            <xs:attribute name="Sum" type="xs:decimal" use="optional"/>
+            <xs:attribute name="Currency" type="xs:string" use="optional"/>
+            <xs:attribute name="SecurityClearance" type="xs:string" use="optional"/>
+            <xs:attribute name="SignatureVerification" type="xs:string" use="optional"/>
+            <xs:attribute name="client" type="xs:boolean" use="optional"/>
+            <xs:attribute name="advance" type="xs:boolean" use="optional"/>
+            <xs:attribute name="cash" type="xs:boolean" use="optional"/>
+            <xs:attribute name="factoring" type="xs:boolean" use="optional"/>
+            <xs:attribute name="AgreeWithTreasury" type="xs:boolean" use="optional"/>
+            <xs:attribute name="AgreeWithLogisticians" type="xs:boolean" use="optional"/>
+            <xs:attribute name="AgreeWithTransportDep" type="xs:boolean" use="optional"/>
+            <xs:attribute name="AgreeWithFactoringDep" type="xs:boolean" use="optional"/>
+            <xs:attribute name="AgreeWithAccountant" type="xs:boolean" use="optional"/>
+            <xs:attribute name="AgreeWithHeadOfKM" type="xs:boolean" use="optional"/>
+            <xs:attribute name="MakeThePrice" type="xs:boolean" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
