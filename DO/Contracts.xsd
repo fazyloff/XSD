@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="document"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="subdivision"/>
+      </xs:sequence>
+      <xs:attribute name="AgreeWithFactoringDep" use="required" type="xs:boolean">
+          <xs:annotation>Согласовать с Факторингом?</xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="AgreeWithLogisticians" use="required" type="xs:boolean"/>
+      <xs:attribute name="AgreeWithTransportDep" use="required" type="xs:boolean"/>
+      <xs:attribute name="AgreeWithTreasury" use="required" type="xs:boolean"/>
+      <xs:attribute name="Content" use="required" type="xs:NCName"/>
+      <xs:attribute name="CreatedDate" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="Currency" use="required" type="xs:integer"/>
+      <xs:attribute name="EndDate" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="ID" use="required" type="xs:integer"/>
+      <xs:attribute name="ProlongationOrder" use="required" type="xs:integer"/>
+      <xs:attribute name="RegNumber" use="required"/>
+      <xs:attribute name="ResponsibleEmail" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="ResponsibleName" use="required"/>
+      <xs:attribute name="Route" use="required" type="xs:NCName"/>
+      <xs:attribute name="SecurityClearance" use="required" type="xs:NCName"/>
+      <xs:attribute name="SignatureVerification" use="required" type="xs:NCName"/>
+      <xs:attribute name="StartDate" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="Sum" use="required" type="xs:integer"/>
+      <xs:attribute name="Title" use="required" type="xs:NCName"/>
+      <xs:attribute name="advance" use="required" type="xs:boolean"/>
+      <xs:attribute name="cash" use="required" type="xs:boolean"/>
+      <xs:attribute name="client" use="required" type="xs:boolean"/>
+      <xs:attribute name="clientID" use="required" type="xs:NCName"/>
+      <xs:attribute name="companyID" use="required" type="xs:integer"/>
+      <xs:attribute name="documentType" use="required" type="xs:NCName"/>
+      <xs:attribute name="factoring" use="required" type="xs:boolean"/>
+      <xs:attribute name="holdingID" use="required" type="xs:NCName"/>
+      <xs:attribute name="operationType" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subdivision">
+    <xs:complexType>
+      <xs:attribute name="Code" use="required" type="xs:NCName"/>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+      <xs:attribute name="Purpose" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
