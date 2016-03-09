@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container xmlns="http://www.coty.com/Rarus/Axapta/99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd">
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>CustomerOrder</ObjectType>
+    <Object>
+      <CustomerOrder xmlns:Nom="http://www.coty.com/Rarus/Axapta/10" xmlns:CO="http://www.coty.com/Rarus/Axapta/30" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/30-1CAxapta_Customer'sOrder.xsd">
+        <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">201500000142213</CO:ID>
+        <CO:ID_Axapta xmlns="http://www.coty.com/Rarus/Axapta/30">ЗКЛг0230649</CO:ID_Axapta>
+        <CO:DateTime xmlns="http://www.coty.com/Rarus/Axapta/30">2015-10-27T18:01:41</CO:DateTime>
+        <CO:Date_sales xmlns="http://www.coty.com/Rarus/Axapta/30">2015-10-29T00:00:00</CO:Date_sales>
+        <CO:Date_Acceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0001-01-01T00:00:00</CO:Date_Acceptance>
+        <CO:Num_Customer_Order xmlns="http://www.coty.com/Rarus/Axapta/30">Гиперглобус</CO:Num_Customer_Order>
+        <CO:ParentOrder xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:DvlMode xmlns="http://www.coty.com/Rarus/Axapta/30">Самовывоз</CO:DvlMode>
+        <CO:TypeOrder>
+          <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">Регион</CO:ID>
+          <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Реализация в регионы</CO:Name>
+        </CO:TypeOrder>
+        <CO:CHAIN>
+          <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">ГД_COTY_3PL</CO:ID>
+          <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Переброска ПЛК-ГД</CO:Name>
+        </CO:CHAIN>
+        <CO:VAT_Included xmlns="http://www.coty.com/Rarus/Axapta/30">true</CO:VAT_Included>
+        <CO:Sticking xmlns="http://www.coty.com/Rarus/Axapta/30">true</CO:Sticking>
+        <CO:Counterparties>
+          <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">ГД</CO:ID>
+          <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Градиент Дистрибьюция ООО</CO:Name>
+          <CO:ShortName xmlns="http://www.coty.com/Rarus/Axapta/30">Градиент Дистрибьюция ООО</CO:ShortName>
+          <CO:INN xmlns="http://www.coty.com/Rarus/Axapta/30">7705442145</CO:INN>
+          <CO:KPP xmlns="http://www.coty.com/Rarus/Axapta/30">502101001</CO:KPP>
+        </CO:Counterparties>
+        <CO:Contract>
+          <CO:RContractAccount xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:RContractNumber xmlns="http://www.coty.com/Rarus/Axapta/30">КД3/2014/Coty-ДП</CO:RContractNumber>
+          <CO:RSubContractAccount xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        </CO:Contract>
+        <CO:Consignee>
+          <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">ГД</CO:ID>
+          <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Градиент Дистрибьюция ООО</CO:Name>
+          <CO:ShortName xmlns="http://www.coty.com/Rarus/Axapta/30">Градиент Дистрибьюция ООО</CO:ShortName>
+          <CO:INN xmlns="http://www.coty.com/Rarus/Axapta/30">7705442145</CO:INN>
+          <CO:KPP xmlns="http://www.coty.com/Rarus/Axapta/30">502101001</CO:KPP>
+        </CO:Consignee>
+        <CO:Address>
+          <CO:GRD_AddressRegNum xmlns="http://www.coty.com/Rarus/Axapta/30">981667</CO:GRD_AddressRegNum>
+          <CO:Address xmlns="http://www.coty.com/Rarus/Axapta/30">142180,Московская обл,Климовск г,Коммунальная ул, д. 23</CO:Address>
+          <CO:CLADRUsage xmlns="http://www.coty.com/Rarus/Axapta/30">1</CO:CLADRUsage>
+          <CO:AddressName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CLADR>
+            <CO:CountryRegion>
+              <CO:CountryRegionId xmlns="http://www.coty.com/Rarus/Axapta/30">RU</CO:CountryRegionId>
+              <CO:CountryRegionName xmlns="http://www.coty.com/Rarus/Axapta/30">РОССИЯ</CO:CountryRegionName>
+            </CO:CountryRegion>
+            <CO:ZipCode>
+              <CO:ZipCodeId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:ZipCode>
+            <CO:State>
+              <CO:StateId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:StateName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:StateTypeId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:StateTypeName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:State>
+            <CO:County>
+              <CO:CountyId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:CountyName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:CountyTypeId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:CountyTypeName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:County>
+            <CO:Town>
+              <CO:TownId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:TownName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:TownTypeId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:TownTypeName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:Town>
+            <CO:Settlement>
+              <CO:SettlementId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:SettlementName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:SettlementTypeId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:SettlementTypeName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:Settlement>
+            <CO:Street>
+              <CO:StreetId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:StreetName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:StreetTypeId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+              <CO:StreetTypeName xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:Street>
+            <CO:Estate>
+              <CO:EstateId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:Estate>
+            <CO:Building>
+              <CO:BuildingId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+            </CO:Building>
+          </CO:CLADR>
+        </CO:Address>
+        <CO:AddressDC xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:Status xmlns="http://www.coty.com/Rarus/Axapta/30">Acceptance</CO:Status>
+        <CO:Date_Expedition xmlns="http://www.coty.com/Rarus/Axapta/30">0001-01-01T00:00:00</CO:Date_Expedition>
+        <CO:EDI_RelationId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:UltimateCustomerGLN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:Service24ReasonId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:is3PL xmlns="http://www.coty.com/Rarus/Axapta/30">1</CO:is3PL>
+        <CO:InternalOrder xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:InternalOrder>
+        <CO:WarehouseHead>
+          <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+          <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+        </CO:WarehouseHead>
+        <CO:EDICodeByBuyer xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">81001007040</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Fun Sensation освеж.парфюм.вода 75мл жен</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">12</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">183.47</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">81001007044</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas get ready! освеж.парфюм.вода 75мл жен</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">48</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">183.47</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984637000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Extreme Power део спрей 150</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">96</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.68</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984492000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 Extreme Power гель д/душа 250мл муж</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">108</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31788286000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas get ready! део стик 51гр</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">72</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">114.52</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31788297000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas get ready! део спрей муж 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">168</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.68</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31983829000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Team Five део спрей муж 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">144</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.68</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984127000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas UEFA Champions League гель д/д муж 250мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">72</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31712164000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas C&amp;C get ready! ант/т ролик жен 50мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">120</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">62.7</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31475136000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas C&amp;C Soften ант-т спрей жен 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">48</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.61</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31475326000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas С&amp;C Control ант/т спрей жен 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">192</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.61</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31712170000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas C&amp;C get ready! ант/т жен 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">288</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.61</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31983857000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas C&amp;C 6в1 ант/т спрей жен 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">216</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.61</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31535252000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Protect гель д/душа 250мл жен</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">96</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">79.66</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31711128000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas get ready! гель д/д жен 250мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">72</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">79.66</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984237000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Soft Honey гель д/д жен 250мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">48</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">79.66</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984641000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Happy гель д/душа жен 250мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">48</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">79.66</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984458000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 get ready! гель д/д муж 250мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">108</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984554000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 Team Five гель д/душа 250мл муж</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">36</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31712186000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas get ready! ант/т ролик муж 50мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">168</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">79.66</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31983862000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas C&amp;D 6в1 ант/т спрей муж 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">168</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.68</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984465000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 Extra Fresh гель д/душа 250мл муж</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">108</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31535257000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 Актив Старт 250мл муж</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">60</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984479000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 After Sport гель д/душа 250мл муж</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">168</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984887000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Hair&amp;Body 3 Sport Energy гель д/душа 250мл муж</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">60</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">85.17</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984103000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas UEFA Champions League део-спрей муж 150мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">96</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">89.68</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Goods>
+          <Nom:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984104000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas UEFA Champions League лосьон п/бр 100мл</Nom:Name>
+          </Nom:Nomenclature>
+          <CO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/30">48</CO:Quantity>
+          <CO:QuantityAcceptance xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityAcceptance>
+          <CO:QuantityShipped xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:QuantityShipped>
+          <CO:Price xmlns="http://www.coty.com/Rarus/Axapta/30">174.54</CO:Price>
+          <CO:VAT_rate xmlns="http://www.coty.com/Rarus/Axapta/30">18</CO:VAT_rate>
+          <CO:GTIN xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:CustLineNum xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:CustLineNum>
+          <CO:ExternaItemId xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitCode xmlns="http://www.coty.com/Rarus/Axapta/30" />
+          <CO:OrderedUnitPacksize xmlns="http://www.coty.com/Rarus/Axapta/30">0</CO:OrderedUnitPacksize>
+          <CO:Warehouse>
+            <CO:ID xmlns="http://www.coty.com/Rarus/Axapta/30">К_Основной</CO:ID>
+            <CO:Name xmlns="http://www.coty.com/Rarus/Axapta/30">Основной_Коти</CO:Name>
+          </CO:Warehouse>
+        </CO:Goods>
+        <CO:Amount xmlns="http://www.coty.com/Rarus/Axapta/30">257825.88</CO:Amount>
+        <CO:Comment xmlns="http://www.coty.com/Rarus/Axapta/30">Гиперглобус</CO:Comment>
+        <CO:TransportDescription xmlns="http://www.coty.com/Rarus/Axapta/30" />
+        <CO:StoreDescription xmlns="http://www.coty.com/Rarus/Axapta/30">СТИКЕРОВАТЬ</CO:StoreDescription>
+        <CO:Id_invoice xmlns="http://www.coty.com/Rarus/Axapta/30">10/29/586</CO:Id_invoice>
+        <CO:Barcode_Invoice xmlns="http://www.coty.com/Rarus/Axapta/30">201500000106182</CO:Barcode_Invoice>
+      </CustomerOrder>
+    </Object>
+  </DataGroup>
+</Container>

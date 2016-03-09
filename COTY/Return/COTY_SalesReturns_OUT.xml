@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>SalesReturns</ObjectType>
+    <Object>
+      <SalesReturns>
+        <ID>46820002443</ID>
+        <DateTime>2015-10-21T00:00:00</DateTime>
+        <Type>
+          <Number>10/21/1 049-возв</Number>
+        </Type>
+        <Counterparties>
+          <ID>ДИС.8844</ID>
+          <Name>ООО " МЕТРО Кэш энд Керри"</Name>
+        </Counterparties>
+        <ID_CustomerOrder>ЗКЛг0226228</ID_CustomerOrder>
+        <VAT_Included>0</VAT_Included>
+        <Is3PL>1</Is3PL>
+        <Contract>
+          <RContractAccount>
+          </RContractAccount>
+          <RContractNumber>
+          </RContractNumber>
+          <RSubContractAccount>
+          </RSubContractAccount>
+        </Contract>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>30003351000</Id>
+            <Name>2492 Ж д/сн лака суп укр Extra Stre</Name>
+          </Nomenclature>
+          <Quantity>4.0000</Quantity>
+          <COGS>0</COGS>
+          <Price>206.9600</Price>
+          <VAT_rate>18</VAT_rate>
+          <ID_Sales>ПЛК15040237_т</ID_Sales>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>К3PL_Основной</Name>
+          </Warehouse>
+          <Reason>коммерческий  излишек</Reason>
+        </Goods>
+        <Amount>4.0000</Amount>
+        <Comment>10/21/1 049-возв</Comment>
+      </SalesReturns>
+    </Object>
+  </DataGroup>
+</Container>

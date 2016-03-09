@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>ConfirmationAssemble_Disassemble</ObjectType>
+    <Object>
+      <ConfirmationAssemble_Disassemble>
+        <IDAssemble_Disassemble>46836754233</IDAssemble_Disassemble>
+        <DateTime>2015-11-25T12:11:05</DateTime>
+        <OperationKind>Assemble</OperationKind>
+        <Nomenclature>
+          <Organization>
+          </Organization>
+          <Id>65792189000TST</Id>
+          <Name>(Т) Си Кей Уан Ред т/в жен 50мл</Name>
+        </Nomenclature>
+        <Quantity>50.0000</Quantity>
+        <Price>266.8800</Price>
+        <WarehouseOut>
+          <ID>К_ПН</ID>
+          <Name>К3PL_ПН</Name>
+        </WarehouseOut>
+        <WarehouseIn>
+          <ID>К_ПН</ID>
+          <Name>К3PL_ПН</Name>
+        </WarehouseIn>
+        <Comment>Журнал: 468073496 201500000003010 Перевод продукта в тестеры CK</Comment>
+        <CustomsDocNumber>
+        </CustomsDocNumber>
+        <ContryOfGood>RU</ContryOfGood>
+        <ID_RemakeOrder>201500000003010</ID_RemakeOrder>
+        <ID_COTY>
+        </ID_COTY>
+        <Accessory>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>65792189000</Id>
+            <Name>Си Кей Уан Ред т/в жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>50.0000</Quantity>
+          <Price>266.8806</Price>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>RU</ContryOfGood>
+        </Accessory>
+      </ConfirmationAssemble_Disassemble>
+    </Object>
+  </DataGroup>
+</Container>

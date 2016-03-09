@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://gradient.ru/xsd/ax-1sdo">
+
+  <xs:element name="data">
+	  <xs:annotation>
+		  <xs:documentation>
+			  Структура для передачи данных
+		  </xs:documentation>
+	  </xs:annotation>
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="document">
+		      <xs:annotation>
+		        <xs:documentation>
+			        Структура документа
+		        </xs:documentation>
+	        </xs:annotation>
+
+          <xs:complexType>
+
+            <xs:sequence>
+              <xs:element name="subdivision" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>
+                    Структура для передачи данных о подразделении
+                  </xs:documentation>
+                </xs:annotation>
+
+                <xs:complexType>
+                  <xs:attribute name="Code" use="required">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Код подразделения, не пустая строка (10)
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+
+                  <xs:attribute name="Name" use="required">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Наименование подразделения, не пустая строка (150)
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="150"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+
+                  <xs:attribute name="Purpose" use="required">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Назначение, строка (строго 2 символа). По этому коду ищется назначение (префикс "purpose-").
+                        В назначении есть ссылка не ветку Подразделений, в которой по соответствующему коду с префиксом, указанном в ветке можно найти Подразделение.
+                        При создании процесса программа рекурсивно пройдётся по этапам процесса и заменит Назначение на Подразделение.
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="2"/>
+                        <xs:maxLength value="2"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+
+            <xs:attribute name="Route" use="required">
+				      <xs:annotation>
+					      <xs:documentation>
+						      Маршрут, не пустая строка (20), по этому коду находится Шаблон комплексного процесса, который мы должны запустить.
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="20"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+<!--
+						      /********************* РЕКВИЗИТЫ ШАПКИ ВНУТРЕННЕГО ДОКУМЕНТА ********************************/
+-->
+            
+            <xs:attribute name="documentType" use="required">
+				      <xs:annotation>
+					      <xs:documentation>
+						      Тип присылаемой заявки, не пустая строка (9), по этому коду находится Папка внутреннеого документа, в которой будет создана карточка документа.
+	                "Pact" - значит это Договор (при необходимости создания нового вида внутреннего документа - будут проставлены соответствующие настройки)
+	                "Partner" - заявка по контрагенту
+	                В этих случаях понятно, что учёт ведётся по Корреспондентам (=Контрагентам) и ставится соответствующая галочка в виде внутреннего документа
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="9"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            
+            <xs:attribute name="operationType" use="required">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Вид заявки, не пустая строка (100), по этому имени находится Вид внутреннеого документа.
+	                "Заявка на регистрацию контрагента" - значит прописываем в Корреспонденты элемент по коду "00-000006"
+                  Т.е. поле корреспондент обязательно для заполнения в данном случае, но Контрагент ещё не заведён в Аксапте
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="ID" use="required">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Вид заявки, не пустая строка (15), по этому коду находится Внутренний документ.
+                  ДО не загружает объект, если уже есть с таким кодом.
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="15"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="companyID" use="required">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Код организации, не пустая строка (9), по этому коду находится Организация.
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="9"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            
+            <xs:attribute name="holdingID" use="required">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Код холдинга, не пустая строка (138), если не нашли организацию, то создаём новую с соответствующим кодом.
+                  В качестве названия организации становится companyID + " - " + holdingID
+                  Длина наименования справочника Организации: 150
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="138"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            
+            <xs:attribute name="CreatedDate" type="xs:dateTime" use="required">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Дата создания заявки.
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+           
+            <xs:attribute name="RegNumber" use="optional">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Регистрационный номер внутреннего документа, не пустая строка (30)
+                  Если RegNumber пустой, то берётся значение ID (например, в Рекламациях)
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="30"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="Title" use="required">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Заголовок врутреннего документа, не пустая строка (150)
+                  Визуальное представление документа в списке и Заголовок самой карточки.
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="150"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="Content" use="optional">
+ 				      <xs:annotation>
+					      <xs:documentation>
+						      Содержание врутреннего документа, строка неограниченной длинны. Многострочное описание документа. 
+                  Сюда можно передавать какую то дополнительную информацию, которая не влияет на технический маршрут бизнес-процесса в рамках ДО.
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+
+            <xs:attribute name="ResponsibleEmail" use="required">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Email ответственного за заявку, не пустая строка (100)
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="100"/>        
+                  <xs:pattern value="[^@]+@[^\.]+\..+"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            
+            <xs:attribute name="ResponsibleName" use="required">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Имя пользователя, ответственного за заявку, не пустая строка (100)
+                  Если пользователя не удалось найти по email, то создаётся новый с этим именем.
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:minLength value="1"/>
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+<!--
+						      /********************* КОНТРАГЕНТ ********************************/
+-->
+
+<!--
+						      /********************* РЕКВИЗИТЫ ДОГОВОРОВ ********************************/
+-->
+
+            <xs:attribute name="StartDate" use="optional">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Дата начала действия документа
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:date">
+                  <xs:maxInclusive value="3999-12-31" />
+                  <xs:minInclusive value="1980-01-01" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="EndDate" use="optional">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Дата окончания действия документа
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:dateTime">
+                  <xs:maxInclusive value="3999-12-31T23:59:59" /> 
+                  <xs:minInclusive value="1980-01-01T00:00:00" /> 
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="ProlongationOrder" use="optional">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Порядок пролонгации документа, не пустая строка (1)
+		              0 - Не продлевается
+		              1 - Допускает продление
+		              2 - Автоматически на месяц
+		              3 - Автоматически на квартал
+		              4 - Автоматически на полугодие
+		              5 - Автоматически на год
+		              6 - Автоматически на неопределенный срок
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="[0-6]"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            
+            <xs:attribute name="Sum" use="optional">
+  				    <xs:annotation>
+					      <xs:documentation>
+						      Сумма документа, неотрицательное число
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                  <xs:minInclusive value="0" /> 
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="Currency" use="optional">
+   				    <xs:annotation>
+					      <xs:documentation>
+						      Код валюты, не пустая строка (3)
+					      </xs:documentation>
+            	</xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="[0-9]{3}"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+<!--
+			/********************* ДОПОЛНИТЕЛЬНЫЕ РЕКВИЗИТЫ ********************************/
+-->
+
+              <!--
+						        /********************* блок "Нал-факт" (договора) ********************************/
+              -->
+
+              <xs:attribute name="SecurityClearance" use="optional">
+   				          <xs:annotation>
+					            <xs:documentation>
+						            Требуется проверка СБ, строка (100)
+                        используется в договорах
+					            </xs:documentation>
+            	      </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Да"/>
+                        <xs:enumeration value="Нал-факт"/>
+                        <xs:enumeration value="Нет"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+            
+                  <xs:attribute name="SignatureVerification" use="optional">
+   				          <xs:annotation>
+					            <xs:documentation>
+						            Требуется проверка подписи, строка (100)
+                        используется в договорах
+					            </xs:documentation>
+            	      </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Да"/>
+                        <xs:enumeration value="Нал-факт"/>
+                        <xs:enumeration value="Нет"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                       
+                          <xs:attribute name="client" type="xs:boolean" use="optional">
+    				                <xs:annotation>
+					                    <xs:documentation>
+						                    Клиент это или нет (поставщик).
+                                используется в договорах, если требуется проверка СБ или подписи "Нал-факт"
+					                    </xs:documentation>
+            	              </xs:annotation>
+                          </xs:attribute>
+           
+                          <xs:attribute name="advance" type="xs:boolean" use="optional">
+    				                <xs:annotation>
+					                    <xs:documentation>
+						                    Предоплата.
+                                используется в договорах, если требуется проверка СБ или подписи "Нал-факт"
+					                    </xs:documentation>
+            	              </xs:annotation>
+                          </xs:attribute>
+            
+                          <xs:attribute name="cash" type="xs:boolean" use="optional">
+    				                <xs:annotation>
+					                    <xs:documentation>
+						                    Наличные.
+                                используется в договорах, если требуется проверка СБ или подписи "Нал-факт"
+					                    </xs:documentation>
+            	              </xs:annotation>
+                          </xs:attribute>
+
+<!--
+			/********************* Прочие доп реквизиты договоров ********************************/
+-->
+            
+                 <xs:attribute name="factoring" type="xs:boolean" use="optional">
+    				        <xs:annotation>
+					            <xs:documentation>
+						            Факторинг.
+                        используется в договорах
+					            </xs:documentation>
+            	      </xs:annotation>
+                  </xs:attribute>
+            
+                  <xs:attribute name="AgreeWithTreasury" type="xs:boolean" use="optional">
+    				        <xs:annotation>
+					            <xs:documentation>
+						            согласовать с казначейством
+                        используется в договорах
+					            </xs:documentation>
+            	      </xs:annotation>
+                  </xs:attribute>
+            
+                  <xs:attribute name="AgreeWithLogisticians" type="xs:boolean" use="optional">
+    				        <xs:annotation>
+					            <xs:documentation>
+						            согласовать с логистом
+                        используется в договорах
+					            </xs:documentation>
+            	      </xs:annotation>
+                  </xs:attribute>
+            
+                  <xs:attribute name="AgreeWithTransportDep" type="xs:boolean" use="optional">
+    				        <xs:annotation>
+					            <xs:documentation>
+						            согласовать с транспортом
+                        используется в договорах
+					            </xs:documentation>
+            	      </xs:annotation>
+                  </xs:attribute>
+            
+            <xs:attribute name="AgreeWithFactoringDep" type="xs:boolean" use="optional">
+    				  <xs:annotation>
+					      <xs:documentation>
+						      согласовать с ФО (Факторинговый отдел)
+                  используется в договорах (documentType="Pact") и рекламациях по аналитикам и ценам (Route="Р.Аналит.и.Цены")
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+            
+            <xs:attribute name="AgreeWithAccountant" type="xs:boolean" use="optional">
+    				  <xs:annotation>
+					      <xs:documentation>
+						      согласовать с бухгелтером
+                  используется рекламациях по аналитикам и ценам (Route="Р.Аналит.и.Цены")
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+            
+            <xs:attribute name="AgreeWithHeadOfDep" type="xs:boolean" use="optional">
+    				  <xs:annotation>
+					      <xs:documentation>
+						      согласовать с линейным менеджером
+                  используется в рекламациях по аналитикам и ценам (Route="Р.Аналит.и.Цены")
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+            
+            <xs:attribute name="AgreeWithDCD" type="xs:boolean" use="optional">
+    				  <xs:annotation>
+					      <xs:documentation>
+						      согласовать с ЗКД (Заместитель Коммерческого Директора)
+                  используется в рекламациях по аналитикам и ценам (Route="Р.Аналит.и.Цены")
+                  (DCD = Deputy Commercial Director)
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+            
+            <xs:attribute name="MakeThePrice" type="xs:boolean" use="optional">
+    				  <xs:annotation>
+					      <xs:documentation>
+						      Необходимо внести необходимые настройки в ценообразовании (пока это касается клиентов работающих с Порталом).
+                  используется для маршрута Route="НовыйКонтрагент"
+					      </xs:documentation>
+            	</xs:annotation>
+            </xs:attribute>
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="date">
+    <xs:restriction base="xs:date">
+      <xs:pattern value="\d*-\d\d-\d\d"/>
+      
+    </xs:restriction>
+    
+  </xs:simpleType>
+ </xs:schema>

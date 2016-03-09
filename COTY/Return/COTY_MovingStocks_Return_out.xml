@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>MovingStocks</ObjectType>
+    <Object>
+      <MovingStocks>
+        <ID>468076918</ID>
+        <DateTime>2015-12-10T10:34:01</DateTime>
+        <ID_COTY>
+        </ID_COTY>
+        <DateTime_COTY>
+        </DateTime_COTY>
+        <Is3PL>1</Is3PL>
+        <WarehouseOut>
+          <ID>К_КК</ID>
+          <Name>К3PL_КК</Name>
+        </WarehouseOut>
+        <WarehouseIn>
+          <ID>К_Основной</ID>
+          <Name>К3PL_Основной</Name>
+        </WarehouseIn>
+        <Comment>Перемещение по акту Алькор и Ко_ЗКЛг0242293 </Comment>
+        <ID_RemakeOrder>
+        </ID_RemakeOrder>
+        <OperationKind>3</OperationKind>
+        <ID_MovingStocks>
+        </ID_MovingStocks>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31983857000</Id>
+            <Name>AD.C&amp;C део спрей 6в1 жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>3.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+      </MovingStocks>
+    </Object>
+  </DataGroup>
+</Container>
