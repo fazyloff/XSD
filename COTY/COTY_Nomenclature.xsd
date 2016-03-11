@@ -18,7 +18,7 @@
               </xs:element>
               <xs:element name="ObjectType" type="xs:string">
                 <xs:annotation>
-                  <xs:documentation>Type of object - CustomerOrder</xs:documentation>
+                  <xs:documentation>Type of object - Nomenclature</xs:documentation>
                 </xs:annotation>
               </xs:element>
               <xs:element name="Object">
@@ -155,7 +155,7 @@
                           </xs:element>
                           <xs:element name="UnitOfWeight" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation>unit of measure for weight</xs:documentation>
+                              <xs:documentation>unit of measure for weight, pieces - pieces, grab - sealed pack, carton - box</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="Gross_Weight_per_Unit" type="xs:decimal">
@@ -165,7 +165,7 @@
                           </xs:element>
                           <xs:element name="UnitOfVolume" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation>Unit of measure for volume</xs:documentation>
+                              <xs:documentation>Unit of measure for volume, pieces - pieces, grab - sealed pack, carton - box</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="Length_Depth" type="xs:decimal">
@@ -185,12 +185,12 @@
                           </xs:element>
                           <xs:element name="UnitOfPurch" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation>Unit of measure for Purch</xs:documentation>
+                              <xs:documentation>Unit of measure for Purch, pieces - pieces, grab - sealed pack, carton - box</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="UnitOfSales" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation>Unit of measure for Sales</xs:documentation>
+                              <xs:documentation>Unit of measure for Sales, pieces - pieces, grab - sealed pack, carton - box</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="Country_Of_Origin" type="xs:string">
