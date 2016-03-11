@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>Root element of a message</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationTag" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of operation - modify, insert, delete
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ObjectType" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Type of object - CustomerOrder</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Object">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Nomenclature">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Product information
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Organization" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Product Category
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Id" type="xs:unsignedLong">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Product id
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Name" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Product Name
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ShortName" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Shortened product name
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>                                      
+                          <xs:element name="NomenclatureType">
+                          <xs:annotation>
+                            <xs:documentation>Product type</xs:documentation>
+                          </xs:annotation>
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="Nomenclature">
+                                  <xs:annotation>
+                                    <xs:documentation>Simple product</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="Specification">
+                                  <xs:annotation>
+                                    <xs:documentation>Complex product</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                              </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                          <xs:element name="NomenclatureUnit">
+                            <xs:annotation>
+                              <xs:documentation>Product unit</xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="Goods">
+                                  <xs:annotation>
+                                    <xs:documentation>Simple product</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="Equipment">
+                                  <xs:annotation>
+                                    <xs:documentation>Equipment</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="Tester">
+                                  <xs:annotation>
+                                    <xs:documentation>Tester</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="Material">
+                                  <xs:annotation>
+                                    <xs:documentation>Component</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="Promo">
+                                  <xs:annotation>
+                                    <xs:documentation>Promo production</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="PartsEquipment">
+                                  <xs:annotation>
+                                    <xs:documentation>PArts Equipment</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="POSMaterial">
+                                  <xs:annotation>
+                                    <xs:documentation>POS Material</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="Expendables">
+                                  <xs:annotation>
+                                    <xs:documentation>Expendables</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="VAT_Purchase" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>VAT Stake in purch, 10, 0, 18 available</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="VAT_Sale" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>VAT Stake in sales, 10, 0, 18 available</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Alcohol" type="xs:boolean">
+                            <xs:annotation>
+                              <xs:documentation>Does product contain alcohol?</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="AlcoholPercentage" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Percentage of alcohol</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Volume" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Volume of unit of product</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="UnitOfWeight" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>unit of measure for weight</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Gross_Weight_per_Unit" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Gross weight of unit</xs:documentation>
+                            </xs:annotation>                            
+                          </xs:element>
+                          <xs:element name="UnitOfVolume" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Unit of measure for volume</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Length_Depth" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>lenght (Depth) of unit</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Width" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Width of unit</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Height" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Height of unit</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="UnitOfPurch" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Unit of measure for Purch</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="UnitOfSales" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Unit of measure for Sales</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Country_Of_Origin" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>ISO Country code of Product's Origin</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Units_per_Carton" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Units in box</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Units_per_Grab" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Units in one sealed pack</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Carton_per_Pallet" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Qty of boxes in one palet</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="EAN" type="xs:unsignedLong">
+                            <xs:annotation>
+                              <xs:documentation>Unit barcode</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="GrabEAN" type="xs:unsignedLong">
+                            <xs:annotation>
+                              <xs:documentation>barcode of one sealed pack</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="CartonEAN" type="xs:unsignedLong">
+                            <xs:annotation>
+                              <xs:documentation>barcode of one box</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ </xs:schema>

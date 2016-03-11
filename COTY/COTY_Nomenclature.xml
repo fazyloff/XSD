@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<Container xmlns="http://www.coty.com/Rarus/Axapta/99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd">
+<Container>
   <DataGroup>
     <OperationTag>modify</OperationTag>
     <ObjectType>Nomenclature</ObjectType>
     <Object>
-      <Nomenclature xmlns:Nom="http://www.coty.com/Rarus/Axapta/10" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/10 10-1CAxapta_Nomenclature.xsd">
-        <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
-        <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">30995292000</Nom:Id>
-        <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">Sally Hansen Complete Care  Nail Treatment 7-in-1 Средство для ухода за сухими ломкими ногтями</Nom:Name>
-        <Nom:ShortName xmlns="http://www.coty.com/Rarus/Axapta/10">Ср-тво д/ух.сух. Лом. ногтями 7-в-1</Nom:ShortName>
-        <Nom:NomenclatureType xmlns="http://www.coty.com/Rarus/Axapta/10">Nomenclature</Nom:NomenclatureType>
-        <Nom:NomenclatureUnit xmlns="http://www.coty.com/Rarus/Axapta/10">Goods</Nom:NomenclatureUnit>
-        <Nom:VAT_Purchase xmlns="http://www.coty.com/Rarus/Axapta/10">18</Nom:VAT_Purchase>
-        <Nom:VAT_Sale xmlns="http://www.coty.com/Rarus/Axapta/10">18</Nom:VAT_Sale>
-        <Nom:Alcohol xmlns="http://www.coty.com/Rarus/Axapta/10">true</Nom:Alcohol>
-        <Nom:AlcoholPercentage xmlns="http://www.coty.com/Rarus/Axapta/10">14.56</Nom:AlcoholPercentage>
-        <Nom:Volume xmlns="http://www.coty.com/Rarus/Axapta/10">13.3</Nom:Volume>
-        <Nom:UnitOfWeight xmlns="http://www.coty.com/Rarus/Axapta/10">Pieces</Nom:UnitOfWeight>
-        <Nom:Gross_Weight_per_Unit xmlns="http://www.coty.com/Rarus/Axapta/10">0.082</Nom:Gross_Weight_per_Unit>
-        <Nom:UnitOfVolume xmlns="http://www.coty.com/Rarus/Axapta/10">Pieces</Nom:UnitOfVolume>
-        <Nom:Length_Depth xmlns="http://www.coty.com/Rarus/Axapta/10">7.302</Nom:Length_Depth>
-        <Nom:Width xmlns="http://www.coty.com/Rarus/Axapta/10">3.175</Nom:Width>
-        <Nom:Height xmlns="http://www.coty.com/Rarus/Axapta/10">13.97</Nom:Height>
-        <Nom:UnitOfPurch xmlns="http://www.coty.com/Rarus/Axapta/10">Pieces</Nom:UnitOfPurch>
-        <Nom:UnitOfSales xmlns="http://www.coty.com/Rarus/Axapta/10">Pieces</Nom:UnitOfSales>
-        <Nom:Country_Of_Origin xmlns="http://www.coty.com/Rarus/Axapta/10">US</Nom:Country_Of_Origin>
-        <Nom:Units_per_Carton xmlns="http://www.coty.com/Rarus/Axapta/10">48</Nom:Units_per_Carton>
-        <Nom:Units_per_Grab xmlns="http://www.coty.com/Rarus/Axapta/10">1</Nom:Units_per_Grab>
-        <Nom:Carton_per_Pallet xmlns="http://www.coty.com/Rarus/Axapta/10">80</Nom:Carton_per_Pallet>
-        <Nom:EAN xmlns="http://www.coty.com/Rarus/Axapta/10">074170435061</Nom:EAN>
-        <Nom:GrabEAN xmlns="http://www.coty.com/Rarus/Axapta/10">3614221230725</Nom:GrabEAN>
-        <Nom:CartonEAN xmlns="http://www.coty.com/Rarus/Axapta/10">3614221230732</Nom:CartonEAN>
+      <Nomenclature>
+        <Organization>Color&amp;Body</Organization>
+        <Id>30995292000</Id>
+        <Name>Sally Hansen Complete Care  Nail Treatment 7-in-1 Средство для ухода за сухими ломкими ногтями</Name>
+        <ShortName>Ср-тво д/ух.сух. Лом. ногтями 7-в-1</ShortName>
+        <NomenclatureType>Nomenclature</NomenclatureType>
+        <NomenclatureUnit>Goods</NomenclatureUnit>
+        <VAT_Purchase>18</VAT_Purchase>
+        <VAT_Sale>18</VAT_Sale>
+        <Alcohol>true</Alcohol>
+        <AlcoholPercentage>14.56</AlcoholPercentage>
+        <Volume>13.3</Volume>
+        <UnitOfWeight>Pieces</UnitOfWeight>
+        <Gross_Weight_per_Unit>0.082</Gross_Weight_per_Unit>
+        <UnitOfVolume>Pieces</UnitOfVolume>
+        <Length_Depth>7.302</Length_Depth>
+        <Width>3.175</Width>
+        <Height>13.97</Height>
+        <UnitOfPurch>Pieces</UnitOfPurch>
+        <UnitOfSales>Pieces</UnitOfSales>
+        <Country_Of_Origin>US</Country_Of_Origin>
+        <Units_per_Carton>48</Units_per_Carton>
+        <Units_per_Grab>1</Units_per_Grab>
+        <Carton_per_Pallet>80</Carton_per_Pallet>
+        <EAN>074170435061</EAN>
+        <GrabEAN>3614221230725</GrabEAN>
+        <CartonEAN>3614221230732</CartonEAN>
       </Nomenclature>
     </Object>
   </DataGroup>
