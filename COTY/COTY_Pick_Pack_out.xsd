@@ -342,7 +342,7 @@
                                     <xs:documentation>Serial Shipping Container Code Information</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
-                                    <xs:sequence>
+                                    <xs:sequence maxOccurs="unbounded">
                                       <xs:element name="SerialNumber" type="xs:unsignedLong">
                                         <xs:annotation>
                                           <xs:documentation>Serial Shipping Container Code</xs:documentation>

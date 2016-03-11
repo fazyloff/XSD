@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>CustomerOrder</ObjectType>
+    <Object>
+      <CustomerOrder>
+        <ID>201500000142213</ID>
+        <ID_Axapta>ЗКЛг0230649</ID_Axapta>
+        <DateTime>2015-10-27T18:01:41</DateTime>
+        <Date_sales>2015-10-29T00:00:00</Date_sales>
+        <Date_Acceptance>0001-01-01T00:00:00</Date_Acceptance>
+        <Num_Customer_Order>Гиперглобус</Num_Customer_Order>
+        <ParentOrder />
+        <DvlMode>Самовывоз</DvlMode>
+        <TypeOrder>
+          <ID>Регион</ID>
+          <Name>Реализация в регионы</Name>
+        </TypeOrder>
+        <CHAIN>
+          <ID>ГД_COTY_3PL</ID>
+          <Name>Переброска ПЛК-ГД</Name>
+        </CHAIN>
+        <VAT_Included>true</VAT_Included>
+        <Sticking>true</Sticking>
+        <Counterparties>
+          <ID>ГД</ID>
+          <Name>Градиент Дистрибьюция ООО</Name>
+          <ShortName>Градиент Дистрибьюция ООО</ShortName>
+          <INN>7705442145</INN>
+          <KPP>502101001</KPP>
+        </Counterparties>
+        <Contract>
+          <RContractAccount />
+          <RContractNumber>КД3/2014/Coty-ДП</RContractNumber>
+          <RSubContractAccount />
+        </Contract>
+        <Consignee>
+          <ID>ГД</ID>
+          <Name>Градиент Дистрибьюция ООО</Name>
+          <ShortName>Градиент Дистрибьюция ООО</ShortName>
+          <INN>7705442145</INN>
+          <KPP>502101001</KPP>
+        </Consignee>
+        <Address>
+          <GRD_AddressRegNum>981667</GRD_AddressRegNum>
+          <Address>142180,Московская обл,Климовск г,Коммунальная ул, д. 23</Address>
+          <CLADRUsage>1</CLADRUsage>
+          <AddressName />
+          <CLADR>
+            <CountryRegion>
+              <CountryRegionId>RU</CountryRegionId>
+              <CountryRegionName>РОССИЯ</CountryRegionName>
+            </CountryRegion>
+            <ZipCode>
+              <ZipCodeId>450000</ZipCodeId>
+            </ZipCode>
+            <State>
+              <StateId />
+              <StateName />
+              <StateTypeId />
+              <StateTypeName />
+            </State>
+            <County>
+              <CountyId />
+              <CountyName />
+              <CountyTypeId />
+              <CountyTypeName />
+            </County>
+            <Town>
+              <TownId />
+              <TownName />
+              <TownTypeId />
+              <TownTypeName />
+            </Town>
+            <Settlement>
+              <SettlementId />
+              <SettlementName />
+              <SettlementTypeId />
+              <SettlementTypeName />
+            </Settlement>
+            <Street>
+              <StreetId />
+              <StreetName />
+              <StreetTypeId />
+              <StreetTypeName />
+            </Street>
+            <Estate>
+              <EstateId />
+            </Estate>
+            <Building>
+              <BuildingId />
+            </Building>
+          </CLADR>
+        </Address>
+        <AddressDC />
+        <Status>Acceptance</Status>
+        <Date_Expedition>0001-01-01T00:00:00</Date_Expedition>
+        <EDI_RelationId>Гиперглобус</EDI_RelationId>
+        <UltimateCustomerGLN>46000000000</UltimateCustomerGLN>
+        <Service24ReasonId>Проспали</Service24ReasonId>
+        <is3PL>1</is3PL>
+        <InternalOrder>0</InternalOrder>
+        <WarehouseHead>
+          <ID>К_Основной</ID>
+          <Name>Основной_Коти</Name>
+        </WarehouseHead>
+        <EDICodeByBuyer>EDI Code by byuer</EDICodeByBuyer>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>81001007040</Id>
+            <Name>adidas Fun Sensation освеж.парфюм.вода 75мл жен</Name>
+          </Nomenclature>
+          <Quantity>12</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>183.47</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId>asqeweqr12</ExternaItemId>
+          <OrderedUnitCode>CT</OrderedUnitCode>
+          <OrderedUnitPacksize>12</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>81001007044</Id>
+            <Name>adidas get ready! освеж.парфюм.вода 75мл жен</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>183.47</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984637000</Id>
+            <Name>adidas Extreme Power део спрей 150</Name>
+          </Nomenclature>
+          <Quantity>96</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.68</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984492000</Id>
+            <Name>adidas Hair&amp;Body 3 Extreme Power гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>108</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31788286000</Id>
+            <Name>adidas get ready! део стик 51гр</Name>
+          </Nomenclature>
+          <Quantity>72</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>114.52</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31788297000</Id>
+            <Name>adidas get ready! део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.68</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31983829000</Id>
+            <Name>adidas Team Five део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>144</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.68</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984127000</Id>
+            <Name>adidas UEFA Champions League гель д/д муж 250мл</Name>
+          </Nomenclature>
+          <Quantity>72</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31712164000</Id>
+            <Name>adidas C&amp;C get ready! ант/т ролик жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>120</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>62.7</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31475136000</Id>
+            <Name>adidas C&amp;C Soften ант-т спрей жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.61</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31475326000</Id>
+            <Name>adidas С&amp;C Control ант/т спрей жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>192</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.61</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31712170000</Id>
+            <Name>adidas C&amp;C get ready! ант/т жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>288</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.61</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31983857000</Id>
+            <Name>adidas C&amp;C 6в1 ант/т спрей жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>216</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.61</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31535252000</Id>
+            <Name>adidas Protect гель д/душа 250мл жен</Name>
+          </Nomenclature>
+          <Quantity>96</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>79.66</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31711128000</Id>
+            <Name>adidas get ready! гель д/д жен 250мл</Name>
+          </Nomenclature>
+          <Quantity>72</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>79.66</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984237000</Id>
+            <Name>adidas Soft Honey гель д/д жен 250мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>79.66</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984641000</Id>
+            <Name>adidas Happy гель д/душа жен 250мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>79.66</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984458000</Id>
+            <Name>adidas Hair&amp;Body 3 get ready! гель д/д муж 250мл</Name>
+          </Nomenclature>
+          <Quantity>108</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984554000</Id>
+            <Name>adidas Hair&amp;Body 3 Team Five гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>36</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31712186000</Id>
+            <Name>adidas get ready! ант/т ролик муж 50мл</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>79.66</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31983862000</Id>
+            <Name>adidas C&amp;D 6в1 ант/т спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.68</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984465000</Id>
+            <Name>adidas Hair&amp;Body 3 Extra Fresh гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>108</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN>4601234567890</GTIN>
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31535257000</Id>
+            <Name>adidas Hair&amp;Body 3 Актив Старт 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>60</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984479000</Id>
+            <Name>adidas Hair&amp;Body 3 After Sport гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984887000</Id>
+            <Name>adidas Hair&amp;Body 3 Sport Energy гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>60</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>85.17</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984103000</Id>
+            <Name>adidas UEFA Champions League део-спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>96</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>89.68</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984104000</Id>
+            <Name>adidas UEFA Champions League лосьон п/бр 100мл</Name>
+          </Nomenclature>
+          <Quantity>4800</Quantity>
+          <QuantityAcceptance>0</QuantityAcceptance>
+          <QuantityShipped>0</QuantityShipped>
+          <Price>174.54</Price>
+          <VAT_rate>18</VAT_rate>
+          <GTIN />
+          <CustLineNum>0</CustLineNum>
+          <ExternaItemId />
+          <OrderedUnitCode />
+          <OrderedUnitPacksize>0</OrderedUnitPacksize>
+          <Warehouse>
+            <ID>К_Основной</ID>
+            <Name>Основной_Коти</Name>
+          </Warehouse>
+        </Goods>
+        <Amount>257825.88</Amount>
+        <Comment>Гиперглобус</Comment>
+        <TransportDescription>Всямкиукытикдьадтывтэжвалваыэт</TransportDescription>
+        <StoreDescription>СТИКЕРОВАТЬ</StoreDescription>
+        <Id_invoice>10/29/586</Id_invoice>
+        <Barcode_Invoice>201500000106182</Barcode_Invoice>
+      </CustomerOrder>
+    </Object>
+  </DataGroup>
+</Container>

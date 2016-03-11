@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container xmlns="http://www.coty.com/Rarus/Axapta/99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd">
+  <DataGroup>
+    <OperationTag>insert</OperationTag>
+    <ObjectType>MovingStockOrder</ObjectType>
+    <Object>
+      <MovingStockOrder xmlns:MSO="http://www.coty.com/Rarus/Axapta/04" xmlns:Nom="http://www.coty.com/Rarus/Axapta/10">
+        <MSO:ID_COTY xmlns="http://www.coty.com/Rarus/Axapta/04">201500000040453</MSO:ID_COTY>
+        <MSO:DateTime_COTY xmlns="http://www.coty.com/Rarus/Axapta/04">2015-10-21T16:24:36</MSO:DateTime_COTY>
+        <MSO:ID xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        <MSO:DateTime xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        <MSO:Is3PL xmlns="http://www.coty.com/Rarus/Axapta/04">1</MSO:Is3PL>
+        <MSO:WarehouseOut>
+          <MSO:ID xmlns="http://www.coty.com/Rarus/Axapta/04">К_Основной</MSO:ID>
+          <MSO:Name xmlns="http://www.coty.com/Rarus/Axapta/04">Основной_Коти</MSO:Name>
+        </MSO:WarehouseOut>
+        <MSO:WarehouseIn>
+          <MSO:ID xmlns="http://www.coty.com/Rarus/Axapta/04">К_Брак</MSO:ID>
+          <MSO:Name xmlns="http://www.coty.com/Rarus/Axapta/04">Брак_Коти</MSO:Name>
+        </MSO:WarehouseIn>
+        <MSO:Comment xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009022</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas коробка жен get ready! ролик+гель</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">7</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009032</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas коробка  муж Pure Game парфюм.вода+гель д/душа</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">9</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009029</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas коробка  жен спрей Soften+гель Soft Honey</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">31</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009007</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">playboy POS коробка Super M парф.вода+гель</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">23</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009026</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">Playboy коробка муж Play it Wild део спрей+гель д/душа</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">38</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009015</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">playboy POS коробка GEN W т/в+браслет</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">2</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+        <MSO:Goods>
+          <MSO:Nomenclature>
+            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
+            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">80001009000</Nom:Id>
+            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas коробка муж get ready! т/в100+спрей+гель+мини мяч</Nom:Name>
+          </MSO:Nomenclature>
+          <MSO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/04">23</MSO:Quantity>
+          <MSO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/04" />
+          <MSO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/04" />
+        </MSO:Goods>
+      </MovingStockOrder>
+    </Object>
+  </DataGroup>
+</Container>
