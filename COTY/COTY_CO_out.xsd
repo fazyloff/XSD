@@ -356,6 +356,11 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+                                <xs:element name="CustLineNum" type="xs:unsignedShort">
+                                  <xs:annotation>
+                                    <xs:documentation>Customer order line number in customer's ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
                               </xs:sequence>
                             </xs:complexType>
                           </xs:element>

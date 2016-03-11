@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<Container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Container>
   <DataGroup>
     <OperationTag>modify</OperationTag>
     <ObjectType>CustomerOrder</ObjectType>
