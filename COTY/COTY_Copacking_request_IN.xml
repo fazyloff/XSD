@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<Container xmlns="http://www.coty.com/Rarus/Axapta/99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd">
+<Container>
   <DataGroup>
     <OperationTag>insert</OperationTag>
     <ObjectType>RemakeOrder</ObjectType>
     <Object>
-      <RemakeOrder xmlns:Nom="http://www.coty.com/Rarus/Axapta/10" xmlns:RO="http://www.coty.com/Rarus/Axapta/05">
-        <RO:ID_COTY xmlns="http://www.coty.com/Rarus/Axapta/05">201500000003010</RO:ID_COTY>
-        <RO:DateTime_COTY xmlns="http://www.coty.com/Rarus/Axapta/05">2015-11-23T16:06:16</RO:DateTime_COTY>
-        <RO:OperationKind xmlns="http://www.coty.com/Rarus/Axapta/05">1</RO:OperationKind>
-        <RO:ID xmlns="http://www.coty.com/Rarus/Axapta/05" />
-        <RO:DateTime xmlns="http://www.coty.com/Rarus/Axapta/05" />
-        <RO:Warehouse>
-          <RO:ID xmlns="http://www.coty.com/Rarus/Axapta/05">К_ПН</RO:ID>
-          <RO:Name xmlns="http://www.coty.com/Rarus/Axapta/05">К3PL_ПН</RO:Name>
-        </RO:Warehouse>
-        <RO:WarehouseOut>
-          <RO:ID xmlns="http://www.coty.com/Rarus/Axapta/05">К_Основной</RO:ID>
-          <RO:Name xmlns="http://www.coty.com/Rarus/Axapta/05">Основной_Коти</RO:Name>
-        </RO:WarehouseOut>
-        <RO:KIT_ID xmlns="http://www.coty.com/Rarus/Axapta/05">65792189000TST</RO:KIT_ID>
-        <RO:KIT_Quantity xmlns="http://www.coty.com/Rarus/Axapta/05">50</RO:KIT_Quantity>
-        <RO:KIT_Price xmlns="http://www.coty.com/Rarus/Axapta/05">0</RO:KIT_Price>
-        <RO:Is3PL xmlns="http://www.coty.com/Rarus/Axapta/05">1</RO:Is3PL>
-        <RO:Comment xmlns="http://www.coty.com/Rarus/Axapta/05" />
-        <RO:Goods>
-          <RO:Nomenclature>
-            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Fragrance&amp;Skin</Nom:Organization>
-            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">65792189000</Nom:Id>
-            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">Си Кей Уан Ред т/в жен 50мл</Nom:Name>
-          </RO:Nomenclature>
-          <RO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/05">50</RO:Quantity>
-          <RO:Price xmlns="http://www.coty.com/Rarus/Axapta/05">0</RO:Price>
-        </RO:Goods>
+      <RemakeOrder>
+        <ID_COTY>201500000003010</ID_COTY>
+        <DateTime_COTY>2015-11-23T16:06:16</DateTime_COTY>
+        <OperationKind>1</OperationKind>
+        <ID>ST124</ID>
+        <DateTime>2015-11-23T16:06:16</DateTime>
+          <Warehouse>
+          <ID>К_ПН</ID>
+          <Name>К3PL_ПН</Name>
+        </Warehouse>
+        <WarehouseOut>
+          <ID>К_Основной</ID>
+          <Name>Основной_Коти</Name>
+        </WarehouseOut>
+        <KIT_ID>65792189000TST</KIT_ID>
+        <KIT_Quantity>5002</KIT_Quantity>
+        <KIT_Price>10.23</KIT_Price>
+        <Is3PL>1</Is3PL>
+        <Comment>This is general comment</Comment>
+        <Goods>
+          <Nomenclature>
+            <Organization>Fragrance&amp;Skin</Organization>
+            <Id>65792189000</Id>
+            <Name>Си Кей Уан Ред т/в жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>50</Quantity>
+          <Price>0</Price>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Fragrance&amp;Skin</Organization>
+            <Id>65792189000</Id>
+            <Name>Си Кей Уан Ред т/в жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>35000</Quantity>
+          <Price>100.2</Price>
+        </Goods>
       </RemakeOrder>
     </Object>
   </DataGroup>
