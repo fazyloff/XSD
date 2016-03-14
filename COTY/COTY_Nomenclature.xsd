@@ -39,7 +39,7 @@
                               </xs:documentation>
                             </xs:annotation>
                           </xs:element>
-                          <xs:element name="Id" type="xs:unsignedLong">
+                          <xs:element name="Id" type="xs:string">
                             <xs:annotation>
                               <xs:documentation>
                                 Product id
