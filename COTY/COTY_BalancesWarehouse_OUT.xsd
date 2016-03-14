@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>Root element of a message</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationTag" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of operation, avaliable value -  insert
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ObjectType" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Type of object, available value - "BalancesWarehouse" from stocks information</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Object">
+                <xs:complexType>
+                 <xs:sequence>
+                    <xs:element name="BalancesWarehouse">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DateTime" type="xs:dateTime">
+                            <xs:annotation>
+                            <xs:documentation>Date and time of stocks information"</xs:documentation>
+                            </xs:annotation>
+                            </xs:element>
+                              <xs:element maxOccurs="unbounded" name="Balances">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID_Nomenclature" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Product ID in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="ID_Warehouse" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse ID in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Quantity" type="xs:decimal">
+                                  <xs:annotation>
+                                    <xs:documentation>Physical stocks quantity</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
