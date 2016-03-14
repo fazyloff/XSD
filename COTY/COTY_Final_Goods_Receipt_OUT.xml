@@ -44,6 +44,19 @@
           </CustomsDocNumber>
           <ContryOfGood>RU</ContryOfGood>
         </Accessory>
+        <Accessory>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>6579218900a</Id>
+            <Name>—и  ей ”ан –ед т/в жен 50млada</Name>
+          </Nomenclature>
+          <Quantity>50.0000</Quantity>
+          <Price>266.8806</Price>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>RU</ContryOfGood>
+        </Accessory>
       </ConfirmationAssemble_Disassemble>
     </Object>
   </DataGroup>
