@@ -54,7 +54,7 @@
                           </xs:element>
                           <xs:element name="Warehouse">
                             <xs:annotation>
-                              <xs:documentation>Warehouse from information</xs:documentation>
+                              <xs:documentation>Warehouse to information</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
                               <xs:sequence>
@@ -73,7 +73,7 @@
                           </xs:element>
                           <xs:element name="WarehouseOut">
                             <xs:annotation>
-                              <xs:documentation>Warehouse To information</xs:documentation>
+                              <xs:documentation>Warehouse from information</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
                               <xs:sequence>
