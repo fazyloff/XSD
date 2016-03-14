@@ -18,7 +18,7 @@
               </xs:element>
               <xs:element name="ObjectType" type="xs:string">
                 <xs:annotation>
-                  <xs:documentation>Type of object, available value - "BalancesWarehouse" from stocks information</xs:documentation>
+                  <xs:documentation>Type of object, available value - "BalancesWarehouse" for stocks information</xs:documentation>
                 </xs:annotation>
               </xs:element>
               <xs:element name="Object">
