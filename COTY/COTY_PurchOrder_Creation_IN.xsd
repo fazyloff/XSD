@@ -32,24 +32,14 @@
                               <xs:documentation>Purch order id in COTY's ERP</xs:documentation>
                             </xs:annotation>
                           </xs:element>
-                          <xs:element name="Internal3PLNum" type="xs:string">
-                            <xs:annotation>
-                              <xs:documentation>Purch order id in 3PL's ERP</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element name="DateTime" type="xs:dateTime">
-                            <xs:annotation>
-                              <xs:documentation>Purch order date and time</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element name="SupplierGLN" type="xs:string" >
-                            <xs:annotation>
-                              <xs:documentation>Supplier GLN</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
                           <xs:element name="SupplierName" type="xs:string">
                             <xs:annotation>
                               <xs:documentation>Supplier Name</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="SupplierGLN" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Supplier GLN</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="DocNumber" type="xs:string">
@@ -59,22 +49,22 @@
                           </xs:element>
                           <xs:element name="DocDate" type="xs:dateTime">
                             <xs:annotation>
-                              <xs:documentation>Invoice date</xs:documentation>
+                              <xs:documentation>Invoice Date</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="DeliveryDate" type="xs:dateTime">
                             <xs:annotation>
-                              <xs:documentation>Delivery date</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element name="Comment" type="xs:string">
-                            <xs:annotation>
-                              <xs:documentation>General comment</xs:documentation>
+                              <xs:documentation>Invoice date</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="Is3PL" type="xs:unsignedByte">
                             <xs:annotation>
                               <xs:documentation>Is it 3PL PurchOrder, 1- Yes, 0 - No</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Comment" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>General comment</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="Warehouse">
@@ -104,11 +94,6 @@
                           <xs:element name="FactPallete" type="xs:unsignedByte">
                             <xs:annotation>
                               <xs:documentation>Fact quantity of palets</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element name="FactBoxes" type="xs:unsignedByte">
-                            <xs:annotation>
-                              <xs:documentation>Fact quantity of boxes</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="Goods" maxOccurs="unbounded" minOccurs="1">
@@ -146,38 +131,47 @@
                                     <xs:documentation>Ordered quantity</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="QtyFact" type="xs:decimal">
-                                  <xs:annotation>
-                                    <xs:documentation>Fact delivered quantity</xs:documentation>
-                                  </xs:annotation>
-                                </xs:element>
                                 <xs:element name="Price" type="xs:decimal">
                                   <xs:annotation>
-                                    <xs:documentation>Price</xs:documentation>
+                                    <xs:documentation>Item price</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="Warehouse">
+                                <xs:element name="CustomsDocNumber" type="xs:string">
                                   <xs:annotation>
-                                    <xs:documentation>additional warehouse information (if differs from warehouse in header)</xs:documentation>
+                                    <xs:documentation>Customs Declaration number</xs:documentation>
                                   </xs:annotation>
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="ID" type="xs:string">
-                                        <xs:annotation>
-                                          <xs:documentation>Warehouse ID in 3PL ERP</xs:documentation>
-                                        </xs:annotation>
-                                      </xs:element>
-                                      <xs:element name="Name" type="xs:string" >
-                                        <xs:annotation>
-                                          <xs:documentation>Warehouse Name in 3PL ERP</xs:documentation>
-                                        </xs:annotation>
-                                      </xs:element>
-                                    </xs:sequence>
-                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ContryOfGood" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>ISO CODE of Product's origin country</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>                               
+                                <xs:element name="InvoiceNumber" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Invoice number</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="QtyFact" type="xs:decimal">
+                                  <xs:annotation>
+                                    <xs:documentation>Fact Qantity</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="QtyDamage" type="xs:decimal">
+                                  <xs:annotation>
+                                    <xs:documentation>Damaged quantity</xs:documentation>
+                                  </xs:annotation>
                                 </xs:element>
                               </xs:sequence>
                             </xs:complexType>
                           </xs:element>
+                          <xs:element name="Amount" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Total amount of Purch Order</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                        </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -186,8 +180,5 @@
               </xs:element>
             </xs:sequence>
           </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+        </xs:element>      
 </xs:schema>

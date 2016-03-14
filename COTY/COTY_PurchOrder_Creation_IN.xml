@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<Container xmlns="http://www.coty.com/Rarus/Axapta/99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd">
+<Container>
   <DataGroup>
     <OperationTag>insert</OperationTag>
     <ObjectType>PurchOrder</ObjectType>
     <Object>
-      <PurchOrder xmlns:Nom="http://www.coty.com/Rarus/Axapta/10" xmlns:PO="http://www.coty.com/Rarus/Axapta/01">
-        <PO:IDPurchOrder xmlns="http://www.coty.com/Rarus/Axapta/01">201500000044496</PO:IDPurchOrder>
-        <PO:SupplierName xmlns="http://www.coty.com/Rarus/Axapta/01">ООО "КОТИ БЬЮТИ РАША"</PO:SupplierName>
-        <PO:SupplierGLN xmlns="http://www.coty.com/Rarus/Axapta/01">45678941321354</PO:SupplierGLN>
-        <PO:DocNumber xmlns="http://www.coty.com/Rarus/Axapta/01">8699513847</PO:DocNumber>
-        <PO:DocDate xmlns="http://www.coty.com/Rarus/Axapta/01">2015-11-11T00:00:00</PO:DocDate>
-        <PO:DeliveryDate xmlns="http://www.coty.com/Rarus/Axapta/01" />
-        <PO:Is3PL xmlns="http://www.coty.com/Rarus/Axapta/01">1</PO:Is3PL>
-        <PO:Comment xmlns="http://www.coty.com/Rarus/Axapta/01">3002268604</PO:Comment>
-        <PO:Warehouse>
-          <PO:ID xmlns="http://www.coty.com/Rarus/Axapta/01">К_РУС</PO:ID>
-          <PO:Name xmlns="http://www.coty.com/Rarus/Axapta/01">Коти_Рус</PO:Name>
-        </PO:Warehouse>
-        <PO:FactArrival xmlns="http://www.coty.com/Rarus/Axapta/01" />
-        <PO:FactPallete xmlns="http://www.coty.com/Rarus/Axapta/01" />
-        <PO:Goods>
-          <PO:Nomenclature>
-            <Nom:Organization xmlns="http://www.coty.com/Rarus/Axapta/10">Color&amp;Body</Nom:Organization>
-            <Nom:Id xmlns="http://www.coty.com/Rarus/Axapta/10">31984638000</Nom:Id>
-            <Nom:Name xmlns="http://www.coty.com/Rarus/Axapta/10">adidas Ice Dive део спрей муж 150мл</Nom:Name>
-          </PO:Nomenclature>
-          <PO:Quantity xmlns="http://www.coty.com/Rarus/Axapta/01">48408</PO:Quantity>
-          <PO:Price xmlns="http://www.coty.com/Rarus/Axapta/01">53.74</PO:Price>
-          <PO:CustomsDocNumber xmlns="http://www.coty.com/Rarus/Axapta/01" />
-          <PO:ContryOfGood xmlns="http://www.coty.com/Rarus/Axapta/01" />
-          <PO:InvoiceNumber xmlns="http://www.coty.com/Rarus/Axapta/01" />
-          <PO:QtyFact xmlns="http://www.coty.com/Rarus/Axapta/01" />
-          <PO:QtyDamage xmlns="http://www.coty.com/Rarus/Axapta/01" />
-        </PO:Goods>
-        <PO:Amount xmlns="http://www.coty.com/Rarus/Axapta/01">2601445.92</PO:Amount>
+      <PurchOrder>
+        <IDPurchOrder>201500000044496</IDPurchOrder>
+        <SupplierName>ООО "КОТИ БЬЮТИ РАША"</SupplierName>
+        <SupplierGLN>45678941321354</SupplierGLN>
+        <DocNumber>8699513847</DocNumber>
+        <DocDate>2015-11-11T00:00:00</DocDate>
+        <DeliveryDate>2015-11-11T00:00:00</DeliveryDate>
+        <Is3PL>1</Is3PL>
+        <Comment>3002268604</Comment>
+        <Warehouse>
+          <ID>К_РУС</ID>
+          <Name>Коти_Рус</Name>
+        </Warehouse>
+        <FactArrival>2015-11-11T00:01:37</FactArrival>
+        <FactPallete>12</FactPallete>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984638000</Id>
+            <Name>adidas Ice Dive део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>48408</Quantity>
+          <Price>53.74</Price>
+          <CustomsDocNumber>123/12/1</CustomsDocNumber>
+          <ContryOfGood>ARG</ContryOfGood>
+          <InvoiceNumber>АБВГ12-34</InvoiceNumber>
+          <QtyFact>48407</QtyFact>
+          <QtyDamage>103</QtyDamage>
+        </Goods>
+        <Amount>2601445.92</Amount>
       </PurchOrder>
     </Object>
   </DataGroup>
