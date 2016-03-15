@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.coty.com/Rarus/Axapta/99" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>Root element of a message</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationTag" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of operation - modify, insert, delete
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ObjectType" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Type of object - GTDList, products Custom declaration numbers list</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Object">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="GTDList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DocType" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Type of object - GTDList</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="DocID" type="xs:unsignedLong">
+                            <xs:annotation>
+                              <xs:documentation>GTD List ID in COTY's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="DocID_Axapta" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>GTD List ID in 3PL's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element maxOccurs="unbounded" name="Goods">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Nomenclature">
+                                  <xs:annotation>
+                                    <xs:documentation>Product information</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Organization" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>Product organization</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Id" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>Product id in 3PL ERP</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Name" type="xs:string" >
+                                        <xs:annotation>
+                                          <xs:documentation>Product name 3PL ERP</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Quantity" type="xs:decimal" >
+                                  <xs:annotation>
+                                    <xs:documentation>Document quantity</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="GTD" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Customs declaration number</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryName" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Product origin country name</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Product origin country ISO code</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
