@@ -59,6 +59,9 @@
 							<EAN>
 								<xsl:value-of select="Line-Item/EAN"/>
 							</EAN>
+							<BuyerItemCode>
+								<xsl:value-of select="Line-Item/BuyerItemCode"/>
+							</BuyerItemCode>
 							<SupplierItemCode>
 								<xsl:value-of select="Line-Item/SupplierItemCode"/>
 							</SupplierItemCode>
@@ -119,12 +122,14 @@
 		</MapperInfo>
 		<MapperBlockPosition>
 			<template match="/">
-				<block path="Document-DespatchAdvice/DespatchAdvice-Header/Remarks/xsl:value-of" x="169" y="241"/>
-				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each" x="188" y="134"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Header/Remarks/xsl:value-of" x="133" y="198"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each" x="133" y="143"/>
 			</template>
 		</MapperBlockPosition>
 		<TemplateContext></TemplateContext>
-		<MapperFilter side="source"></MapperFilter>
+		<MapperFilter side="source">
+			<Fragment url="" path="" action=""/>
+		</MapperFilter>
 	</MapperMetaTag>
 </metaInformation>
 -->

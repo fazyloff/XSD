@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:tns="http://www.coty.com/Rarus/Axapta/99"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://www.coty.com/Rarus/Axapta/99"
+		xmlns="http://schemas.xmlsoap.org/wsdl/"
+		name="Axapta"
+		targetNamespace="http://www.coty.com/Rarus/Axapta/99">
+	<types>
+		<xsd:schema xmlns:xs1="http://www.coty.com/Rarus/Axapta/99"
+				elementFormDefault="qualified"
+				targetNamespace="http://www.coty.com/Rarus/Axapta/99">
+			<xsd:element name="SendAdaptorXMLMessage">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="sourceSystem"
+								nillable="true"
+								type="xsd:string"/>
+						<xsd:element name="xml_file"
+								type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="SendAdaptorXMLMessageResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="return"
+								type="xsd:string"/>
+						<xsd:element name="sourceSystem"
+								nillable="true"
+								type="xsd:string"/>
+						<xsd:element name="xml_file"
+								type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="SendAdaptorXMLMessageRequestMessage">
+		<part name="parameters"
+				element="tns:SendAdaptorXMLMessage"/>
+	</message>
+	<message name="SendAdaptorXMLMessageResponseMessage">
+		<part name="parameters"
+				element="tns:SendAdaptorXMLMessageResponse"/>
+	</message>
+	<portType name="AxaptaPortType">
+		<operation name="SendAdaptorXMLMessage">
+			<input message="tns:SendAdaptorXMLMessageRequestMessage"/>
+			<output message="tns:SendAdaptorXMLMessageResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="AxaptaSoapBinding"
+			type="tns:AxaptaPortType">
+		<soap:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SendAdaptorXMLMessage">
+			<soap:operation soapAction="uri" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="AxaptaSoap12Binding"
+			type="tns:AxaptaPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SendAdaptorXMLMessage">
+			<soap12bind:operation  soapAction="uri" style="document"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="Axapta">
+		<port name="AxaptaSoap"
+				binding="tns:AxaptaSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soap:address location="http://10.43.5.179:9094/"/>
+		</port>
+		<port name="AxaptaSoap12"
+				binding="tns:AxaptaSoap12Binding">
+			<soap12bind:address location="http://10.43.5.179:9094/"/>
+		</port>
+	</service>
+</definitions>

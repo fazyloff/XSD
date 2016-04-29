@@ -59,6 +59,9 @@
 							<EAN>
 								<xsl:value-of select="Line-Item/EAN"/>
 							</EAN>
+							<BuyerItemCode>
+								<xsl:value-of select="Line-Item/BuyerItemCode"/>
+							</BuyerItemCode>
 							<SupplierItemCode>
 								<xsl:value-of select="Line-Item/SupplierItemCode"/>
 							</SupplierItemCode>
@@ -118,10 +121,7 @@
 			<SourceSchema srcSchemaPath="..\..\ORDRSP_DESADV\ORDRSP.xml" srcSchemaRoot="Document-OrderResponse" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
 		</MapperInfo>
 		<MapperBlockPosition>
-			<template match="/">
-				<block path="Document-DespatchAdvice/DespatchAdvice-Header/Remarks/xsl:value-of" x="169" y="241"/>
-				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each" x="188" y="134"/>
-			</template>
+			<template match="/"></template>
 		</MapperBlockPosition>
 		<TemplateContext></TemplateContext>
 		<MapperFilter side="source"></MapperFilter>
