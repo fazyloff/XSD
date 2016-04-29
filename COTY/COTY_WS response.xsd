@@ -26,8 +26,8 @@
                   </xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:choice>
-              <xs:element name="ObjectKey">
+              <xs:choice maxOccurs="1" minOccurs="1">
+                <xs:element name="ObjectKey">
                 <xs:annotation>
                   <xs:documentation>
                     This block is returned, if everything is ok.
