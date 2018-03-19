@@ -28,10 +28,9 @@
 					<xsl:value-of select="Document-OrderResponse/OrderResponse-Header/OrderDate"/>
 				</BuyerOrderDate>
 				<Remarks>
-					<xsl:value-of select="concat('Создан из ORDRSP:',Document-OrderResponse/OrderResponse-Header/OrderResponseNumber)"/>
+					<xsl:value-of select="concat('Создан из ORDRSP:',Document-OrderResponse/OrderResponse-Header/OrderResponseNumber,' Палет:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/PackageNumber,' Вес нетто:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/TotalNetWeight,' Вес брутто:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/TotalGrossWeight)"/>
 				</Remarks>
 			</DespatchAdvice-Header>
-			
 			<DespatchAdvice-Parties>
 				<Buyer>
 					<ILN>
@@ -50,7 +49,7 @@
 				</DeliveryPoint>
 			</DespatchAdvice-Parties>
 			<DespatchAdvice-Lines>
-					<xsl:for-each select="Document-OrderResponse/OrderResponse-Lines/Line">
+				<xsl:for-each select="Document-OrderResponse/OrderResponse-Lines/Line">
 					<Line>
 						<Line-Item>
 							<LineNumber>
@@ -83,6 +82,12 @@
 							<UnitGrossPrice>
 								<xsl:value-of select="Line-Item/OrderedUnitGrossPrice"/>
 							</UnitGrossPrice>
+							<NetAmount>
+								<xsl:value-of select="Line-Item/NetAmount"/>
+							</NetAmount>
+							<GrossAmount>
+								<xsl:value-of select="Line-Item/GrossAmount"/>
+							</GrossAmount>
 							<TaxRate>
 								<xsl:value-of select="Line-Item/TaxRate"/>
 							</TaxRate>
@@ -96,7 +101,7 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="..\..\ORDRSP_DESADV\ORDRSP.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="ORDRSP UNILEVER.xml" htmlbaseurl="" outputurl="unilever desadv.xml" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
 		          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
 		          customvalidator="">
 			<advancedProp name="sInitialMode" value=""/>
@@ -118,18 +123,22 @@
 	</scenarios>
 	<MapperMetaTag>
 		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="DESADV_XSD.xsd" destSchemaRoot="Document-DespatchAdvice" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no">
-			<SourceSchema srcSchemaPath="..\..\ORDRSP_DESADV\ORDRSP.xml" srcSchemaRoot="Document-OrderResponse" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
+			<SourceSchema srcSchemaPath="ORDRSP UNILEVER.xml" srcSchemaRoot="Document-OrderResponse" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
 		</MapperInfo>
 		<MapperBlockPosition>
 			<template match="/">
-				<block path="Document-DespatchAdvice/DespatchAdvice-Header/Remarks/xsl:value-of" x="133" y="198"/>
-				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each" x="133" y="143"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Header/DespatchAdviceTime/xsl:value-of" x="278" y="90"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Header/DeliveryDate/xsl:value-of" x="278" y="144"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Header/Remarks/xsl:value-of" x="278" y="214"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each" x="318" y="214"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each/Line/Line-Item/BuyerItemCode/xsl:value-of" x="238" y="214"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each/Line/Line-Item/ItemDescription/xsl:value-of" x="198" y="214"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each/Line/Line-Item/UnitGrossPrice/xsl:value-of" x="158" y="214"/>
+				<block path="Document-DespatchAdvice/DespatchAdvice-Lines/xsl:for-each/Line/Line-Item/TaxRate/xsl:value-of" x="118" y="214"/>
 			</template>
 		</MapperBlockPosition>
 		<TemplateContext></TemplateContext>
-		<MapperFilter side="source">
-			<Fragment url="" path="" action=""/>
-		</MapperFilter>
+		<MapperFilter side="source"></MapperFilter>
 	</MapperMetaTag>
 </metaInformation>
 -->
