@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>PurchOrder</ObjectType>
+    <Object>
+      <PurchOrder>
+        <IDPurchOrder>201500000044496</IDPurchOrder>
+        <Internal3PLNum>ЗПЛг0077355</Internal3PLNum>
+        <DateTime>2015-11-25T17:23:04</DateTime>
+        <SupplierGLN>
+        </SupplierGLN>
+        <SupplierName>ООО "БЬЮТИ"</SupplierName>
+        <DocNumber>8699513847 14_11BS</DocNumber>
+        <DocDate>2015-11-25T00:00:00</DocDate>
+        <DeliveryDate>2015-11-24T00:00:00</DeliveryDate>
+        <Comment>3002268604</Comment>
+        <Is3PL>1</Is3PL>
+        <Warehouse>
+          <ID>К_РУС</ID>
+          <Name>К3PL_РУС</Name>
+        </Warehouse>
+        <FactArrival>2015-11-25T09:30:00</FactArrival>
+        <FactPallete>28</FactPallete>
+        <FactBoxes>0</FactBoxes>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31984638000</Id>
+            <Name>AD.Ice Dive део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>48408.00</Quantity>
+          <QtyFact>48408.00</QtyFact>
+          <Price>53.7400</Price>
+          <Warehouse>
+            <ID>К_РУС</ID>
+            <Name>К3PL_РУС</Name>
+          </Warehouse>
+        </Goods>
+      </PurchOrder>
+    </Object>
+  </DataGroup>
+</Container>

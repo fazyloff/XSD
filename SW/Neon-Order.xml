@@ -1,0 +1,8 @@
+<?xml version='1.0' ?>
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><order><OrderGUID>d2e5</OrderGUID><ParentOrderingSystem>NEON</ParentOrderingSystem><numberIN>2000200000</numberIN><numberOUT/><orderDate>2016-09-26T15:06:03.277</orderDate><shipmentDate>2016-09-26T00:00:00</shipmentDate><clientID/><adressID/><contractID/><companyID>107</companyID><stockID>ЦТ</stockID><sectorID/><noteTotal/><noteWarehouse/><noteTransport/><checkSum/><checkCurrency>Руб</checkCurrency><delivery>Доставка</delivery><noContract>false</noContract><nopay>false</nopay><statusVKPK>3</statusVKPK><sectorIdSW>1000000012</sectorIdSW><lines/></order><order><OrderGUID>d2e10</OrderGUID><ParentOrderingSystem>NEON</ParentOrderingSystem><numberIN>100000000200000</numberIN><numberOUT/><orderDate>2016-09-26T16:09:07</orderDate><shipmentDate>2016-09-26T00:00:00</shipmentDate><clientID/><adressID/><contractID/><companyID>107</companyID><stockID>ЦТ</stockID><sectorID/><noteTotal/><noteWarehouse/><noteTransport/><checkSum/><checkCurrency>Руб</checkCurrency><delivery>Доставка</delivery><noContract>false</noContract><nopay>false</nopay><statusVKPK>3</statusVKPK><sectorIdSW>1000000013</sectorIdSW><lines>
+				
+				
+				
+				
+				
+			<line><productID>80019900110</productID><price>109.32203</price><count>5.000</count><unit>1</unit></line><line><productID>80052075</productID><price>45.36440</price><count>8.000</count><unit>1</unit></line><line><productID>800530343</productID><price>79.25423</price><count>9.000</count><unit>1</unit></line><line><productID>80053550305</productID><price>170.68644</price><count>5.000</count><unit>1</unit></line><line><productID>800563123</productID><price>79.11864</price><count>70.000</count><unit>1</unit></line></lines></order></orders>

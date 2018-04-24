@@ -28,7 +28,7 @@
 					<xsl:value-of select="Document-OrderResponse/OrderResponse-Header/OrderDate"/>
 				</BuyerOrderDate>
 				<Remarks>
-					<xsl:value-of select="concat('Создан из ORDRSP:',Document-OrderResponse/OrderResponse-Header/OrderResponseNumber,' Палет:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/PackageNumber,' Вес нетто:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/TotalNetWeight,' Вес брутто:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/TotalGrossWeight)"/>
+					<xsl:value-of select="concat('Создан из ORDRSP:',Document-OrderResponse/OrderResponse-Header/OrderResponseNumber, ' Палет:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/PackageNumber,' Вес нетто:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/TotalNetWeight,' Вес брутто:',Document-OrderResponse/OrderResponse-Lines/Packing-Reference/TotalGrossWeight)"/>
 				</Remarks>
 			</DespatchAdvice-Header>
 			<DespatchAdvice-Parties>
@@ -82,9 +82,6 @@
 							<UnitGrossPrice>
 								<xsl:value-of select="Line-Item/OrderedUnitGrossPrice"/>
 							</UnitGrossPrice>
-							<NetAmount>
-								<xsl:value-of select="Line-Item/NetAmount"/>
-							</NetAmount>
 							<TaxRate>
 								<xsl:value-of select="Line-Item/TaxRate"/>
 							</TaxRate>
@@ -102,19 +99,19 @@
 		          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
 		          customvalidator="">
 			<advancedProp name="sInitialMode" value=""/>
-			<advancedProp name="schemaCache" value="||"/>
-			<advancedProp name="bXsltOneIsOkay" value="true"/>
 			<advancedProp name="bSchemaAware" value="true"/>
-			<advancedProp name="bGenerateByteCode" value="true"/>
+			<advancedProp name="bXsltOneIsOkay" value="true"/>
+			<advancedProp name="schemaCache" value="||"/>
 			<advancedProp name="bXml11" value="false"/>
+			<advancedProp name="bGenerateByteCode" value="true"/>
 			<advancedProp name="iValidation" value="0"/>
 			<advancedProp name="bExtensions" value="true"/>
 			<advancedProp name="iWhitespace" value="0"/>
 			<advancedProp name="sInitialTemplate" value=""/>
 			<advancedProp name="bTinyTree" value="true"/>
-			<advancedProp name="xsltVersion" value="2.0"/>
-			<advancedProp name="bWarnings" value="true"/>
 			<advancedProp name="bUseDTD" value="false"/>
+			<advancedProp name="bWarnings" value="true"/>
+			<advancedProp name="xsltVersion" value="2.0"/>
 			<advancedProp name="iErrorHandling" value="fatal"/>
 		</scenario>
 	</scenarios>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>Root element of a message</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationTag" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of operation - modify, insert, delete
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ObjectType" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Type of object - RemakeOrder (order for assembling/disassembling kits)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Object">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RemakeOrder">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID_COTY" type="xs:unsignedLong">
+                            <xs:annotation>
+                              <xs:documentation>Document's ID in COTY's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element> 
+                          <xs:element name="DateTime_COTY" type="xs:dateTime">
+                            <xs:annotation>
+                              <xs:documentation>Document's datetime in COTY's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="OperationKind" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Type of operation. 1 - assembling of a kit, 2 - dissasembing of a kit, 3 - additional operations</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Document's ID in 3PL's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="DateTime" type="xs:dateTime">
+                            <xs:annotation>
+                              <xs:documentation>Document's datetime in 3PL's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Warehouse">
+                            <xs:annotation>
+                              <xs:documentation>Warehouse to information</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse ID in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Name" type="xs:string" >
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse Name in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="WarehouseOut">
+                            <xs:annotation>
+                              <xs:documentation>Warehouse from information</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse ID in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Name" type="xs:string" >
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse Name in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="KIT_ID" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>assembled/disassembled KIT id in 3PL ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="KIT_Quantity" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>Quantity of kits to be assembled/disassembled</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="KIT_Price" type="xs:decimal">
+                            <xs:annotation>
+                              <xs:documentation>KIT's price</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Is3PL" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Is it 3PL RemakeOrder, 1- Yes, 0 - No</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Comment" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>General comment</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Goods" maxOccurs="unbounded" minOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>REmake order lines</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Nomenclature">
+                                  <xs:annotation>
+                                    <xs:documentation>KIT's component information</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Organization" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>KIT's component organization</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Id" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>KIT's component id in 3PL ERP</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Name" type="xs:string" >
+                                        <xs:annotation>
+                                          <xs:documentation>KIT's component name 3PL ERP</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Quantity" type="xs:decimal" >
+                                  <xs:annotation>
+                                    <xs:documentation>KIT's component quantity</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Price" type="xs:decimal">
+                                  <xs:annotation>
+                                    <xs:documentation>KIT's component price</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:c://tmp//Neon-Order.xsd">
+	<order>
+		<OrderGUID>{A4C5C61A-936C-447C-AD4B-E17CCC233B39}</OrderGUID>
+		<ParentOrderingSystem>NEON</ParentOrderingSystem>
+		<numberIN>171256</numberIN>
+		<orderDate>2016-04-07 18:45:49</orderDate>
+		<shipmentDate>2016-04-12 00:00:00</shipmentDate>
+		<clientID>ДИС.1150</clientID>
+		<creatorType>0</creatorType>
+		<addressGruz>ДИС.1150</addressGruz>
+		<adressID>1035123</adressID>
+		<contractID>no</contractID>
+		<companyID>100</companyID>
+		<stockID>КЛИМ_основ</stockID>
+		<sectorID>СКТ000892</sectorID>
+		<noteTotal/>
+		<noteWarehouse/>
+		<noteTransport/>
+		<checkSum>18573.58000</checkSum>
+		<checkCurrency>Руб</checkCurrency>
+		<delivery>Доставка</delivery>
+		<payment>Нал</payment>
+		<noContract>true</noContract>
+		<nopay>false</nopay>    
+		<statusVKPK>2</statusVKPK>
+		<lines>
+			<line>
+				<productID>17050220</productID>
+				<price>109.96895</price>
+				<count>3</count>
+				<unit>1</unit>
+			</line>
+			<line>
+				<productID>17050431</productID>
+				<price>61.93000</price>
+				<count>2</count>
+				<unit>1</unit>
+			</line>
+			<line>
+				<productID>17050435</productID>
+				<price>71.81000</price>
+				<count>1</count>
+				<unit>1</unit>
+			</line>
+		</lines>
+	</order>
+</orders>

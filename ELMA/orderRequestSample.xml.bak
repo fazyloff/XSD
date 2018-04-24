@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<request>
+<custAccounts>КЛНТ001001,КЛНТ001002</custAccounts>
+<custOrderNum>АБВГ01234</custOrderNum>
+<salesId>ЗКЗ01234567*</salesId>
+<invoiceId>18100123456</invoiceId>
+<factureId>100325235/18</factureId>
+<address>г.Москва, Красная площадь, д. 1</address>
+<startDate>2018-01-01</startDate>
+<endDate>2018-12-31</endDate>
+</request>

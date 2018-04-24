@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>Nomenclature</ObjectType>
+    <Object>
+      <Nomenclature>
+        <Organization>Color&amp;Body</Organization>
+        <Id>30995292000</Id>
+        <Name>Sally Hansen Complete Care  Nail Treatment 7-in-1 Средство для ухода за сухими ломкими ногтями</Name>
+        <ShortName>Ср-тво д/ух.сух. Лом. ногтями 7-в-1</ShortName>
+        <NomenclatureType>Nomenclature</NomenclatureType>
+        <NomenclatureUnit>Goods</NomenclatureUnit>
+        <VAT_Purchase>18</VAT_Purchase>
+        <VAT_Sale>18</VAT_Sale>
+        <Alcohol>true</Alcohol>
+        <AlcoholPercentage>14.56</AlcoholPercentage>
+        <Volume>13.3</Volume>
+        <UnitOfWeight>Pieces</UnitOfWeight>
+        <Gross_Weight_per_Unit>0.082</Gross_Weight_per_Unit>
+        <UnitOfVolume>Pieces</UnitOfVolume>
+        <Length_Depth>7.302</Length_Depth>
+        <Width>3.175</Width>
+        <Height>13.97</Height>
+        <UnitOfPurch>Pieces</UnitOfPurch>
+        <UnitOfSales>Pieces</UnitOfSales>
+        <Country_Of_Origin>US</Country_Of_Origin>
+        <Units_per_Carton>48</Units_per_Carton>
+        <Units_per_Grab>1</Units_per_Grab>
+        <Carton_per_Pallet>80</Carton_per_Pallet>
+        <EAN>074170435061</EAN>
+        <GrabEAN>3614221230725</GrabEAN>
+        <CartonEAN>3614221230732</CartonEAN>
+      </Nomenclature>
+    </Object>
+  </DataGroup>
+</Container>

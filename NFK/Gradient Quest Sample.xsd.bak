@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="debtordata">
+    <xs:complexType>
+      <xs:sequence>
+	    <xs:element ref="id"/>
+	    <xs:element ref="date"/>
+        <xs:element ref="contract_due_days"/>
+        <xs:element ref="max_debt"/>
+        <xs:element ref="OPF"/>
+        <xs:element ref="company_name"/>
+        <xs:element ref="INN"/>
+        <xs:element ref="OGRN"/>
+        <xs:element ref="USN_tax"/>
+        <xs:element ref="main_phone"/>
+        <xs:element ref="add_phone"/>
+		<xs:element ref="sms_validation_code"/>
+        <xs:element ref="web_site"/>
+        <xs:element ref="years_in_business"/>
+        <xs:element ref="ceo"/>
+        <xs:element ref="business_owner" minOccurs="0"/>
+        <xs:element ref="retail_sales_ratio"/>
+        <xs:element ref="stores_num"/>
+        <xs:element ref="stores_num_1year"/>
+        <xs:element ref="sales_area"/>
+        <xs:element ref="warehouse_area"/>
+        <xs:element ref="total_office_area"/>
+        <xs:element ref="sales_vol"/>
+        <xs:element ref="total_debt"/>
+        <xs:element ref="employees_num"/>
+        <xs:element ref="INN_controlled"/>
+        <xs:element ref="competitors"/>
+        <xs:element ref="advantages"/>
+        <xs:element ref="plans"/>
+        <xs:element ref="dificulties"/>
+        <xs:element ref="personal_data_confirmed"/>
+        <xs:element ref="cred_bureau_confirmed"/>
+        <xs:element ref="application_confirmed"/>
+      </xs:sequence>
+      <xs:attribute name="FileID" use="required"/>
+      <xs:attribute name="FormVer" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id">
+    <xs:annotation>
+    	<xs:documentation>id анкеты
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date">
+    <xs:annotation>
+    	<xs:documentation>дата время анкеты
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:dateTime"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="contract_due_days">
+    <xs:annotation>
+    	<xs:documentation>Необходимая продолжительность отсрочки оплаты за закупленные товары, в календарных днях
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="max_debt">
+    <xs:complexType>
+      <xs:annotation>
+      	<xs:documentation>Сколько максимально планируется закупать за период отсрочки оплаты? (максимальный размер задолжености перед поставщиком за закупленные товары)
+</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OPF">
+    <xs:complexType>
+      <xs:annotation>
+      	<xs:documentation>Организационно правовая форма деятельности
+</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="value" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="company_name">
+    <xs:complexType>
+      <xs:annotation>
+      	<xs:documentation>Наименование вашей компании / ИП
+</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INN">
+    <xs:complexType>
+      <xs:annotation>
+      	<xs:documentation>ИНН</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OGRN">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USN_tax">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="USN_taxType"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="main_phone">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="add_phone">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sms_validation_code">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="web_site">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="years_in_business">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ceo">
+    <xs:complexType>
+      <xs:attribute name="bday" use="required" type="xs:date"/>
+      <xs:attribute name="first_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="is_owner" use="required" type="xs:boolean"/>
+      <xs:attribute name="last_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="middle_name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="business_owner">
+    <xs:complexType>
+      <xs:attribute name="bday" use="required" type="xs:date"/>
+      <xs:attribute name="first_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="last_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="middle_name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retail_sales_ratio">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stores_num">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stores_num_1year">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sales_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="warehouse_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="total_office_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sales_vol">
+    <xs:complexType>
+      <xs:attribute name="sales_vol_1" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_10" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_11" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_12" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_2" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_3" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_4" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_5" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_6" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_7" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_8" use="required" type="xs:nonNegativeInteger"/>
+      <xs:attribute name="sales_vol_9" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="total_debt">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="employees_num">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:nonNegativeInteger"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INN_controlled" type="value"/>    
+  <xs:element name="competitors" type="value"/>
+  <xs:element name="advantages" type="value"/>
+  <xs:element name="plans" type="value"/>
+  <xs:element name="dificulties" type="value"/>
+  <xs:element name="personal_data_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cred_bureau_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="application_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="value">
+    <xs:sequence>
+      <xs:element ref="value"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="value" type="xs:string"/>
+<xs:simpleType name="USN_taxType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="не используется"/>
+<xs:enumeration value="используется УСН"/>
+<xs:enumeration value="используется ЕНВД"/>
+
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

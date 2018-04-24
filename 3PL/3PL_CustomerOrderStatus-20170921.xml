@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>CustomerOrder</ObjectType>
+    <Object>
+      <CustomerOrder>
+        <ID>201500000142213</ID>
+        <ID_Axapta>ЗКЛг0230649</ID_Axapta>
+        <DateTime>2015-10-27T17:08:31</DateTime>
+        <Date_sales>2015-10-29T00:00:00</Date_sales>
+        <Date_Acceptance>2015-10-27T00:00:00</Date_Acceptance>
+        <Status>Picked</Status>
+        <Date_Expedition>
+        </Date_Expedition>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>81001007040</Id>
+            <Name>AD.Fun Sensation парф.вода жен 75мл</Name>
+          </Nomenclature>
+          <Quantity>12.0000</Quantity>
+          <QuantityAcceptance>12.0000</QuantityAcceptance>
+          <QuantityPicked>12.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+           <CustLineNum>1</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>81001007044</Id>
+            <Name>AD.Get Ready парф.вода жен 75мл</Name>
+          </Nomenclature>
+          <Quantity>48.0000</Quantity>
+          <QuantityAcceptance>48.0000</QuantityAcceptance>
+          <QuantityPicked>48.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>          
+		  <CustLineNum>2</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31984637000</Id>
+            <Name>adidas Extreme Power део спрей 150</Name>
+          </Nomenclature>
+          <Quantity>96.0000</Quantity>
+          <QuantityAcceptance>96.0000</QuantityAcceptance>
+          <QuantityPicked>96.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>3</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31984492000</Id>
+            <Name>AD.BHF Extreme Power гель д/д м250</Name>
+          </Nomenclature>
+          <Quantity>108.0000</Quantity>
+          <QuantityAcceptance>108.0000</QuantityAcceptance>
+          <QuantityPicked>108.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>4</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31788286000</Id>
+            <Name>AD.Get ready! део-стик муж 51гр</Name>
+          </Nomenclature>
+          <Quantity>72.0000</Quantity>
+          <QuantityAcceptance>72.0000</QuantityAcceptance>
+          <QuantityPicked>72.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>5</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31788297000</Id>
+            <Name>AD.Get ready! део-спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>168.0000</Quantity>
+          <QuantityAcceptance>168.0000</QuantityAcceptance>
+          <QuantityPicked>168.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>6</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31983829000</Id>
+            <Name>AD.Team Five део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>144.0000</Quantity>
+          <QuantityAcceptance>144.0000</QuantityAcceptance>
+          <QuantityPicked>144.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>7</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31984127000</Id>
+            <Name>AD.UEFA Champions гель д/д муж 250</Name>
+          </Nomenclature>
+          <Quantity>72.0000</Quantity>
+          <QuantityAcceptance>72.0000</QuantityAcceptance>
+          <QuantityPicked>72.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>8</CustLineNum>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>31712164000</Id>
+            <Name>AD.Get Ready део ролик жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>120.0000</Quantity>
+          <QuantityAcceptance>120.0000</QuantityAcceptance>
+          <QuantityPicked>120.0000</QuantityPicked>
+          <QuantityShipped>0.0000</QuantityShipped>
+          <CustLineNum>9</CustLineNum>
+        </Goods>       
+        <Comment>TEST</Comment>
+      </CustomerOrder>
+    </Object>
+  </DataGroup>
+</Container>

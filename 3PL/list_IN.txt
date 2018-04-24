@@ -1,0 +1,18 @@
+ Том в устройстве C не имеет метки.
+ Серийный номер тома: 22AE-47F2
+
+ Содержимое папки c:\BTS\XSD\3PL
+
+21.12.2015  12:49           730 707 3PL_BalancesWarehouse_OUT.xml
+11.03.2016  17:29            24 345 3PL_CustomerOrder_in.xml
+11.03.2016  15:48            24 154 3PL_CustomerOrder_out.xml
+15.03.2016  11:49            12 220 3PL_GTDList_IN.xml
+09.08.2017  12:29             3 077 3PL_MovingStocks_Creation_IN.xml
+09.08.2017  12:30             3 625 3PL_MovingStocks_OUT.xml
+11.03.2016  17:48             1 492 3PL_Nomenclature.xml
+09.08.2017  12:25             1 398 3PL_PurchOrder_Creation_IN.xml
+09.08.2017  12:26             1 424 3PL_PurchOrder_Reciept_OUT.xml
+14.03.2016  13:33             1 505 COTY_Copacking_request_IN.xml
+14.03.2016  13:35             2 094 COTY_Final_Goods_Receipt_OUT.xml
+              11 файлов        806 041 байт
+               0 папок  141 043 687 424 байт свободно

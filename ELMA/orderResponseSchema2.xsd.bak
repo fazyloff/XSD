@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="СписокЗаказов">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Заказ"/>
+      </xs:sequence>
+      <xs:attribute name="count" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Заказ">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="СпособДоставки"/>
+        <xs:element ref="КодКлиентаКЛНТ"/>
+        <xs:element ref="НазваниеКонтрагента"/>
+        <xs:element ref="ЗаказНаПродажу"/>
+        <xs:element ref="Акцептовано"/>
+        <xs:element ref="РазрешенаОтгрузка"/>
+        <xs:element ref="КодЗаказаКлиента"/>
+        <xs:element ref="ТипЗаказа"/>
+        <xs:element ref="Склад"/>
+        <xs:element ref="НаименованиеПоставки"/>
+        <xs:element ref="АдресПоставки"/>
+        <xs:element ref="ПоставкаНазваниеАдреса"/>
+        <xs:element ref="АдресПолучателя"/>
+        <xs:element ref="ОбъединенныйЗаказ"/>       
+        <xs:element ref="ОбщиеПримечания"/>
+        <xs:element ref="ПримечанияТранспортногоОтдела"/>
+        <xs:element ref="ПодразделениеНомер"/>
+        <xs:element ref="ПодразделениеОписание"/>
+        <xs:element ref="АвторЗаказаПоле1"/>
+        <xs:element ref="АвторЗаказаПоле2"/>
+        <xs:element ref="ТелефонКонтактногоЛица"/>
+        <xs:element ref="СкидкаУПД"/>
+        <xs:element ref="СпособОплаты"/>
+        <xs:element ref="СуммаНакладной"/>
+        <xs:element ref="ДатаОтгрузки"/>
+        <xs:element ref="СостояниеЗаказа"/>
+        <xs:element ref="Статус"/>
+        <xs:element ref="Факторинг"/>
+        <xs:element ref="ДатаЧека"/>
+        <xs:element ref="НомераЧеков"/>
+		 <xs:element ref="Накладные"/>
+        <xs:element ref="СчетаФактуры"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="СпособДоставки" type="xs:string"/>
+  <xs:element name="КодКлиентаКЛНТ" type="xs:string"/>
+  <xs:element name="НазваниеКонтрагента" type="xs:string"/>
+  <xs:element name="ЗаказНаПродажу" type="xs:string"/>
+  <xs:element name="Акцептовано" type="xs:boolean"/>
+  <xs:element name="РазрешенаОтгрузка" type="xs:boolean"/>
+  <xs:element name="КодЗаказаКлиента" type="xs:string"/>
+  <xs:element name="ТипЗаказа" type="xs:string"/>
+  <xs:element name="Склад" type="xs:string"/>
+  <xs:element name="НаименованиеПоставки" type="xs:string"/>
+  <xs:element name="АдресПоставки" type="xs:string"/>
+  <xs:element name="ПоставкаНазваниеАдреса" type="xs:string"/>
+  <xs:element name="АдресПолучателя" type="xs:string"/>
+  <xs:element name="ОбъединенныйЗаказ" type="xs:boolean"/>
+  <xs:element name="Накладные">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Накладная"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Накладная">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Номер"/>
+        <xs:element ref="Дата"/>
+        <xs:element ref="Сторно"/>
+        <xs:element ref="Сторнирована"/>
+        <xs:element ref="Сумма"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Сторно" type="xs:boolean"/>
+  <xs:element name="Сторнирована" type="xs:boolean"/>
+  <xs:element name="Сумма" type="xs:decimal"/>
+  <xs:element name="СчетаФактуры">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="СчетФактура"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="СчетФактура">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Номер"/>
+        <xs:element ref="Дата"/>
+        <xs:element ref="Тип"/>
+        <xs:element ref="Cумма"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Тип" type="xs:string"/>
+  <xs:element name="Cумма" type="xs:decimal"/>
+  <xs:element name="ОбщиеПримечания" type="xs:string"/>
+  <xs:element name="ПримечанияТранспортногоОтдела" type="xs:string"/>
+  <xs:element name="ПодразделениеНомер" type="xs:string"/>
+  <xs:element name="ПодразделениеОписание" type="xs:string"/>
+  <xs:element name="АвторЗаказаПоле1" type="xs:string"/>
+  <xs:element name="АвторЗаказаПоле2">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ТелефонКонтактногоЛица">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="СкидкаУПД" type="xs:boolean"/>
+  <xs:element name="СпособОплаты" type="xs:string"/>
+  <xs:element name="СуммаНакладной" type="xs:integer"/>
+  <xs:element name="ДатаОтгрузки" type="xs:string"/>
+  <xs:element name="СостояниеЗаказа" type="xs:string"/>
+  <xs:element name="Статус" type="xs:string"/>
+  <xs:element name="Факторинг" type="xs:boolean"/>
+  <xs:element name="ДатаЧека" type="xs:string"/>
+  <xs:element name="НомераЧеков" type="xs:string"/>
+  <xs:element name="Номер" type="xs:string"/>
+  <xs:element name="Дата" type="xs:date"/>
+</xs:schema>

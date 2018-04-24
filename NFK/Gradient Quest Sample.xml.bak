@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<debtordata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FileID="APP_20180212_20:16:25_cc7e314d-90b3-42bb-a011-603fa2fff389" FormVer="0.1" xsi:noNamespaceSchemaLocation="Gradient%20Quest%20Sample.xsd">
+    <id value="cc7e314d-90b3-42bb-a011-603fa2fff389"/>
+	<date value="2018-02-12T20:16:25"/>
+	<contract_due_days value="42"/>
+    <max_debt value="550"/>
+    <OPF value="ООО"/>
+    <company_name value="Магазин У дома"/>
+    <INN value="123456789000"/>
+    <OGRN value="1234567890013"/>
+    <USN_tax value="не используется"/>
+    <main_phone value="88005553535"/>
+    <add_phone value="88005553531"/> 
+    <web_site value="www.magazin-u-doma.ru"/>
+    <years_in_business value="2"/>
+    <ceo last_name="Семаков" first_name="Сергей" middle_name="Львович" bday="1971-12-15" is_owner="false"/>
+    <business_owner last_name="Керимов" first_name="Александр" middle_name="Керивович" bday="1989-11-15"/>
+    <retail_sales_ratio value="4"/>
+    <stores_num value="46"/>
+    <stores_num_1year value="77"/>
+    <sales_area value="800"/>
+    <warehouse_area value="1000"/>
+    <total_office_area value="5784"/>
+    <sales_vol sales_vol_1="6667" sales_vol_2="876876" sales_vol_3="777394" sales_vol_4="774890" sales_vol_5="840389" sales_vol_6="668399" sales_vol_7="774803" sales_vol_8="88883777" sales_vol_9="73718" sales_vol_10="98732" sales_vol_11="53462" sales_vol_12="11882"/>
+    <total_debt value="88830"/>
+    <employees_num value="1113"/>
+    <INN_controlled>
+	<value><![CDATA[Здесь список ИНН, разделенных любыми спецсимволами]]></value>
+		</INN_controlled>
+    <competitors>
+		<value><![CDATA[Здесь список конкурентов, в т.ч. ООО "МАРУСЯ" и АО <<Любаша>>,
+		И ИП  со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</competitors>
+    <advantages>
+		<value><![CDATA[Здесь большой большой текст про преимущества бизнеса, со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</advantages>
+    <plans>
+		<value><![CDATA[Здесь великие планы бизнеса, со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</plans>
+    <dificulties>
+	<value><![CDATA[Здесь мелкие проблемы, со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</dificulties>
+    <personal_data_confirmed value="true"/>
+    <cred_bureau_confirmed value="true"/>
+    <application_confirmed value="true"/>
+</debtordata>

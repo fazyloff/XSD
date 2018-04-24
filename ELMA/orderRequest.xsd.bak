@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="custAccounts" minOccurs="1"/>
+        <xs:element ref="custOrderNum" minOccurs="0"/>
+        <xs:element ref="salesId" minOccurs="0"/>
+        <xs:element ref="invoiceId" minOccurs="0"/>
+        <xs:element ref="factureId" minOccurs="0"/>
+        <xs:element ref="address" minOccurs="0"/>
+        <xs:element ref="startDate" minOccurs="0"/>
+        <xs:element ref="endDate" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="custAccounts" type="xs:string"/>
+  <xs:element name="custOrderNum" type="xs:string"/>
+  <xs:element name="salesId" type="xs:string"/>
+  <xs:element name="invoiceId" type="xs:string"/>
+  <xs:element name="factureId" type="xs:string"/>
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="startDate" type="xs:date"/>
+  <xs:element name="endDate" type="xs:date"/>
+</xs:schema>

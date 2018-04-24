@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>modify</OperationTag>
+    <ObjectType>MovingStocks</ObjectType>
+    <Object>
+      <MovingStocks>
+        <ID>468066531</ID>
+        <DateTime>2015-10-22T09:59:58</DateTime>
+        <Is3PL>1</Is3PL>
+        <WarehouseOut>
+          <ID>К_Основной</ID>
+          <Name>К3PL_Основной</Name>
+        </WarehouseOut>
+        <WarehouseIn>
+          <ID>К_Брак</ID>
+          <Name>К3PL_Брак</Name>
+        </WarehouseIn>
+        <Comment>201500000040453 с к_осн на к_брак 201500000040453 с к_осн на к_брак
+Юсупова Л.   19.10.2015г</Comment>
+        <ID_RemakeOrder>
+        </ID_RemakeOrder>
+        <OperationKind>3</OperationKind>
+        <ID_MovingStocks>
+        </ID_MovingStocks>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009022</Id>
+            <Name>adidas коробка жен get ready! ролик</Name>
+          </Nomenclature>
+          <Quantity>7.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009000</Id>
+            <Name>adidas коробка муж get ready! т/в10</Name>
+          </Nomenclature>
+          <Quantity>23.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009007</Id>
+            <Name>playboy POS коробка Super M парф.во</Name>
+          </Nomenclature>
+          <Quantity>23.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009015</Id>
+            <Name>playboy POS коробка GEN W т/в+брасл</Name>
+          </Nomenclature>
+          <Quantity>2.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009026</Id>
+            <Name>Playboy коробка муж Play it Wild де</Name>
+          </Nomenclature>
+          <Quantity>38.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009029</Id>
+            <Name>adidas коробка  жен спрей Soften+ге</Name>
+          </Nomenclature>
+          <Quantity>31.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>
+            </Organization>
+            <Id>80001009032</Id>
+            <Name>adidas коробка  муж Pure Game парфю</Name>
+          </Nomenclature>
+          <Quantity>9.0000</Quantity>
+          <CustomsDocNumber>
+          </CustomsDocNumber>
+          <ContryOfGood>
+          </ContryOfGood>
+        </Goods>
+      </MovingStocks>
+    </Object>
+  </DataGroup>
+</Container>

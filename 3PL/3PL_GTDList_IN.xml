@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container xmlns="http://www.coty.com/Rarus/Axapta/99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd">
+  <DataGroup>
+    <OperationTag>insert</OperationTag>
+    <ObjectType>GTDList</ObjectType>
+    <Object>
+      <GTDList>
+        <DocType>CustomerOrder</DocType>
+        <DocID>201500000142213</DocID>
+        <DocID_Axapta>ЗКЛг0230649</DocID_Axapta>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>81001007040</Id>
+            <Name>adidas Fun Sensation освеж.парфюм.вода 75мл жен</Name>
+          </Nomenclature>
+          <Quantity>12</Quantity>
+          <GTD />
+          <CountryName>РОССИЯ</CountryName>
+          <CountryCode>RU</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>81001007044</Id>
+            <Name>adidas get ready! освеж.парфюм.вода 75мл жен</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <GTD />
+          <CountryName>РОССИЯ</CountryName>
+          <CountryCode>RU</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984637000</Id>
+            <Name>adidas Extreme Power део спрей 150</Name>
+          </Nomenclature>
+          <Quantity>96</Quantity>
+          <GTD>10106050/310815/0012326/4</GTD>
+          <CountryName>ПОЛЬША</CountryName>
+          <CountryCode>PL</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984492000</Id>
+            <Name>adidas Hair&amp;Body 3 Extreme Power гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>108</Quantity>
+          <GTD>10106050/130815/0011273/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31788286000</Id>
+            <Name>adidas get ready! део стик 51гр</Name>
+          </Nomenclature>
+          <Quantity>72</Quantity>
+          <GTD>10106050/150915/0013435/14</GTD>
+          <CountryName>МОНАКО</CountryName>
+          <CountryCode>MC</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31788297000</Id>
+            <Name>adidas get ready! део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <GTD>10106050/040815/0010685/20</GTD>
+          <CountryName>ПОЛЬША</CountryName>
+          <CountryCode>PL</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31983829000</Id>
+            <Name>adidas Team Five део спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>144</Quantity>
+          <GTD>10106050/150915/0013424/7</GTD>
+          <CountryName>ПОЛЬША</CountryName>
+          <CountryCode>PL</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984127000</Id>
+            <Name>adidas UEFA Champions League гель д/д муж 250мл</Name>
+          </Nomenclature>
+          <Quantity>72</Quantity>
+          <GTD>10106050/070415/0004765/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31712164000</Id>
+            <Name>adidas C&amp;C get ready! ант/т ролик жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>120</Quantity>
+          <GTD>10106050/280915/0014200/16</GTD>
+          <CountryName>ИСПАНИЯ</CountryName>
+          <CountryCode>ES</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31475136000</Id>
+            <Name>adidas C&amp;C Soften ант-т спрей жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <GTD>10106050/270215/0002745/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31475326000</Id>
+            <Name>adidas С&amp;C Control ант/т спрей жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>192</Quantity>
+          <GTD>10130120/021015/0008817/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31712170000</Id>
+            <Name>adidas C&amp;C get ready! ант/т жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>288</Quantity>
+          <GTD>10130120/021015/0008817/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31983857000</Id>
+            <Name>adidas C&amp;C 6в1 ант/т спрей жен 150мл</Name>
+          </Nomenclature>
+          <Quantity>216</Quantity>
+          <GTD>10106050/010915/0012427/12</GTD>
+          <CountryName>ПОРТУГАЛИЯ</CountryName>
+          <CountryCode>PT</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31535252000</Id>
+            <Name>adidas Protect гель д/душа 250мл жен</Name>
+          </Nomenclature>
+          <Quantity>96</Quantity>
+          <GTD>10106050/160215/0002164/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31711128000</Id>
+            <Name>adidas get ready! гель д/д жен 250мл</Name>
+          </Nomenclature>
+          <Quantity>72</Quantity>
+          <GTD>10130120/021015/0008791/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984237000</Id>
+            <Name>adidas Soft Honey гель д/д жен 250мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <GTD>10106050/020215/0001299/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984641000</Id>
+            <Name>adidas Happy гель д/душа жен 250мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <GTD>10106050/140915/0013238/13</GTD>
+          <CountryName>ИСПАНИЯ</CountryName>
+          <CountryCode>ES</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984458000</Id>
+            <Name>adidas Hair&amp;Body 3 get ready! гель д/д муж 250мл</Name>
+          </Nomenclature>
+          <Quantity>108</Quantity>
+          <GTD>10130120/021015/0008791/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984554000</Id>
+            <Name>adidas Hair&amp;Body 3 Team Five гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>36</Quantity>
+          <GTD>10106050/310815/0012262/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31712186000</Id>
+            <Name>adidas get ready! ант/т ролик муж 50мл</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <GTD>10106050/110815/0011095/6</GTD>
+          <CountryName>ИСПАНИЯ</CountryName>
+          <CountryCode>ES</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31983862000</Id>
+            <Name>adidas C&amp;D 6в1 ант/т спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <GTD>10106050/070715/0009069/11</GTD>
+          <CountryName>ПОРТУГАЛИЯ</CountryName>
+          <CountryCode>PT</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984465000</Id>
+            <Name>adidas Hair&amp;Body 3 Extra Fresh гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>108</Quantity>
+          <GTD>10106050/020715/0008859/15</GTD>
+          <CountryName>ИСПАНИЯ</CountryName>
+          <CountryCode>ES</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31535257000</Id>
+            <Name>adidas Hair&amp;Body 3 Актив Старт 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>42</Quantity>
+          <GTD />
+          <CountryName />
+          <CountryCode />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31535257000</Id>
+            <Name>adidas Hair&amp;Body 3 Актив Старт 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>18</Quantity>
+          <GTD>10106050/300315/0004303/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984479000</Id>
+            <Name>adidas Hair&amp;Body 3 After Sport гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>168</Quantity>
+          <GTD>10130120/021015/0008791/1</GTD>
+          <CountryName>УКРАИНА</CountryName>
+          <CountryCode>UA</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984887000</Id>
+            <Name>adidas Hair&amp;Body 3 Sport Energy гель д/душа 250мл муж</Name>
+          </Nomenclature>
+          <Quantity>60</Quantity>
+          <GTD>10106050/030715/0008940/10</GTD>
+          <CountryName>ИСПАНИЯ</CountryName>
+          <CountryCode>ES</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984103000</Id>
+            <Name>adidas UEFA Champions League део-спрей муж 150мл</Name>
+          </Nomenclature>
+          <Quantity>96</Quantity>
+          <GTD>10106050/191214/0023310/12</GTD>
+          <CountryName>ПОЛЬША</CountryName>
+          <CountryCode>PL</CountryCode>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>31984104000</Id>
+            <Name>adidas UEFA Champions League лосьон п/бр 100мл</Name>
+          </Nomenclature>
+          <Quantity>48</Quantity>
+          <GTD>10106050/190115/0000409/11</GTD>
+          <CountryName>ИСПАНИЯ</CountryName>
+          <CountryCode>ES</CountryCode>
+        </Goods>
+      </GTDList>
+    </Object>
+  </DataGroup>
+</Container>

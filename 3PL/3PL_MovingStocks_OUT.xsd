@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>Root element of a message</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationTag" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of operation - modify, insert, delete
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ObjectType" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Type of object - MovingStocks, Stocks transfer operation</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Object">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MovingStocks">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Operation ID in 3PL's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="DateTime" type="xs:dateTime">
+                            <xs:annotation>
+                              <xs:documentation>Operation datetime in 3PL's ERP</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Is3PL" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Is it 3PL Document, 1- Yes, 0 - No</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="WarehouseOut">
+                            <xs:annotation>
+                              <xs:documentation>Warehouse From information</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse ID in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Name" type="xs:string" >
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse Name in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="WarehouseIn">
+                            <xs:annotation>
+                              <xs:documentation>Warehouse To information</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse ID in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Name" type="xs:string" >
+                                  <xs:annotation>
+                                    <xs:documentation>Warehouse Name in 3PL ERP</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Comment" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>General comment</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID_RemakeOrder" type="xs:string">
+                           <xs:annotation>
+                              <xs:documentation>Remake order ID in 3PL's ERP, linked to this Transfer</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="OperationKind" type="xs:unsignedByte">
+                            <xs:annotation>
+                              <xs:documentation>Type of moving stocks, available value - "3"</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID_MovingStocks" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>Purch order's ID in 3PL's ERP, linked to this Transfer</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Goods" maxOccurs="unbounded" minOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>Moving stocks lines</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Nomenclature">
+                                  <xs:annotation>
+                                    <xs:documentation>Product information</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Organization" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>Product organization</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Id" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>Product id in 3PL ERP</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Name" type="xs:string" >
+                                        <xs:annotation>
+                                          <xs:documentation>Product name 3PL ERP</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Quantity" type="xs:decimal" >
+                                  <xs:annotation>
+                                    <xs:documentation>transferred quantity</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CustomsDocNumber" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Customs Declaration number</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="ContryOfGood" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>ISO CODE of Product's origin country</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

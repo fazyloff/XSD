@@ -1,0 +1,237 @@
+﻿<xs:schema xmlns:tns="http://gradient.ru/GradientOrderIN" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://gradient.ru/GradientOrderIN" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="Container">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DataGroup">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OperationTag" type="xs:string"/>
+							<xs:element name="ObjectType" type="xs:string"/>
+							<xs:element name="Object">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CustomerOrder">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ID" type="xs:string"/>
+													<xs:element name="ID_Axapta" type="xs:string" nillable="true"/>
+													<xs:element name="DateTime" type="xs:dateTime"/>
+													<xs:element name="Date_sales" type="xs:dateTime"/>
+													<xs:element name="Date_Acceptance" type="xs:dateTime" nillable="true"/>
+													<xs:element name="Num_Customer_Order" type="xs:string" nillable="true"/>
+													<xs:element name="ParentOrder" type="xs:string" nillable="true"/>
+													<xs:element name="DvlMode" type="xs:string"/>
+													<xs:element name="TypeOrder">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ID" type="xs:string"/>
+																<xs:element name="Name" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="CHAIN" nillable="true">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ID" type="xs:string" nillable="true"/>
+																<xs:element name="Name" type="xs:string" nillable="true"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="VAT_Included" type="xs:boolean" nillable="true"/>
+													<xs:element name="Sticking" type="xs:boolean" nillable="true"/>
+													<xs:element name="Counterparties">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ID" type="xs:string"/>
+																<xs:element name="Name" type="xs:string"/>
+																<xs:element name="ShortName" type="xs:string" nillable="true"/>
+																<xs:element name="INN" type="xs:unsignedLong" nillable="true"/>
+																<xs:element name="KPP" type="xs:unsignedInt" nillable="true"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Contract" nillable="true">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="RContractAccount" type="xs:string" nillable="true"/>
+																<xs:element name="RContractNumber" type="xs:string" nillable="true"/>
+																<xs:element name="RSubContractAccount" type="xs:string" nillable="true"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Consignee">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ID" type="xs:string"/>
+																<xs:element name="Name" type="xs:string"/>
+																<xs:element name="ShortName" type="xs:string" nillable="true"/>
+																<xs:element name="INN" type="xs:unsignedLong" nillable="true"/>
+																<xs:element name="KPP" type="xs:unsignedInt" nillable="true"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Address">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="GRD_AddressRegNum" type="xs:string"/>
+																<xs:element name="Address" type="xs:string"/>
+																<xs:element name="CLADRUsage" type="xs:unsignedByte" nillable="true"/>
+																<xs:element name="AddressName" nillable="true"/>
+																<xs:element name="CLADR" nillable="true">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="CountryRegion">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="CountryRegionId" type="xs:string"/>
+																						<xs:element name="CountryRegionName" type="xs:string"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="ZipCode">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="ZipCodeId" type="xs:unsignedInt"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="State">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="StateId"/>
+																						<xs:element name="StateName"/>
+																						<xs:element name="StateTypeId"/>
+																						<xs:element name="StateTypeName"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="County">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="CountyId"/>
+																						<xs:element name="CountyName"/>
+																						<xs:element name="CountyTypeId"/>
+																						<xs:element name="CountyTypeName"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Town">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="TownId"/>
+																						<xs:element name="TownName"/>
+																						<xs:element name="TownTypeId"/>
+																						<xs:element name="TownTypeName"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Settlement">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="SettlementId"/>
+																						<xs:element name="SettlementName"/>
+																						<xs:element name="SettlementTypeId"/>
+																						<xs:element name="SettlementTypeName"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Street">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="StreetId"/>
+																						<xs:element name="StreetName"/>
+																						<xs:element name="StreetTypeId"/>
+																						<xs:element name="StreetTypeName"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Estate">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="EstateId"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Building">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="BuildingId"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="AddressDC" nillable="true"/>
+													<xs:element name="Status" type="xs:string" nillable="true"/>
+													<xs:element name="Date_Expedition" type="xs:dateTime" nillable="true"/>
+													<xs:element name="EDI_RelationId" type="xs:string" nillable="true"/>
+													<xs:element name="UltimateCustomerGLN" type="xs:unsignedLong" nillable="true"/>
+													<xs:element name="Service24ReasonId" type="xs:string" nillable="true"/>
+													<xs:element name="is3PL" type="xs:unsignedByte"/>
+													<xs:element name="InternalOrder" type="xs:unsignedByte" nillable="true"/>
+													<xs:element name="WarehouseHead">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ID" type="xs:string"/>
+																<xs:element name="Name" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="EDICodeByBuyer" type="xs:string" nillable="true"/>
+													<xs:element name="Goods" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Nomenclature">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Organization" type="xs:string"/>
+																			<xs:element name="Id" type="xs:string"/>
+																			<xs:element name="Name" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Quantity" type="xs:decimal"/>
+																<xs:element name="QuantityAcceptance" type="xs:decimal" nillable="true"/>
+																<xs:element name="QuantityShipped" type="xs:decimal" nillable="true"/>
+																<xs:element name="Price" type="xs:decimal" nillable="true"/>
+																<xs:element name="VAT_rate" type="xs:unsignedByte" nillable="true"/>
+																<xs:element name="GTIN" type="xs:string" nillable="true"/>
+																<xs:element name="CustLineNum" type="xs:unsignedByte"/>
+																<xs:element name="ExternaItemId" type="xs:string" nillable="true"/>
+																<xs:element name="OrderedUnitCode" type="xs:string" nillable="true"/>
+																<xs:element name="OrderedUnitPacksize" type="xs:unsignedByte" nillable="true"/>
+																<xs:element name="Warehouse">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="ID" type="xs:string" nillable="true"/>
+																			<xs:element name="Name" type="xs:string" nillable="true"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="MinExpiryDate" type="xs:dateTime" nillable="true"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Amount" type="xs:decimal"/>
+													<xs:element name="Comment" type="xs:string" nillable="true"/>
+													<xs:element name="TransportDescription" type="xs:string" nillable="true"/>
+													<xs:element name="StoreDescription" type="xs:string" nillable="true"/>
+													<xs:element name="Id_invoice" type="xs:string" nillable="true"/>
+													<xs:element name="Barcode_Invoice" type="xs:unsignedLong" nillable="true"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

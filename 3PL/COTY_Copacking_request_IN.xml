@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>insert</OperationTag>
+    <ObjectType>RemakeOrder</ObjectType>
+    <Object>
+      <RemakeOrder>
+        <ID_COTY>201500000003010</ID_COTY>
+        <DateTime_COTY>2015-11-23T16:06:16</DateTime_COTY>
+        <OperationKind>1</OperationKind>
+        <ID>ST124</ID>
+        <DateTime>2015-11-23T16:06:16</DateTime>
+          <Warehouse>
+          <ID>К_ПН</ID>
+          <Name>К3PL_ПН</Name>
+        </Warehouse>
+        <WarehouseOut>
+          <ID>К_Основной</ID>
+          <Name>Основной_Коти</Name>
+        </WarehouseOut>
+        <KIT_ID>65792189000TST</KIT_ID>
+        <KIT_Quantity>5002</KIT_Quantity>
+        <KIT_Price>10.23</KIT_Price>
+        <Is3PL>1</Is3PL>
+        <Comment>This is general comment</Comment>
+        <Goods>
+          <Nomenclature>
+            <Organization>Fragrance&amp;Skin</Organization>
+            <Id>65792189000</Id>
+            <Name>Си Кей Уан Ред т/в жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>50</Quantity>
+          <Price>0</Price>
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Fragrance&amp;Skin</Organization>
+            <Id>65792189000</Id>
+            <Name>Си Кей Уан Ред т/в жен 50мл</Name>
+          </Nomenclature>
+          <Quantity>35000</Quantity>
+          <Price>100.2</Price>
+        </Goods>
+      </RemakeOrder>
+    </Object>
+  </DataGroup>
+</Container>

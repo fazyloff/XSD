@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="catalogType" minOccurs="1">
+		<xs:annotation>
+		<xs:documentation>
+		Тип справочника, из списка ниже
+		</xs:documentation>
+		</xs:annotation>
+		</xs:element>
+        <xs:element ref="startPosition" minOccurs="0">
+		<xs:annotation>
+		<xs:documentation>
+		Стартовая позиция
+		</xs:documentation>
+		</xs:annotation>
+		</xs:element>
+        <xs:element ref="records" minOccurs="0">
+		<xs:annotation>
+		<xs:documentation>
+		Число записей в результате
+		</xs:documentation>
+		</xs:annotation>
+		</xs:element>
+        <xs:element ref="messageId" minOccurs="0">
+		<xs:annotation>
+		<xs:documentation>
+		Номер сообщения
+		</xs:documentation>
+		</xs:annotation>
+		</xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="catalogType" type="catalogTypes"/>
+  <xs:element name="startPosition" type="xs:unsignedInt"/>
+  <xs:element name="records" type="xs:unsignedInt"/>
+  <xs:element name="messageId" type="xs:unsignedInt"/>
+  <xs:simpleType  name="catalogTypes">
+	  <xs:restriction base="xs:string">
+		  <xs:enumeration value="Клиенты"/>
+		  <xs:enumeration value="Договоры"/>
+		  <xs:enumeration value="ОПФ"/>
+		  <xs:enumeration value="Адреса"/>
+		  <xs:enumeration value="Сотрудники"/>
+		  <xs:enumeration value="Подразделения"/>
+		  <xs:enumeration value="БЕ"/>
+		  <xs:enumeration value="Холдинги"/>
+	  </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

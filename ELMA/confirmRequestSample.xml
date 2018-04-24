@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="confirmRequest.xsd">
+<catalogType>Клиенты</catalogType>
+<messageId>123</messageId>
+</request>

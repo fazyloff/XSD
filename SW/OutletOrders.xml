@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ROOT>
+	<OutletOrders>
+		<OutletOrder OL_ID="100020000000008" OL_CODE="001117" OlCard_id="2000200001" OrderNo="2000200000" OLOrderDate="2016-09-26T15:06:03.277" OrderExecutionDate="2016-09-26T00:00:00" PayForm_id="200000" ResponsiblePerson="-" OLOrderAmount="13.00000" Discount="0.00" Merch_id="1000000012" OlDeliveryAddress="125363,Москва г,Сходненская ул, д. 23" DOUBLED="0" Op_Code="" DTML="20160926 15:11" TransportCost="0.00" ProxySeries="" ProxyNumber="" ProxyDate="1900-01-01T00:00:00" VATCalcMode="0" VAT_Sum="2.34000" W_ExternalCode="1" IsReturn="0" TaxFactureNo="0" Comments="" Route_id="100000000000011" DC_ALLOW="0" OLDISTCENT="" OLDISTSHAR="0.000" DC_DELIVER="0" DC_PAYER="0" PayDate="1900-01-01T00:00:00" PCOMP_CODE="" Postpay="0" Cust_Id="2">
+			<OutletOrderDetails />
+		</OutletOrder>
+		<OutletOrder OL_ID="100020000000301" OL_CODE="000573" OlCard_id="100000000200002" OrderNo="100000000200000" OLOrderDate="2016-09-26T16:09:07" OrderExecutionDate="2016-09-26T00:00:00" PayForm_id="200000" ResponsiblePerson="-" OLOrderAmount="8014.55000" Discount="0.00" Merch_id="1000000013" OlDeliveryAddress="142110,Московская обл,Подольск г,Парковая ул, д. 11 А" DOUBLED="0" Op_Code="" DTML="20160926 16:13" TransportCost="0.00" ProxySeries="" ProxyNumber="" ProxyDate="1900-01-01T00:00:00" VATCalcMode="0" VAT_Sum="1442.62000" W_ExternalCode="1" IsReturn="0" TaxFactureNo="0" Comments="" Route_id="100000000000010" DC_ALLOW="0" OLDISTCENT="" OLDISTSHAR="0.000" DC_DELIVER="0" DC_PAYER="0" PayDate="2016-09-26T00:00:00" PCOMP_CODE="" PFormType="1" Postpay="0" Cust_Id="2">
+			<OutletOrderDetails>
+				<OutletOrderDetail CODE="504801" LOCALCODE="80019900110" PRICE="109.32203" QTY="5.000" ISRETURN="0" RDISCOUNT="0.00" BASEPRICE="109.32203000" VAT="18.00" Cust_Id="2" />
+				<OutletOrderDetail CODE="504297" LOCALCODE="80052075" PRICE="45.36440" QTY="8.000" ISRETURN="0" RDISCOUNT="0.00" BASEPRICE="45.36440000" VAT="18.00" Cust_Id="2" />
+				<OutletOrderDetail CODE="505657" LOCALCODE="800530343" PRICE="79.25423" QTY="9.000" ISRETURN="0" RDISCOUNT="0.00" BASEPRICE="79.25423000" VAT="18.00" Cust_Id="2" />
+				<OutletOrderDetail CODE="506315" LOCALCODE="80053550305" PRICE="170.68644" QTY="5.000" ISRETURN="0" RDISCOUNT="0.00" BASEPRICE="170.68644000" VAT="18.00" Cust_Id="2" />
+				<OutletOrderDetail CODE="503942" LOCALCODE="800563123" PRICE="79.11864" QTY="70.000" ISRETURN="0" RDISCOUNT="0.00" BASEPRICE="79.11864000" VAT="18.00" Cust_Id="2" />
+			</OutletOrderDetails>
+		</OutletOrder>
+	</OutletOrders>
+</ROOT>

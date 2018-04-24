@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="orders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="order"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderGUID"/>
+        <xs:element ref="ParentOrderingSystem"/>
+        <xs:element ref="numberIN"/>
+        <xs:element ref="numberOUT"/>
+        <xs:element ref="numberParent"/>
+        <xs:element ref="presentParent"/>
+        <xs:element ref="orderAction"/>
+        <xs:element ref="orderDate"/>
+        <xs:element ref="shipmentDate"/>
+        <xs:element ref="clientID"/>
+        <xs:element ref="creatorType"/>
+        <xs:element ref="addressGruz"/>
+        <xs:element ref="adressID"/>
+        <xs:element ref="contractID"/>
+        <xs:element ref="companyID"/>
+        <xs:element ref="stockID"/>
+        <xs:element ref="sectorID"/>
+        <xs:element ref="noteTotal"/>
+        <xs:element ref="noteWarehouse"/>
+        <xs:element ref="noteTransport"/>
+        <xs:element ref="status"/>
+        <xs:element ref="statusDesc"/>
+        <xs:element ref="checkSum"/>
+        <xs:element ref="checkStatus"/>
+        <xs:element ref="checkCurrency"/>
+        <xs:element ref="delivery"/>
+        <xs:element ref="deliveryCost"/>
+        <xs:element ref="payment"/>
+        <xs:element ref="discount"/>
+        <xs:element ref="discountReason"/>
+        <xs:element ref="noContract"/>
+        <xs:element ref="nopay"/>
+        <xs:element ref="invoice"/>
+        <xs:element ref="waybill"/>
+        <xs:element ref="statusVKPK"/>
+        <xs:element ref="orderContactPhone"/>
+        <xs:element ref="orderContactFIO"/>
+        <xs:element ref="lines"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderGUID" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>GUID заказа, Уникальный идентификатор</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="ParentOrderingSystem" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Система-источник, передавать строку- "NEON"</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="numberIN" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Номер в учетной системе поставщика, передавать номер заказа в КПК</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="orderDate" type="xs:dateTime">
+      <xs:annotation>
+          <xs:documentation>Дата заказа</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="shipmentDate" type="xs:dateTime">
+      <xs:annotation>
+          <xs:documentation>Предполагаемая дата поставки</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="clientID" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Код клиента в учетной системе дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="creatorType" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Тип создания заказа, передавать - 0</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="addressGruz" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Адрес грузополучателя</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="adressID" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Код адреса из учетной системы дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="contractID" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Код договора из учетной системы дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="companyID" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Код компании из учетной системы дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="stockID" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Код склада из учетной системы дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="sectorID" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Код сектора - Торгпреда из учетной системы дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="noteTotal" type="xs:string">
+         <xs:annotation>
+             <xs:documentation>Общее примечание</xs:documentation>
+         </xs:annotation>
+     </xs:element>
+  <xs:element name="noteWarehouse" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Примечание для склада</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="noteTransport" type="xs:string">
+    <xs:annotation>
+          <xs:documentation>Примечание для транспортного отдела</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="checkSum" type="xs:decimal">
+      <xs:annotation>
+          <xs:documentation>Сумма заказа</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="checkCurrency" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Валюта заказа</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="delivery" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Способ доставки - одно из значений: доставка, самовывоз</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="payment" type="xs:string">
+      <xs:annotation>
+          <xs:documentation>Способ оплаты</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="noContract" type="xs:boolean">
+      <xs:annotation>
+          <xs:documentation>Заказ Без договора?</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="nopay" type="xs:boolean">
+      <xs:annotation>
+          <xs:documentation>Заказ без оплаты (бонусный)?</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="statusVKPK" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Статус заказа в мобильном устройстве. 2- заказ создан, 3 - заказ акцептован, 27 - заказ отменен </xs:documentation>
+      </xs:annotation>
+  </xs:element>
+   <xs:element name="lines">
+    <xs:annotation>
+        <xs:documentation>строки заказа</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="line"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="line">
+    <xs:annotation>
+        <xs:documentation>строка заказа</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="productID"/>
+        <xs:element ref="price"/>
+        <xs:element ref="count"/>
+        <xs:element ref="unit"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="productID" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Код номенклатуры в учетной системе дистрибьютора</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="price" type="xs:decimal">
+      <xs:annotation>
+          <xs:documentation>цена за шт</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="count" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Количество</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+  <xs:element name="unit" type="xs:integer">
+      <xs:annotation>
+          <xs:documentation>Единица измерения, всегда 1</xs:documentation>
+      </xs:annotation>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<Данные ДеньДанных = "01.01.2011" КодСпецотдела="UPECO" КодКомпании="100">
+	<ВидДанных Тип="Документ" Вид="ПриходныйКассовыйОрдер">
+		<Документ Cash_ID="" Cash_Cyrrencyiso="" Cash_Number="" Cash_Partner="" Cash_Contract="" Cash_DATE="" Cash_summa="" Cash_NDS="" Cash_Comment="" Cash_BuhAccount="" Cash_InvoiceID="" Cash_InvoiceDate="" Cash_StornoId=""/>
+	</ВидДанных>
+</Данные>

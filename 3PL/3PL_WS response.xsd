@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://www.coty.com/Rarus/Axapta/99 99-1CAxapta_AdapterMessage.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.coty.com/Rarus/Axapta/99" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:annotation>
+      <xs:documentation>Root element of a message</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataGroup">
+          <xs:annotation>
+            <xs:documentation>Root element of a message</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationTag" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of operation - modify, insert, delete. May be copied from Request message!
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ObjectType" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>
+                    Type of object - CustomerOrder, PurchORder, MovingStockOrder, etc. May be copied from Request message!
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:choice maxOccurs="1" minOccurs="1">
+                <xs:element name="ObjectKey">
+                <xs:annotation>
+                  <xs:documentation>
+                    This block is returned, if everything is ok.
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SimpleObjectKey">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ObjectKeyID" type="xs:string">
+                            <xs:annotation>
+                              <xs:documentation>
+                                ID of object. May be copied from Request message!
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+                <xs:element name="ErrMsg" type="xs:string">
+                  <xs:annotation>
+                    <xs:documentation>
+                      This block is returned, when an error is raised. Full error description, debug info, etc.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

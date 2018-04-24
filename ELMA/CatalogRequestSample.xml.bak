@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogRequest.xsd">
+<catalogType>Клиенты</catalogType>
+<!-- На выбор из списка, см XSD:
+		  <xs:enumeration value="Клиенты"/>
+		  <xs:enumeration value="Договоры"/>
+		  <xs:enumeration value="ОПФ"/>
+		  <xs:enumeration value="Адреса"/>
+		  <xs:enumeration value="Сотрудники"/>
+		  <xs:enumeration value="Подразделения"/>
+		  <xs:enumeration value="БЕ"/>
+		  <xs:enumeration value="Холдинги"/>-->
+<startPosition>1</startPosition>
+<records>10</records>
+<messageId>123</messageId>
+</request>

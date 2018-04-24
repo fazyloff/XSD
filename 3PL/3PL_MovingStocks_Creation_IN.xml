@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Container>
+  <DataGroup>
+    <OperationTag>insert</OperationTag>
+    <ObjectType>MovingStockOrder</ObjectType>
+    <Object>
+      <MovingStockOrder>
+        <ID>dasgdsg</ID>
+        <DateTime>2015-10-21T16:24:36</DateTime>
+        <Is3PL>1</Is3PL>
+        <WarehouseOut>
+          <ID>К_Основной</ID>
+          <Name>Основной_К</Name>
+        </WarehouseOut>
+        <WarehouseIn>
+          <ID>К_Брак</ID>
+          <Name>Брак_К</Name>
+        </WarehouseIn>
+        <Comment>BlaBla dvag</Comment>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009022</Id>
+            <Name>adidas коробка жен get ready! ролик+гель</Name>
+          </Nomenclature>
+          <Quantity>7.00</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009032</Id>
+            <Name>adidas коробка  муж Pure Game парфюм.вода+гель д/душа</Name>
+          </Nomenclature>
+          <Quantity>900.00</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009029</Id>
+            <Name>adidas коробка  жен спрей Soften+гель Soft Honey</Name>
+          </Nomenclature>
+          <Quantity>31</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009007</Id>
+            <Name>playboy POS коробка Super M парф.вода+гель</Name>
+          </Nomenclature>
+          <Quantity>23</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009026</Id>
+            <Name>Playboy коробка муж Play it Wild део спрей+гель д/душа</Name>
+          </Nomenclature>
+          <Quantity>38</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009015</Id>
+            <Name>playboy POS коробка GEN W т/в+браслет</Name>
+          </Nomenclature>
+          <Quantity>2</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+        <Goods>
+          <Nomenclature>
+            <Organization>Color&amp;Body</Organization>
+            <Id>80001009000</Id>
+            <Name>adidas коробка муж get ready! т/в100+спрей+гель+мини мяч</Name>
+          </Nomenclature>
+          <Quantity>23</Quantity>
+          <CustomsDocNumber />
+          <ContryOfGood />
+        </Goods>
+      </MovingStockOrder>
+    </Object>
+  </DataGroup>
+</Container>
