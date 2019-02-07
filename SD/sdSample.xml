@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<TaskRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="sdTaskRequest.xsd">
+<Author>user@gradient.ru</Author>
+<Analitic>ubaAnalitic@gradient.ru</Analitic>
+<TaskDate>2018-08-09T14:15:16</TaskDate>
+<BUId>1</BUId>
+<CategoryId>3</CategoryId>
+<Subject>Ошибка! Помогите!</Subject>
+<Body>Я не знаю, что делать! Все сломалось,
+hdkdgh"
+ "аиавивэптпаэпат"</Body>
+</TaskRequest>
+<!--
+заявитель - будет в типа пересылаемом письме после "FROM:" - будет и в SD как заявитель
+аналитик УБА - от кого письмо на сервис SD - будем в SD как исполнители
+Дата  - Дата письма, если будет надо потом поменяем в SD
+БЕ заявителя - будем брать из AD или ещё откуда-то 
+БЕ исходная - она будет фиксироваться в письме, если мы её знаем  (вот её куда-то засунуть)
+Категория - вот её куда-то засунуть
+Тема - тема письма
+-->

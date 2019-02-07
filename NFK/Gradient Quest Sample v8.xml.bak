@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<debtordata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FileID="APP_20180212_20:16:25_cc7e314d-90b3-42bb-a011-603fa2fff389" FormVer="8.0" xsi:noNamespaceSchemaLocation="Gradient%20Quest%20Sample%20v8.xsd">
+    <id value="cc7e314d-90b3-42bb-a011-603fa2fff389"/>
+	<date value="2018-02-12T20:16:25"/>
+	<sms_validation_code value="3452"/>
+	<contract_due_days value="42"/>
+    <max_debt value="550"/>
+	<delivery_type value="Доставка"/>
+	<accept_goods_type value="Шт"/>
+	<primary_docs value="УПД"/>
+    <OPF value="ООО"/>
+    <company_name value="Магазин У дома"/>
+    <INN value="123456789000"/>
+    <OGRN value="1234567890013"/>
+    <USN_tax value="не используется"/>
+    <main_phone value="88005553535"/>
+    <add_phone value="88005553531"/> 
+	<web_site value="www.magazin-u-doma.ru"/>
+    <years_in_business value="2"/>
+    <ceo last_name="Семаков" first_name="Сергей" middle_name="Львович" bday="1971-12-15" is_owner="false"
+         passport_serial="12 34" passport_number="0123456" passport_date="2014-03-12" passport_who="Ленинским РУВД гор. Махачкалы"/>
+    <main_act value="1"/>
+	<retail_sales_ratio value="4"/>
+    <stores_num value="46"/>
+    <stores_num_1year value="77"/>
+    <sales_area value="800"/>
+    <warehouse_area value="1000"/>
+    <total_office_area value="5784"/>
+    <total_debt value="88830"/>
+    <employees_num value="1113"/>
+    <INN_controlled>
+	<value><![CDATA[Здесь список ИНН, разделенных любыми спецсимволами]]></value>
+		</INN_controlled>
+    <competitors>
+		<value><![CDATA[Здесь список конкурентов, в т.ч. ООО "МАРУСЯ" и АО <<Любаша>>,
+		И ИП  со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</competitors>
+    <advantages>
+		<value><![CDATA[Здесь большой большой текст про преимущества бизнеса, со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</advantages>
+    <plans>
+		<value><![CDATA[Здесь великие планы бизнеса, со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</plans>
+    <dificulties>
+	<value><![CDATA[Здесь мелкие проблемы, со всякими спецсимволами, '' "" ! <> и т.п.]]></value>
+	</dificulties>
+    <personal_data_confirmed value="true"/>
+    <cred_bureau_confirmed value="true"/>
+    <application_confirmed value="true"/>
+	<first_delivery_date value="2017-10-07"/>
+	<year_volumes> <!--Все объемные показатели сведены в одну группу тегов-->
+		<!--volume num="Номер месяца" date="Первая дата месяца" sales="Объем продаж общ" gradientsales="Продажи Градиент" payment="Оплаты Градиент" -->
+		<volume num="1" date="2018-05-01" sales="10000" gradientsales="5000" payment="4500"/>
+		<volume num="2" date="2018-04-01" sales="20000" gradientsales="4500" payment="0"/>
+		<volume num="3" date="2018-03-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="4" date="2018-02-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="5" date="2018-01-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="6" date="2017-12-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="7" date="2017-11-01" sales="0" gradientsales="0" payment="1000"/>
+		<volume num="8" date="2017-10-01" sales="1000" gradientsales="1000" payment="0"/>
+		<volume num="9" date="2017-09-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="10" date="2017-08-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="11" date="2017-07-01" sales="0" gradientsales="0" payment="0"/>
+		<volume num="12" date="2017-06-01" sales="0" gradientsales="0" payment="0"/>
+	</year_volumes>
+	<payments_balance value="5000"/>
+</debtordata>

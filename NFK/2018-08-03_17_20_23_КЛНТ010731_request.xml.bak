@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><ticket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../../../bts/xsd/nfk/PortalQuest.xsd">
+    <ticketGUID>{E1F1CB92-5E00-40CF-997E-17568597D55E}</ticketGUID>
+    <ticketID></ticketID>
+    <company_id>100</company_id>
+    <client_id>КЛНТ010731</client_id>
+    <anketa>
+        <sms_validation_code value="1907"/>
+        <contract_due_days value="50"/>
+        <max_debt value="50"/>
+        <delivery_type value="Доставка"/>
+        <accept_goods_type value="Штуки"/>
+        <primary_docs value="УПД"/>
+        <main_phone value="79163018853"/>
+        <add_phone value="79163018853"/>
+        <USN_tax value="Не используется"/>
+        <web_site value="https://www.1.ru"/>
+        <years_in_business value="5"/>
+        <ceo last_name="Власенко" first_name="Константин" middle_name="Николаевич" is_owner="true"
+                            bday="1988-08-01"
+                                        passport_serial="кв"
+                                        passport_number="5552566"
+                                        passport_date="2013-08-01"
+                                        passport_who="тест0"
+                    />
+        <main_act value="Миксовая (продукты+НРС)"/>
+        <retail_sales_ratio value="Более 80%>"/>
+        <stores_num value="5"/>
+        <stores_num_1year value="4"/>
+        <sales_area value="1000"/>
+        <warehouse_area value="2000"/>
+        <total_office_area value="3000"/>
+        <total_debt value="50"/>
+        <employees_num value="500"/>
+        <INN_controlled>
+            <value>646464646 4614616461</value>
+        </INN_controlled>
+        <competitors>
+            <value>тест</value>
+        </competitors>
+        <advantages>
+            <value>тест1</value>
+        </advantages>
+        <plans>
+            <value>тест2</value>
+        </plans>
+        <difficulties>
+            <value>тест3</value>
+        </difficulties>
+        <year_volumes>
+            <!--Все объемные показатели сведены в одну группу тегов-->
+            <!--volume num="Номер месяца" date="Первая дата месяца" sales="Объем продаж общ" gradientsales="Продажи Градиент" payment="Оплаты Градиент" -->
+                            <volume num="1" date="2018-07-01" sales="10"/>
+                            <volume num="2" date="2018-06-01" sales="11"/>
+                            <volume num="3" date="2018-05-01" sales="12"/>
+                            <volume num="4" date="2018-04-01" sales="13"/>
+                            <volume num="5" date="2018-03-01" sales="14"/>
+                            <volume num="6" date="2018-02-01" sales="15"/>
+                            <volume num="7" date="2018-01-01" sales="16"/>
+                            <volume num="8" date="2017-12-01" sales="17"/>
+                            <volume num="9" date="2017-11-01" sales="18"/>
+                            <volume num="10" date="2017-10-01" sales="19"/>
+                            <volume num="11" date="2017-09-01" sales="20"/>
+                            <volume num="12" date="2017-08-01" sales="21"/>
+                    </year_volumes>
+        <personal_data_confirmed value="true"/>
+        <cred_bureau_confirmed value="true"/>
+        <application_confirmed value="true"/>
+    </anketa>
+</ticket>

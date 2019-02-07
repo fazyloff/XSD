@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ticket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ticketGUID"/>
+        <xs:element ref="ticketID" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="company_id"/>
+        <xs:element ref="client_id"/>
+        <xs:element ref="anketa"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ticketGUID" type="xs:string"/>
+  <xs:element name="ticketID" type="xs:string"/>
+  <xs:element name="company_id" type="xs:integer"/>
+  <xs:element name="client_id" type="xs:string"/>
+  <xs:element name="anketa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sms_validation_code" minOccurs="1"/>
+        <xs:element ref="contract_due_days" minOccurs="0"/>
+        <xs:element ref="max_debt" minOccurs="1"/>
+        <xs:element ref="delivery_type" minOccurs="1"/>
+        <xs:element ref="accept_goods_type" minOccurs="1"/>
+        <xs:element ref="primary_docs" minOccurs="1"/>
+        <xs:element ref="main_phone" minOccurs="1"/>
+        <xs:element ref="add_phone" minOccurs="0"/>
+        <xs:element ref="USN_tax" minOccurs="0"/>
+        <xs:element ref="web_site" minOccurs="0"/>
+        <xs:element ref="years_in_business" minOccurs="1"/>
+        <xs:element ref="ceo" minOccurs="1"/>
+        <xs:element ref="main_act" minOccurs="1"/>
+        <xs:element ref="retail_sales_ratio" minOccurs="1"/>
+        <xs:element ref="stores_num" minOccurs="1"/>
+        <xs:element ref="stores_num_1year" minOccurs="1"/>
+        <xs:element ref="sales_area" minOccurs="1"/>
+        <xs:element ref="warehouse_area" minOccurs="1"/>
+        <xs:element ref="total_office_area" minOccurs="1"/>
+        <xs:element ref="total_debt" minOccurs="1"/>
+        <xs:element ref="employees_num" minOccurs="1"/>
+        <xs:element ref="INN_controlled" minOccurs="0"/>
+        <xs:element ref="competitors" minOccurs="0"/>
+        <xs:element ref="advantages" minOccurs="0"/>
+        <xs:element ref="plans" minOccurs="0"/>
+        <xs:element ref="difficulties" minOccurs="0"/>
+        <xs:element ref="year_volumes" minOccurs="1"/>
+        <xs:element ref="personal_data_confirmed"  minOccurs="1"/>
+        <xs:element ref="cred_bureau_confirmed" minOccurs="1"/>
+        <xs:element ref="application_confirmed" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sms_validation_code">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="contract_due_days">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="max_debt">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delivery_type">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accept_goods_type">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="primary_docs">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="main_phone">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="add_phone">
+    <xs:complexType>
+      <xs:attribute name="value" use="optional" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USN_tax">
+    <xs:complexType>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="web_site">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="years_in_business">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ceo">
+    <xs:complexType>
+      <xs:attribute name="bday" use="optional" type="xs:date"/>
+      <xs:attribute name="first_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="is_owner" use="required" type="xs:boolean"/>
+      <xs:attribute name="last_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="middle_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="passport_date" use="optional" type="xs:date"/>
+      <xs:attribute name="passport_number" use="optional" type="xs:integer"/>
+      <xs:attribute name="passport_serial" use="optional" type="xs:string"/>
+      <xs:attribute name="passport_who" use="optional" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="main_act">
+    <xs:complexType>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retail_sales_ratio">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stores_num">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stores_num_1year">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sales_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="warehouse_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="total_office_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="total_debt">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="employees_num">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INN_controlled" type="value"/>
+  <xs:element name="competitors" type="value"/>
+  <xs:element name="advantages" type="value"/>
+  <xs:element name="plans" type="value"/>
+  <xs:element name="difficulties" type="value"/>
+  <xs:element name="year_volumes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="12" ref="volume"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="volume">
+    <xs:complexType>
+      <xs:attribute name="date" use="required" type="xs:date"/>
+      <xs:attribute name="num" use="required" type="xs:integer"/>
+      <xs:attribute name="sales" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personal_data_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cred_bureau_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="application_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="value">
+    <xs:sequence>
+      <xs:element ref="value"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="value" type="xs:string"/>
+  
+</xs:schema>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<securityServiceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gradient%20securityServiceData%20Sample.xsd">
+<id value="cc7e314d-90b3-42bb-a011-603fa2fff389"/><!--id анкеты-->
+<result>true</result><!--Результат вызова -->
+<comment> Any long text comment...</comment><!--комментарий СБ-->
+</securityServiceData>

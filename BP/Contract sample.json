@@ -1,0 +1,13 @@
+{"Contract":
+	{"VendorId":"VENDOR1",
+	"Holding":"ГД",
+	"Number":"123456-КУКУ",
+	"Status":"Active",
+	"StartDate":"2017-12-02",
+	"EndDate":"2020-01-01",
+	"Company":"100",
+	"PartnerType":"Cust",
+	"ContractCode":"100",
+	"ContractAccount":"ДК2345678"
+	}
+}

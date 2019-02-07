@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://ws.apache.org/ns/synapse">
+    <registry provider="org.wso2.carbon.mediation.registry.WSO2Registry">
+        <parameter name="cachableDuration">15000</parameter>
+    </registry>
+    <taskManager provider="org.wso2.carbon.mediation.ntask.NTaskTaskManager"/>
+    <proxy name="NFC_API_Auth_logging" startOnLoad="true" transports="http https">
+        <description/>
+        <target endpoint="NFC_API_Auth3">
+            <inSequence>
+                <property name="CONTENT_TYPE" scope="axis2" value="text/xml"/>
+                <log level="full"/>
+            </inSequence>
+            <outSequence>
+                <send/>
+            </outSequence>
+        </target>
+    </proxy>
+    <proxy name="testDigSgnProxy" startOnLoad="true" statistics="enable"
+        trace="enable" transports="vfs">
+        <description/>
+        <target endpoint="DigSgnHTTPEP">
+            <inSequence>
+                <property name="messageType" scope="axis2" value="application/x-www-form-urlencoded"/>
+                <property expression="$body/*[1]" name="body"
+                    scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <log level="full">
+                    <property expression="get-property('body')" name="body"/>
+                </log>
+                <payloadFactory media-type="text">
+                    <format>_xmlText=$1&amp;_thumbprint=$2</format>
+                    <args>
+                        <arg evaluator="xml"
+                            expression="base64Encode(get-property('body'))"
+                            literal="true" xmlns:ns="http://org.apache.synapse/xsd"/>
+                        <arg value="941111e66863d8ad8ba8658d29fb917df0db03fd"/>
+                    </args>
+                </payloadFactory>
+                <log level="full"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/x-www-form-urlencoded"/>
+                <property name="ContentType" scope="axis2" value="application/x-www-form-urlencoded"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <header action="remove" name="Connection" scope="transport"/>
+                <header action="remove" name="FILE_URI" scope="transport"/>
+                <header action="remove" name="FILE_PATH" scope="transport"/>
+                <header action="remove" name="FILE_NAME" scope="transport"/>
+                <header action="remove" name="USer-Agent" scope="transport"/>
+                <send>
+                    <endpoint key="DigSgnHTTPEP"/>
+                </send>
+            </inSequence>
+            <outSequence>
+                <property name="messageType" scope="axis2" value="text/xml"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="text/xml"/>
+                <property name="ContentType" scope="axis2" value="text/xml"/>
+                <property name="transport.vfs.ReplyFileName"
+                    scope="transport" value="result.txt"/>
+                <property name="OUT_ONLY" value="true"/>
+                <send>
+                    <endpoint>
+                        <address uri="vfs:file://d:/exchangeDocs/NFC/result"/>
+                    </endpoint>
+                </send>
+            </outSequence>
+            <faultSequence>
+                <property name="messageType" scope="axis2" value="text/xml"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="text/xml"/>
+                <property name="ContentType" scope="axis2" value="text/xml"/>
+                <payloadFactory media-type="text">
+                    <format>ERROR:$1</format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                    </args>
+                </payloadFactory>
+                <property name="transport.vfs.ReplyFileName"
+                    scope="transport" value="error.txt"/>
+                <property name="OUT_ONLY" value="true"/>
+                <send>
+                    <endpoint>
+                        <address uri="vfs:file://d:/exchangeDocs/NFC/error"/>
+                    </endpoint>
+                </send>
+            </faultSequence>
+        </target>
+        <parameter name="transport.PollInterval">15</parameter>
+        <parameter name="transport.vfs.FileURI">file://d:/exchangeDocs/NFC</parameter>
+        <parameter name="transport.vfs.ContentType">text/plain; encoding=utf-8</parameter>
+        <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
+        <parameter name="transport.vfs.MoveAfterFailure">file://d:/exchangeDocs/NFC/processed</parameter>
+        <parameter name="transport.vfs.ActionAfterFailure">MOVE</parameter>
+        <parameter name="transport.vfs.FileNamePattern">.*\.xmlx</parameter>
+        <parameter name="transport.vfs.MoveAfterProcess">file://d:/exchangeDocs/NFC/processed</parameter>
+    </proxy>
+    <proxy name="NFCDebtorProxy" startOnLoad="true" statistics="enable"
+        trace="enable" transports="vfs http https">
+        <description>Отправка Анкет Дебитора в НФК</description>
+        <target endpoint="testNFC">
+            <inSequence>
+                <property expression="$body/*[1]" name="body"
+                    type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <property
+                    expression="get-property('transport','FILE_NAME')" name="filename"/>
+                <property name="userid" value="GRADIENT_API_1"/>
+                <property name="password" value="qwe123"/>
+                <property name="thumbprint" value="‎535e0473d462cbe507066a5bae3c6202e127e9d6"/>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <sequence key="NFC_API_Auth_Seq"/>
+                <switch source="fn:substring(get-property('auth_token'),3,1)">
+                    <case regex="m">
+                        <property name="HTTP_SC" scope="axis2" value="200"/>
+                        <respond/>
+                    </case>
+                    <default>
+                        <log level="full">
+                            <property
+                                expression="get-property('auth_token')"
+                                name="auth_token" xmlns:ns="http://org.apache.synapse/xsd"/>
+                            <property
+                                expression="fn:substring(get-property('auth_token'),3,1)"
+                                name="symbol" xmlns:ns="http://org.apache.synapse/xsd"/>
+                        </log>
+                    </default>
+                </switch>
+                <sequence key="digSgnSeq"/>
+                <log level="full">
+                    <property expression="get-property('signature')"
+                        name="signature" xmlns:ns="http://org.apache.synapse/xsd"/>
+                </log>
+                <header
+                    expression="fn:concat('token ',fn:translate(get-property('auth_token'),'&quot;',''))"
+                    name="Authorization" scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <payloadFactory media-type="json">
+                    <format>{"content":"$1","signature":"$2"}            </format>
+                    <args>
+                        <arg evaluator="xml"
+                            expression="base64Encode(get-property('body'))" xmlns:ns="http://org.apache.synapse/xsd"/>
+                        <arg evaluator="xml"
+                            expression="get-property('signature')" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    </args>
+                </payloadFactory>
+                <log level="full">
+                    <property expression="json-eval($.)" name="JSON" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    <property expression="get-property('filename')"
+                        name="FILENAME" xmlns:ns="http://org.apache.synapse/xsd"/>
+                </log>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <call>
+                    <endpoint key="TEST_NFC_Debtor"/>
+                </call>
+                <loopback/>
+            </inSequence>
+            <outSequence>
+                <property name="messageType" value="text/plain"/>
+                <property name="ContentType" value="text/plain"/>
+                <log level="full">
+                    <property
+                        expression="string-length(get-property('filename'))" name="str_len"/>
+                </log>
+                <switch source="string-length(get-property('filename'))">
+                    <case regex="0.0">
+                        <log level="full">
+                            <property name="filename_is_here" value="false"/>
+                        </log>
+                        <switch source="json-eval($.)">
+                            <case regex="^[1-9][0-9]*$">
+                                <payloadFactory media-type="json">
+                                    <format>{"id":$1}
+</format>
+                                    <args>
+                                    <arg evaluator="json" expression="$."/>
+                                    </args>
+                                </payloadFactory>
+                                <send/>
+                            </case>
+                            <default>
+                                <property name="HTTP_SC" scope="axis2" value="200"/>
+                                <send/>
+                            </default>
+                        </switch>
+                    </case>
+                    <default>
+                        <property name="filename_is_here" value="true"/>
+                        <sequence key="NFCresultSeq"/>
+                    </default>
+                </switch>
+            </outSequence>
+            <faultSequence>
+                <payloadFactory media-type="json">
+                    <format>{"message":"$1", "details":"$2"}
+</format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                        <arg evaluator="xml" expression="get-property('ERROR_DETAIL')"/>
+                    </args>
+                </payloadFactory>
+                <switch source="string-length(get-property('filename'))">
+                    <case regex="0.0">
+                        <log level="full">
+                            <property name="filename_is_here" value="false"/>
+                        </log>
+                        <respond/>
+                    </case>
+                    <default>
+                        <property name="filename_is_here" value="true"/>
+                        <sequence key="NFCresultSeq"/>
+                    </default>
+                </switch>
+            </faultSequence>
+        </target>
+        <parameter name="transport.PollInterval">15</parameter>
+        <parameter name="transport.vfs.FileURI">file://d:/exchangeDocs/NFC</parameter>
+        <parameter name="transport.vfs.ContentType">text/plain</parameter>
+        <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
+        <parameter name="transport.vfs.MoveAfterFailure">file://d:/exchangeDocs/NFC/processed</parameter>
+        <parameter name="transport.vfs.ActionAfterFailure">MOVE</parameter>
+        <parameter name="transport.vfs.FileNamePattern">.*\.xml</parameter>
+        <parameter name="transport.vfs.MoveAfterProcess">file://d:/exchangeDocs/NFC/processed</parameter>
+    </proxy>
+    <proxy name="testNFCProxy" startOnLoad="true" statistics="enable"
+        trace="enable" transports="vfs">
+        <description>Отправка Анкет Дебитора в НФК</description>
+        <target endpoint="testNFC">
+            <inSequence>
+                <property expression="$body/*[1]" name="body"
+                    type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <property
+                    expression="get-property('transport','FILE_NAME')" name="filename"/>
+                <property name="userid" value="GRADIENT_API_1"/>
+                <property name="password" value="GrApi1"/>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <sequence key="NFC_API_Auth_Seq"/>
+                <log level="full">
+                    <property expression="get-property('auth_token')"
+                        name="auth_token" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    <property expression="get-property('filename')"
+                        name="filename" xmlns:ns="http://org.apache.synapse/xsd"/>
+                </log>
+                <sequence key="digSgnSeq"/>
+                <log level="full">
+                    <property expression="get-property('signature')"
+                        name="signature" xmlns:ns="http://org.apache.synapse/xsd"/>
+                </log>
+                <header
+                    expression="fn:concat('token ',fn:translate(get-property('auth_token'),'&quot;',''))"
+                    name="Authorization" scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <payloadFactory media-type="json">
+                    <format>{"content":"$1","signature":"$2"}            </format>
+                    <args>
+                        <arg evaluator="xml"
+                            expression="base64Encode(get-property('body'))" xmlns:ns="http://org.apache.synapse/xsd"/>
+                        <arg evaluator="xml"
+                            expression="get-property('signature')" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    </args>
+                </payloadFactory>
+                <log level="full">
+                    <property expression="json-eval($.)" name="JSON" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    <property expression="get-property('filename')"
+                        name="FILENAME" xmlns:ns="http://org.apache.synapse/xsd"/>
+                </log>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+            </inSequence>
+            <outSequence>
+                <property
+                    expression="fn:translate(get-property('filename'),'.xml','.txt')"
+                    name="transport.vfs.ReplyFileName" scope="transport"/>
+                <property name="OUT_ONLY" value="true"/>
+                <send>
+                    <endpoint>
+                        <address uri="vfs:file://d:/exchangeDocs/NFC/result"/>
+                    </endpoint>
+                </send>
+            </outSequence>
+            <faultSequence>
+                <property
+                    expression="fn:translate(get-property('filename'), '.xml','.txt')"
+                    name="transport.vfs.ReplyFileName" scope="transport"/>
+                <property name="OUT_ONLY" value="true"/>
+                <send>
+                    <endpoint>
+                        <address uri="vfs:file://d:/exchangeDocs/NFC/error"/>
+                    </endpoint>
+                </send>
+                <payloadFactory media-type="text">
+                    <format>ERROR:$1</format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                    </args>
+                </payloadFactory>
+            </faultSequence>
+        </target>
+        <parameter name="transport.PollInterval">15</parameter>
+        <parameter name="transport.vfs.FileURI">file://d:/exchangeDocs/NFC</parameter>
+        <parameter name="transport.vfs.ContentType">text/plain</parameter>
+        <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
+        <parameter name="transport.vfs.MoveAfterFailure">file://d:/exchangeDocs/NFC/processed</parameter>
+        <parameter name="transport.vfs.ActionAfterFailure">MOVE</parameter>
+        <parameter name="transport.vfs.FileNamePattern">.*\.xmlx</parameter>
+        <parameter name="transport.vfs.MoveAfterProcess">file://d:/exchangeDocs/NFC/processed</parameter>
+    </proxy>
+    <localEntry key="1">
+        <debtordata>
+            <sms_validation_code value="3452"/>
+            <INN_gradient value="7705442145"/>
+            <KPP_gradient value="502101001"/>
+            <contract_due_days value="42"/>
+            <max_debt value="550.00"/>
+            <delivery_type value="Доставка"/>
+            <accept_goods_type value="Штуки"/>
+            <primary_docs value="УПД"/>
+            <OPF value="ООО"/>
+            <company_name value="ООО &quot;Шанталь-Парфюм&quot;"/>
+            <INN value="7709270546"/>
+            <OGRN value="1027739863117"/>
+            <USN_tax value="Не используется"/>
+            <main_phone value="88005553535"/>
+            <add_phone value="88005553531"/>
+            <web_site value="www.magazin-u-doma.ru"/>
+            <years_in_business value="2"/>
+            <ceo bday="1971-12-15" first_name="Сергей" is_owner="false"
+                last_name="Семаков" middle_name="Львович"
+                passport_date="2014-03-12" passport_number="0123456"
+                passport_serial="12 34" passport_who="Ленинским РУВД гор. Махачкалы"/>
+            <main_act value="2"/>
+            <retail_sales_ratio value="4"/>
+            <stores_num value="46"/>
+            <stores_num_1year value="77"/>
+            <sales_area value="800.00"/>
+            <warehouse_area value="1000.00"/>
+            <total_office_area value="5784.00"/>
+            <total_debt value="88830.00"/>
+            <employees_num value="1113"/>
+            <INN_controlled>
+                <value>Здесь список ИНН, разделенных любыми спецсимволами</value>
+            </INN_controlled>
+            <competitors>
+                <value>Здесь список конкурентов, в т.ч. ООО 'МАРУСЯ' и АО &lt;&lt;Любаша&gt;&gt;,И ИП  со всякими спецсимволами, '' '' ! &lt;&gt; и т.п.</value>
+            </competitors>
+            <advantages>
+                <value>Здесь большой большой текст про преимущества бизнеса, со всякими спецсимволами, '' '' ! &lt;&gt; и т.п.</value>
+            </advantages>
+            <plans>
+                <value>Здесь великие планы бизнеса, со всякими спецсимволами, '' '' ! &lt;&gt; и т.п.</value>
+            </plans>
+            <difficulties>
+                <value>Здесь мелкие проблемы, со всякими спецсимволами, '' '' ! &lt;&gt; и т.п.</value>
+            </difficulties>
+            <personal_data_confirmed value="true"/>
+            <cred_bureau_confirmed value="true"/>
+            <application_confirmed value="true"/>
+            <first_delivery_date value="2016-04-12"/>
+            <year_volumes>
+                <volume date="2018-06-01" gradientsales="25.42" num="1"
+                    payment="-121.00" sales="10000.00"/>
+                <volume date="2018-05-01" gradientsales="0.00" num="2"
+                    payment="0.00" sales="20000.00"/>
+                <volume date="2018-04-01" gradientsales="39.07" num="3"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2018-03-01" gradientsales="0.00" num="4"
+                    payment="-3.85" sales="0.00"/>
+                <volume date="2018-02-01" gradientsales="0.00" num="5"
+                    payment="0.00" sales="125.45"/>
+                <volume date="2018-01-01" gradientsales="13.02" num="6"
+                    payment="-15.00" sales="0.00"/>
+                <volume date="2017-12-01" gradientsales="26.05" num="7"
+                    payment="-3.00" sales="0.00"/>
+                <volume date="2017-11-01" gradientsales="0.00" num="8"
+                    payment="0.00" sales="1000.00"/>
+                <volume date="2017-10-01" gradientsales="0.00" num="9"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2017-09-01" gradientsales="0.00" num="10"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2017-08-01" gradientsales="0.00" num="11"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2017-07-01" gradientsales="0.00" num="12"
+                    payment="0.00" sales="0.00"/>
+            </year_volumes>
+            <payments_balance value="2.18"/>
+        </debtordata>
+        <description/>
+    </localEntry>
+    <localEntry key="encodedContent"><![CDATA[//48AD8AeABtAGwAIAB2AGUAcgBzAGkAbwBuAD0AIgAxAC4AMAAiACAAZQBuAGMAbwBkAGkAbgBnAD0AIgB3AGkAbgBkAG8AdwBzAC0AMQAyADUAMQAiAD8APgANAAoAPABkAGUAYgB0AG8AcgBkAGEAdABhACAAeABtAGwAbgBzADoAeABzAGkAPQAiAGgAdAB0AHAAOgAvAC8AdwB3AHcALgB3ADMALgBvAHIAZwAvADIAMAAwADEALwBYAE0ATABTAGMAaABlAG0AYQAtAGkAbgBzAHQAYQBuAGMAZQAiACAARgBpAGwAZQBJAEQAPQAiAEEAUABQAF8AMgAwADEAOAAwADIAMQAyAF8AMgAwADoAMQA2ADoAMgA1AF8AYwBjADcAZQAzADEANABkAC0AOQAwAGIAMwAtADQAMgBiAGIALQBhADAAMQAxAC0ANgAwADMAZgBhADIAZgBmAGYAMwA4ADkAIgAgAEYAbwByAG0AVgBlAHIAPQAiADgALgAwACIAIAB4AHMAaQA6AG4AbwBOAGEAbQBlAHMAcABhAGMAZQBTAGMAaABlAG0AYQBMAG8AYwBhAHQAaQBvAG4APQAiAEcAcgBhAGQAaQBlAG4AdAAlADIAMABRAHUAZQBzAHQAJQAyADAAUwBhAG0AcABsAGUAJQAyADAAdgA5AC4AeABzAGQAIgA+AA0ACgAgACAAIAAgADwAaQBkACAAdgBhAGwAdQBlAD0AIgBjAGMANwBlADMAMQA0AGQALQA5ADAAYgAzAC0ANAAyAGIAYgAtAGEAMAAxADEALQA2ADAAMwBmAGEAMgBmAGYAZgAzADgAOQAiAC8APgAJAA0ACgAJADwAZABhAHQAZQAgAHYAYQBsAHUAZQA9ACIAMgAwADEAOAAtADAAMgAtADEAMgBUADIAMAA6ADEANgA6ADIANQAiAC8APgAJAA0ACgAJADwAcwBtAHMAXwB2AGEAbABpAGQAYQB0AGkAbwBuAF8AYwBvAGQAZQAgAHYAYQBsAHUAZQA9ACIAMwA0ADUAMgAiAC8APgANAAoACQA8AEkATgBOAF8AZwByAGEAZABpAGUAbgB0ACAAdgBhAGwAdQBlAD0AIgA3ADcAMgAwADEAMgA1ADcAMwA2ACIALwA+AA0ACgAJADwASwBQAFAAXwBnAHIAYQBkAGkAZQBuAHQAIAB2AGEAbAB1AGUAPQAiADcANwAxADcAMAAxADAAMAAxACIALwA+AA0ACgAJADwAYwBvAG4AdAByAGEAYwB0AF8AZAB1AGUAXwBkAGEAeQBzACAAdgBhAGwAdQBlAD0AIgA0ADIAIgAvAD4ADQAKACAAIAAgACAAPABtAGEAeABfAGQAZQBiAHQAIAB2AGEAbAB1AGUAPQAiADUANQAwACIALwA+AA0ACgAJADwAZABlAGwAaQB2AGUAcgB5AF8AdAB5AHAAZQAgAHYAYQBsAHUAZQA9ACIAFAQ+BEEEQgQwBDIEOgQwBCIALwA+AA0ACgAJADwAYQBjAGMAZQBwAHQAXwBnAG8AbwBkAHMAXwB0AHkAcABlACAAdgBhAGwAdQBlAD0AIgAoBEIEIgAvAD4ADQAKAAkAPABwAHIAaQBtAGEAcgB5AF8AZABvAGMAcwAgAHYAYQBsAHUAZQA9ACIAIwQfBBQEIgAvAD4ADQAKACAAIAAgACAAPABPAFAARgAgAHYAYQBsAHUAZQA9ACIAHgQeBB4EIgAvAD4ADQAKACAAIAAgACAAPABjAG8AbQBwAGEAbgB5AF8AbgBhAG0AZQAgAHYAYQBsAHUAZQA9ACIAHAQwBDMEMAQ3BDgEPQQgACMEIAA0BD4EPAQwBCIALwA+AA0ACgAgACAAIAAgADwASQBOAE4AIAB2AGEAbAB1AGUAPQAiADEAMgAzADQANQA2ADcAOAA5ADAAMAAwACIALwA+AA0ACgAgACAAIAAgADwATwBHAFIATgAgAHYAYQBsAHUAZQA9ACIAMQAyADMANAA1ADYANwA4ADkAMAAwADEAMwAiAC8APgANAAoAIAAgACAAIAA8AFUAUwBOAF8AdABhAHgAIAB2AGEAbAB1AGUAPQAiAD0ENQQgADgEQQQ/BD4EOwRMBDcEQwQ1BEIEQQRPBCIALwA+AA0ACgAgACAAIAAgADwAbQBhAGkAbgBfAHAAaABvAG4AZQAgAHYAYQBsAHUAZQA9ACIAOAA4ADAAMAA1ADUANQAzADUAMwA1ACIALwA+AA0ACgAgACAAIAAgADwAYQBkAGQAXwBwAGgAbwBuAGUAIAB2AGEAbAB1AGUAPQAiADgAOAAwADAANQA1ADUAMwA1ADMAMQAiAC8APgAgAA0ACgAJADwAdwBlAGIAXwBzAGkAdABlACAAdgBhAGwAdQBlAD0AIgB3AHcAdwAuAG0AYQBnAGEAegBpAG4ALQB1AC0AZABvAG0AYQAuAHIAdQAiAC8APgANAAoAIAAgACAAIAA8AHkAZQBhAHIAcwBfAGkAbgBfAGIAdQBzAGkAbgBlAHMAcwAgAHYAYQBsAHUAZQA9ACIAMgAiAC8APgANAAoAIAAgACAAIAA8AGMAZQBvACAAbABhAHMAdABfAG4AYQBtAGUAPQAiACEENQQ8BDAEOgQ+BDIEIgAgAGYAaQByAHMAdABfAG4AYQBtAGUAPQAiACEENQRABDMENQQ5BCIAIABtAGkAZABkAGwAZQBfAG4AYQBtAGUAPQAiABsETAQyBD4EMgQ4BEcEIgAgAGIAZABhAHkAPQAiADEAOQA3ADEALQAxADIALQAxADUAIgAgAGkAcwBfAG8AdwBuAGUAcgA9ACIAZgBhAGwAcwBlACIADQAKACAAIAAgACAAIAAgACAAIAAgAHAAYQBzAHMAcABvAHIAdABfAHMAZQByAGkAYQBsAD0AIgAxADIAIAAzADQAIgAgAHAAYQBzAHMAcABvAHIAdABfAG4AdQBtAGIAZQByAD0AIgAwADEAMgAzADQANQA2ACIAIABwAGEAcwBzAHAAbwByAHQAXwBkAGEAdABlAD0AIgAyADAAMQA0AC0AMAAzAC0AMQAyACIAIABwAGEAcwBzAHAAbwByAHQAXwB3AGgAbwA9ACIAGwQ1BD0EOAQ9BEEEOgQ4BDwEIAAgBCMEEgQUBCAAMwQ+BEAELgAgABwEMARFBDAERwQ6BDAEOwRLBCIALwA+AA0ACgAgACAAIAAgADwAbQBhAGkAbgBfAGEAYwB0ACAAdgBhAGwAdQBlAD0AIgAxACIALwA+AA0ACgAJADwAcgBlAHQAYQBpAGwAXwBzAGEAbABlAHMAXwByAGEAdABpAG8AIAB2AGEAbAB1AGUAPQAiADQAIgAvAD4ADQAKACAAIAAgACAAPABzAHQAbwByAGUAcwBfAG4AdQBtACAAdgBhAGwAdQBlAD0AIgA0ADYAIgAvAD4ADQAKACAAIAAgACAAPABzAHQAbwByAGUAcwBfAG4AdQBtAF8AMQB5AGUAYQByACAAdgBhAGwAdQBlAD0AIgA3ADcAIgAvAD4ADQAKACAAIAAgACAAPABzAGEAbABlAHMAXwBhAHIAZQBhACAAdgBhAGwAdQBlAD0AIgA4ADAAMAAiAC8APgANAAoAIAAgACAAIAA8AHcAYQByAGUAaABvAHUAcwBlAF8AYQByAGUAYQAgAHYAYQBsAHUAZQA9ACIAMQAwADAAMAAiAC8APgANAAoAIAAgACAAIAA8AHQAbwB0AGEAbABfAG8AZgBmAGkAYwBlAF8AYQByAGUAYQAgAHYAYQBsAHUAZQA9ACIANQA3ADgANAAiAC8APgANAAoAIAAgACAAIAA8AHQAbwB0AGEAbABfAGQAZQBiAHQAIAB2AGEAbAB1AGUAPQAiADgAOAA4ADMAMAAiAC8APgANAAoAIAAgACAAIAA8AGUAbQBwAGwAbwB5AGUAZQBzAF8AbgB1AG0AIAB2AGEAbAB1AGUAPQAiADEAMQAxADMAIgAvAD4ADQAKACAAIAAgACAAPABJAE4ATgBfAGMAbwBuAHQAcgBvAGwAbABlAGQAPgANAAoACQA8AHYAYQBsAHUAZQA+ADwAIQBbAEMARABBAFQAQQBbABcENAQ1BEEETAQgAEEEPwQ4BEEEPgQ6BCAAGAQdBB0ELAAgAEAEMAQ3BDQENQQ7BDUEPQQ9BEsERQQgADsETgQxBEsEPAQ4BCAAQQQ/BDUERgRBBDgEPAQyBD4EOwQwBDwEOARdAF0APgA8AC8AdgBhAGwAdQBlAD4ADQAKAAkACQA8AC8ASQBOAE4AXwBjAG8AbgB0AHIAbwBsAGwAZQBkAD4ADQAKACAAIAAgACAAPABjAG8AbQBwAGUAdABpAHQAbwByAHMAPgANAAoACQAJADwAdgBhAGwAdQBlAD4APAAhAFsAQwBEAEEAVABBAFsAFwQ0BDUEQQRMBCAAQQQ/BDgEQQQ+BDoEIAA6BD4EPQQ6BEMEQAQ1BD0EQgQ+BDIELAAgADIEIABCBC4ARwQuACAAHgQeBB4EIAAiABwEEAQgBCMEIQQvBCIAIAA4BCAAEAQeBCAAPAA8ABsETgQxBDAESAQwBD4APgAsAA0ACgAJAAkAGAQgABgEHwQgACAAQQQ+BCAAMgRBBE8EOgQ4BDwEOAQgAEEEPwQ1BEYEQQQ4BDwEMgQ+BDsEMAQ8BDgELAAgACcAJwAgACIAIgAgACEAIAA8AD4AIAA4BCAAQgQuAD8ELgBdAF0APgA8AC8AdgBhAGwAdQBlAD4ADQAKAAkAPAAvAGMAbwBtAHAAZQB0AGkAdABvAHIAcwA+AA0ACgAgACAAIAAgADwAYQBkAHYAYQBuAHQAYQBnAGUAcwA+AA0ACgAJAAkAPAB2AGEAbAB1AGUAPgA8ACEAWwBDAEQAQQBUAEEAWwAXBDQENQRBBEwEIAAxBD4EOwRMBEgEPgQ5BCAAMQQ+BDsETARIBD4EOQQgAEIENQQ6BEEEQgQgAD8EQAQ+BCAAPwRABDUEOAQ8BEMESQQ1BEEEQgQyBDAEIAAxBDgENwQ9BDUEQQQwBCwAIABBBD4EIAAyBEEETwQ6BDgEPAQ4BCAAQQQ/BDUERgRBBDgEPAQyBD4EOwQwBDwEOAQsACAAJwAnACAAIgAiACAAIQAgADwAPgAgADgEIABCBC4APwQuAF0AXQA+ADwALwB2AGEAbAB1AGUAPgANAAoACQA8AC8AYQBkAHYAYQBuAHQAYQBnAGUAcwA+AA0ACgAgACAAIAAgADwAcABsAGEAbgBzAD4ADQAKAAkACQA8AHYAYQBsAHUAZQA+ADwAIQBbAEMARABBAFQAQQBbABcENAQ1BEEETAQgADIENQQ7BDgEOgQ4BDUEIAA/BDsEMAQ9BEsEIAAxBDgENwQ9BDUEQQQwBCwAIABBBD4EIAAyBEEETwQ6BDgEPAQ4BCAAQQQ/BDUERgRBBDgEPAQyBD4EOwQwBDwEOAQsACAAJwAnACAAIgAiACAAIQAgADwAPgAgADgEIABCBC4APwQuAF0AXQA+ADwALwB2AGEAbAB1AGUAPgANAAoACQA8AC8AcABsAGEAbgBzAD4ADQAKACAAIAAgACAAPABkAGkAZgBmAGkAYwB1AGwAdABpAGUAcwA+AA0ACgAJADwAdgBhAGwAdQBlAD4APAAhAFsAQwBEAEEAVABBAFsAFwQ0BDUEQQRMBCAAPAQ1BDsEOgQ4BDUEIAA/BEAEPgQxBDsENQQ8BEsELAAgAEEEPgQgADIEQQRPBDoEOAQ8BDgEIABBBD8ENQRGBEEEOAQ8BDIEPgQ7BDAEPAQ4BCwAIAAnACcAIAAiACIAIAAhACAAPAA+ACAAOAQgAEIELgA/BC4AXQBdAD4APAAvAHYAYQBsAHUAZQA+AA0ACgAJADwALwBkAGkAZgBmAGkAYwB1AGwAdABpAGUAcwA+AA0ACgAgACAAIAAgADwAcABlAHIAcwBvAG4AYQBsAF8AZABhAHQAYQBfAGMAbwBuAGYAaQByAG0AZQBkACAAdgBhAGwAdQBlAD0AIgB0AHIAdQBlACIALwA+AA0ACgAgACAAIAAgADwAYwByAGUAZABfAGIAdQByAGUAYQB1AF8AYwBvAG4AZgBpAHIAbQBlAGQAIAB2AGEAbAB1AGUAPQAiAHQAcgB1AGUAIgAvAD4ADQAKACAAIAAgACAAPABhAHAAcABsAGkAYwBhAHQAaQBvAG4AXwBjAG8AbgBmAGkAcgBtAGUAZAAgAHYAYQBsAHUAZQA9ACIAdAByAHUAZQAiAC8APgANAAoACQA8AGYAaQByAHMAdABfAGQAZQBsAGkAdgBlAHIAeQBfAGQAYQB0AGUAIAB2AGEAbAB1AGUAPQAiADIAMAAxADcALQAxADAALQAwADcAIgAvAD4ADQAKAAkAPAB5AGUAYQByAF8AdgBvAGwAdQBtAGUAcwA+ACAAPAAhAC0ALQASBEEENQQgAD4EMQRKBDUEPAQ9BEsENQQgAD8EPgQ6BDAENwQwBEIENQQ7BDgEIABBBDIENQQ0BDUEPQRLBCAAMgQgAD4ENAQ9BEMEIAAzBEAEQwQ/BD8EQwQgAEIENQQzBD4EMgQtAC0APgANAAoACQAJADwAIQAtAC0AdgBvAGwAdQBtAGUAIABuAHUAbQA9ACIAHQQ+BDwENQRABCAAPAQ1BEEETwRGBDAEIgAgAGQAYQB0AGUAPQAiAB8ENQRABDIEMARPBCAANAQwBEIEMAQgADwENQRBBE8ERgQwBCIAIABzAGEAbABlAHMAPQAiAB4EMQRKBDUEPAQgAD8EQAQ+BDQEMAQ2BCAAPgQxBEkEIgAgAGcAcgBhAGQAaQBlAG4AdABzAGEAbABlAHMAPQAiAB8EQAQ+BDQEMAQ2BDgEIAATBEAEMAQ0BDgENQQ9BEIEIgAgAHAAYQB5AG0AZQBuAHQAPQAiAB4EPwQ7BDAEQgRLBCAAEwRABDAENAQ4BDUEPQRCBCIAIAAtAC0APgANAAoACQAJADwAdgBvAGwAdQBtAGUAIABuAHUAbQA9ACIAMQAiACAAZABhAHQAZQA9ACIAMgAwADEAOAAtADAANQAtADAAMQAiACAAcwBhAGwAZQBzAD0AIgAxADAAMAAwADAAIgAgAGcAcgBhAGQAaQBlAG4AdABzAGEAbABlAHMAPQAiADUAMAAwADAAIgAgAHAAYQB5AG0AZQBuAHQAPQAiADQANQAwADAAIgAvAD4ADQAKAAkACQA8AHYAbwBsAHUAbQBlACAAbgB1AG0APQAiADIAIgAgAGQAYQB0AGUAPQAiADIAMAAxADgALQAwADQALQAwADEAIgAgAHMAYQBsAGUAcwA9ACIAMgAwADAAMAAwACIAIABnAHIAYQBkAGkAZQBuAHQAcwBhAGwAZQBzAD0AIgA0ADUAMAAwACIAIABwAGEAeQBtAGUAbgB0AD0AIgAwACIALwA+AA0ACgAJAAkAPAB2AG8AbAB1AG0AZQAgAG4AdQBtAD0AIgAzACIAIABkAGEAdABlAD0AIgAyADAAMQA4AC0AMAAzAC0AMAAxACIAIABzAGEAbABlAHMAPQAiADAAIgAgAGcAcgBhAGQAaQBlAG4AdABzAGEAbABlAHMAPQAiADAAIgAgAHAAYQB5AG0AZQBuAHQAPQAiADAAIgAvAD4ADQAKAAkACQA8AHYAbwBsAHUAbQBlACAAbgB1AG0APQAiADQAIgAgAGQAYQB0AGUAPQAiADIAMAAxADgALQAwADIALQAwADEAIgAgAHMAYQBsAGUAcwA9ACIAMAAiACAAZwByAGEAZABpAGUAbgB0AHMAYQBsAGUAcwA9ACIAMAAiACAAcABhAHkAbQBlAG4AdAA9ACIAMAAiAC8APgANAAoACQAJADwAdgBvAGwAdQBtAGUAIABuAHUAbQA9ACIANQAiACAAZABhAHQAZQA9ACIAMgAwADEAOAAtADAAMQAtADAAMQAiACAAcwBhAGwAZQBzAD0AIgAwACIAIABnAHIAYQBkAGkAZQBuAHQAcwBhAGwAZQBzAD0AIgAwACIAIABwAGEAeQBtAGUAbgB0AD0AIgAwACIALwA+AA0ACgAJAAkAPAB2AG8AbAB1AG0AZQAgAG4AdQBtAD0AIgA2ACIAIABkAGEAdABlAD0AIgAyADAAMQA3AC0AMQAyAC0AMAAxACIAIABzAGEAbABlAHMAPQAiADAAIgAgAGcAcgBhAGQAaQBlAG4AdABzAGEAbABlAHMAPQAiADAAIgAgAHAAYQB5AG0AZQBuAHQAPQAiADAAIgAvAD4ADQAKAAkACQA8AHYAbwBsAHUAbQBlACAAbgB1AG0APQAiADcAIgAgAGQAYQB0AGUAPQAiADIAMAAxADcALQAxADEALQAwADEAIgAgAHMAYQBsAGUAcwA9ACIAMAAiACAAZwByAGEAZABpAGUAbgB0AHMAYQBsAGUAcwA9ACIAMAAiACAAcABhAHkAbQBlAG4AdAA9ACIAMQAwADAAMAAiAC8APgANAAoACQAJADwAdgBvAGwAdQBtAGUAIABuAHUAbQA9ACIAOAAiACAAZABhAHQAZQA9ACIAMgAwADEANwAtADEAMAAtADAAMQAiACAAcwBhAGwAZQBzAD0AIgAxADAAMAAwACIAIABnAHIAYQBkAGkAZQBuAHQAcwBhAGwAZQBzAD0AIgAxADAAMAAwACIAIABwAGEAeQBtAGUAbgB0AD0AIgAwACIALwA+AA0ACgAJAAkAPAB2AG8AbAB1AG0AZQAgAG4AdQBtAD0AIgA5ACIAIABkAGEAdABlAD0AIgAyADAAMQA3AC0AMAA5AC0AMAAxACIAIABzAGEAbABlAHMAPQAiADAAIgAgAGcAcgBhAGQAaQBlAG4AdABzAGEAbABlAHMAPQAiADAAIgAgAHAAYQB5AG0AZQBuAHQAPQAiADAAIgAvAD4ADQAKAAkACQA8AHYAbwBsAHUAbQBlACAAbgB1AG0APQAiADEAMAAiACAAZABhAHQAZQA9ACIAMgAwADEANwAtADAAOAAtADAAMQAiACAAcwBhAGwAZQBzAD0AIgAwACIAIABnAHIAYQBkAGkAZQBuAHQAcwBhAGwAZQBzAD0AIgAwACIAIABwAGEAeQBtAGUAbgB0AD0AIgAwACIALwA+AA0ACgAJAAkAPAB2AG8AbAB1AG0AZQAgAG4AdQBtAD0AIgAxADEAIgAgAGQAYQB0AGUAPQAiADIAMAAxADcALQAwADcALQAwADEAIgAgAHMAYQBsAGUAcwA9ACIAMAAiACAAZwByAGEAZABpAGUAbgB0AHMAYQBsAGUAcwA9ACIAMAAiACAAcABhAHkAbQBlAG4AdAA9ACIAMAAiAC8APgANAAoACQAJADwAdgBvAGwAdQBtAGUAIABuAHUAbQA9ACIAMQAyACIAIABkAGEAdABlAD0AIgAyADAAMQA3AC0AMAA2AC0AMAAxACIAIABzAGEAbABlAHMAPQAiADAAIgAgAGcAcgBhAGQAaQBlAG4AdABzAGEAbABlAHMAPQAiADAAIgAgAHAAYQB5AG0AZQBuAHQAPQAiADAAIgAvAD4ADQAKAAkAPAAvAHkAZQBhAHIAXwB2AG8AbAB1AG0AZQBzAD4ADQAKAAkAPABwAGEAeQBtAGUAbgB0AHMAXwBiAGEAbABhAG4AYwBlACAAdgBhAGwAdQBlAD0AIgA1ADAAMAAwACIALwA+AA0ACgA8AC8AZABlAGIAdABvAHIAZABhAHQAYQA+AA==]]><description/>
+    </localEntry>
+    <localEntry key="NFC_Quest_XSD">
+        <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="debtordata">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="id"/>
+                        <xs:element ref="date"/>
+                        <xs:element ref="sms_validation_code"/>
+                        <xs:element ref="INN_gradient"/>
+                        <xs:element ref="KPP_gradient"/>
+                        <xs:element ref="contract_due_days"/>
+                        <xs:element ref="max_debt"/>
+                        <xs:element ref="delivery_type"/>
+                        <xs:element ref="accept_goods_type"/>
+                        <xs:element ref="primary_docs"/>
+                        <xs:element ref="OPF"/>
+                        <xs:element ref="company_name"/>
+                        <xs:element ref="INN"/>
+                        <xs:element ref="OGRN"/>
+                        <xs:element ref="USN_tax"/>
+                        <xs:element ref="main_phone"/>
+                        <xs:element ref="add_phone"/>
+                        <xs:element ref="web_site"/>
+                        <xs:element ref="years_in_business"/>
+                        <xs:element ref="ceo"/>
+                        <xs:element ref="main_act"/>
+                        <xs:element ref="retail_sales_ratio"/>
+                        <xs:element ref="stores_num"/>
+                        <xs:element ref="stores_num_1year"/>
+                        <xs:element ref="sales_area"/>
+                        <xs:element ref="warehouse_area"/>
+                        <xs:element ref="total_office_area"/>
+                        <xs:element ref="total_debt"/>
+                        <xs:element ref="employees_num"/>
+                        <xs:element ref="INN_controlled"/>
+                        <xs:element ref="competitors"/>
+                        <xs:element ref="advantages"/>
+                        <xs:element ref="plans"/>
+                        <xs:element ref="difficulties"/>
+                        <xs:element ref="personal_data_confirmed"/>
+                        <xs:element ref="cred_bureau_confirmed"/>
+                        <xs:element ref="application_confirmed"/>
+                        <xs:element ref="first_delivery_date"/>
+                        <xs:element ref="year_volumes"/>
+                        <xs:element ref="payments_balance"/>
+                    </xs:sequence>
+                    <xs:attribute name="FileID" use="required"/>
+                    <xs:attribute name="FormVer" type="xs:decimal" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="id">
+                <xs:complexType>
+                    <xs:attribute name="value" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="date">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:dateTime" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sms_validation_code">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="INN_gradient">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="KPP_gradient">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="contract_due_days">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="max_debt">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="delivery_type">
+                <xs:complexType>
+                    <xs:attribute name="value" type="enum_DeliveryType" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="accept_goods_type">
+                <xs:complexType>
+                    <xs:attribute name="value" type="enum_Accept" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="primary_docs">
+                <xs:complexType>
+                    <xs:attribute name="value" type="enum_Docs" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OPF">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:NCName" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="company_name">
+                <xs:complexType>
+                    <xs:attribute name="value" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="INN">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OGRN">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="USN_tax">
+                <xs:complexType>
+                    <xs:attribute name="value" type="enum_USN" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="main_phone">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="add_phone">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="web_site">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="years_in_business">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ceo">
+                <xs:complexType>
+                    <xs:attribute name="bday" type="xs:date" use="optional"/>
+                    <xs:attribute name="first_name" type="xs:NCName" use="required"/>
+                    <xs:attribute name="is_owner" type="xs:boolean" use="required"/>
+                    <xs:attribute name="last_name" type="xs:NCName" use="required"/>
+                    <xs:attribute name="middle_name" type="xs:NCName" use="required"/>
+                    <xs:attribute name="passport_date" type="xs:date" use="optional"/>
+                    <xs:attribute name="passport_number"
+                        type="xs:integer" use="optional"/>
+                    <xs:attribute name="passport_serial"
+                        type="xs:string" use="optional"/>
+                    <xs:attribute name="passport_who" type="xs:string" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="main_act">
+                <xs:complexType>
+                    <xs:attribute name="value" type="enum_MainAct" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="retail_sales_ratio">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="stores_num">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="stores_num_1year">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sales_area">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_area">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="total_office_area">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="total_debt">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="employees_num">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="INN_controlled" type="value"/>
+            <xs:element name="competitors" type="value"/>
+            <xs:element name="advantages" type="value"/>
+            <xs:element name="plans" type="value"/>
+            <xs:element name="difficulties" type="value"/>
+            <xs:element name="personal_data_confirmed">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:boolean" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cred_bureau_confirmed">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:boolean" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="application_confirmed">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:boolean" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="first_delivery_date">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:date" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="year_volumes">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="12" minOccurs="12" ref="volume"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="volume">
+                <xs:complexType>
+                    <xs:attribute name="date" type="xs:date" use="required"/>
+                    <xs:attribute name="num" type="xs:integer" use="required"/>
+                    <xs:attribute name="payment" type="xs:integer"/>
+                    <xs:attribute name="sales" type="xs:integer" use="required"/>
+                    <xs:attribute name="gradientsales" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="payments_balance">
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:integer" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="value">
+                <xs:sequence>
+                    <xs:element ref="value"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="value" type="xs:string"/>
+            <xs:simpleType name="enum_USN">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="не используется"/>
+                    <xs:enumeration value="используется УСН"/>
+                    <xs:enumeration value="используется ЕНВД"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="enum_MainAct">
+                <xs:restriction base="xs:integer">
+                    <xs:enumeration value="1"/>
+                    <!--Миксовая (продукты+НРС)-->
+                    <xs:enumeration value="2"/>
+                    <!--HPC (товары ухода за домом и собой)-->
+                    <xs:enumeration value="3"/>
+                    <!--Фарм-->
+                    <xs:enumeration value="4"/>
+                    <!--АЗС-->
+                    <xs:enumeration value="5"/>
+                    <!--Автомагазин-->
+                    <xs:enumeration value="6"/>
+                    <!--Бытовая техника-->
+                    <xs:enumeration value="7"/>
+                    <!--Бытовая химия-->
+                    <xs:enumeration value="8"/>
+                    <!--Детские товары-->
+                    <xs:enumeration value="9"/>
+                    <!--Зоотовары-->
+                    <xs:enumeration value="10"/>
+                    <!--Интим-->
+                    <xs:enumeration value="11"/>
+                    <!--Косметика-->
+                    <xs:enumeration value="12"/>
+                    <!--Книги-->
+                    <xs:enumeration value="13"/>
+                    <!--Мебель-->
+                    <xs:enumeration value="14"/>
+                    <!--Обувь, кожгалантерея-->
+                    <xs:enumeration value="15"/>
+                    <!--Одежда-->
+                    <xs:enumeration value="16"/>
+                    <!--Оптика-->
+                    <xs:enumeration value="17"/>
+                    <!--Парикмахерская-->
+                    <xs:enumeration value="18"/>
+                    <!--Парфюмерия-->
+                    <xs:enumeration value="19"/>
+                    <!--Продукты-->
+                    <xs:enumeration value="20"/>
+                    <!--Пресса-->
+                    <xs:enumeration value="21"/>
+                    <!--Садоводство-->
+                    <xs:enumeration value="22"/>
+                    <!--Спорт, туризм, рыбалка-->
+                    <xs:enumeration value="23"/>
+                    <!--Строительство и ремонт-->
+                    <xs:enumeration value="24"/>
+                    <!--Сувениры, посуда, подарки-->
+                    <xs:enumeration value="25"/>
+                    <!--Хозтовары-->
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="enum_DeliveryType">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Доставка"/>
+                    <xs:enumeration value="Самовывоз"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="enum_Accept">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Шт"/>
+                    <xs:enumeration value="Кор"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="enum_Docs">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="УПД"/>
+                    <xs:enumeration value="СЧФ"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:schema>
+        <description>Схема сообщения Анкета дебитора</description>
+    </localEntry>
+    <localEntry key="SD_API_BUListXSLT">
+        <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+            <xsl:template match="/">
+                <TaskBUList xmlns="sd">
+                    <xsl:for-each select="TaskForm/TaskType/TaskTypeFields/TaskTypeFieldView[Id=1272]/TaskTypeComboBoxes/TaskTypeComboBoxView">
+                        <TaskBU>
+                            <Id>
+                                <xsl:value-of select="Id"/>
+                            </Id>
+                            <BuName>
+                                <xsl:value-of select="Name"/>
+                            </BuName>
+                        </TaskBU>
+                    </xsl:for-each>
+                </TaskBUList>
+            </xsl:template>
+        </xsl:stylesheet>
+        <description>XSLT для выборки данных по БЕ из newTask</description>
+    </localEntry>
+    <localEntry key="SD_API_CategoryListXSLT">
+        <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+            <xsl:template match="/">
+                <TaskCategoryCollection xmlns="sd">
+                    <xsl:for-each select="TaskForm/TaskType/TaskTypeFields/TaskTypeFieldView[Id=1274]/TaskTypeComboBoxes/TaskTypeComboBoxView">
+                        <TaskCategory>
+                            <Id>
+                                <xsl:value-of select="Id"/>
+                            </Id>
+                            <categoryName>
+                                <xsl:value-of select="Name"/>
+                            </categoryName>
+                        </TaskCategory>
+                    </xsl:for-each>
+                </TaskCategoryCollection>
+            </xsl:template>
+        </xsl:stylesheet>
+        <description>XSLT для выборки из newTask данны по категориям</description>
+    </localEntry>
+    <localEntry key="content">
+        <debtordata>
+            <sms_validation_code value="3452"/>
+            <INN_gradient value="7705442145"/>
+            <KPP_gradient value="502101001"/>
+            <contract_due_days value="42"/>
+            <max_debt value="550.00"/>
+            <delivery_type value="Доставка"/>
+            <accept_goods_type value="Штуки"/>
+            <primary_docs value="УПД"/>
+            <OPF value="ООО"/>
+            <company_name value="ООО &quot;Шанталь-Парфюм&quot;"/>
+            <INN value="7709270546"/>
+            <OGRN value="1027739863117"/>
+            <USN_tax value="Не используется"/>
+            <main_phone value="88005553535"/>
+            <add_phone value="88005553531"/>
+            <web_site value="www.magazin-u-doma.ru"/>
+            <years_in_business value="2"/>
+            <ceo bday="1971-12-15" first_name="Сергей" is_owner="false"
+                last_name="Семаков" middle_name="Львович"
+                passport_date="2014-03-12" passport_number="0123456"
+                passport_serial="12 34" passport_who="Ленинским РУВД гор. Махачкалы"/>
+            <main_act value="2"/>
+            <retail_sales_ratio value="4"/>
+            <stores_num value="46"/>
+            <stores_num_1year value="77"/>
+            <sales_area value="800.00"/>
+            <warehouse_area value="1000.00"/>
+            <total_office_area value="5784.00"/>
+            <total_debt value="88830.00"/>
+            <employees_num value="1113"/>
+            <INN_controlled>
+                <value>Здесь список ИНН, разделенных любыми спецсимволами</value>
+            </INN_controlled>
+            <competitors>
+                <value>Здесь список конкурентов, в т.ч. ООО "МАРУСЯ" и АО &lt;&lt;Любаша&gt;&gt;,И ИП  со всякими спецсимволами, '' "" ! &lt;&gt; и т.п.</value>
+            </competitors>
+            <advantages>
+                <value>Здесь большой большой текст про преимущества бизнеса, со всякими спецсимволами, '' "" ! &lt;&gt; и т.п.</value>
+            </advantages>
+            <plans>
+                <value>Здесь великие планы бизнеса, со всякими спецсимволами, '' "" ! &lt;&gt; и т.п.</value>
+            </plans>
+            <difficulties>
+                <value>Здесь мелкие проблемы, со всякими спецсимволами, '' "" ! &lt;&gt; и т.п.</value>
+            </difficulties>
+            <personal_data_confirmed value="true"/>
+            <cred_bureau_confirmed value="true"/>
+            <application_confirmed value="true"/>
+            <first_delivery_date value="2016-04-12"/>
+            <year_volumes>
+                <volume date="2018-06-01" gradientsales="25.42" num="1"
+                    payment="-121.00" sales="10000.00"/>
+                <volume date="2018-05-01" gradientsales="0.00" num="2"
+                    payment="0.00" sales="20000.00"/>
+                <volume date="2018-04-01" gradientsales="39.07" num="3"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2018-03-01" gradientsales="0.00" num="4"
+                    payment="-3.85" sales="0.00"/>
+                <volume date="2018-02-01" gradientsales="0.00" num="5"
+                    payment="0.00" sales="125.45"/>
+                <volume date="2018-01-01" gradientsales="13.02" num="6"
+                    payment="-15.00" sales="0.00"/>
+                <volume date="2017-12-01" gradientsales="26.05" num="7"
+                    payment="-3.00" sales="0.00"/>
+                <volume date="2017-11-01" gradientsales="0.00" num="8"
+                    payment="0.00" sales="1000.00"/>
+                <volume date="2017-10-01" gradientsales="0.00" num="9"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2017-09-01" gradientsales="0.00" num="10"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2017-08-01" gradientsales="0.00" num="11"
+                    payment="0.00" sales="0.00"/>
+                <volume date="2017-07-01" gradientsales="0.00" num="12"
+                    payment="0.00" sales="0.00"/>
+            </year_volumes>
+            <payments_balance value="2.18"/>
+        </debtordata>
+        <description/>
+    </localEntry>
+    <endpoint name="DigSgnEP">
+        <wsdl port="GetSignatureValueSoap" service="GetSignatureValue"
+            statistics="enable" uri="http://localhost:8081/GetSignatureValue.asmx?wsdl"/>
+    </endpoint>
+    <endpoint name="vfs_NFC">
+        <address uri="vfs:file:///D:/ExchangeDocs/NFC"/>
+    </endpoint>
+    <endpoint name="WorkAXWS">
+        <wsdl port="ServiceSoap" service="Service" uri="http://zskpk02.z.loc:8919/ws/service.asmx?wsdl"/>
+    </endpoint>
+    <endpoint name="NFC_API_Debtor2">
+        <http method="POST" uri-template="https://efactoring.ru/api/ext/docflow/debtor">
+            <timeout>
+                <duration>10000</duration>
+                <responseAction>fault</responseAction>
+            </timeout>
+        </http>
+    </endpoint>
+    <endpoint name="TEST_NFC_Auth">
+        <http method="POST" uri-template="https://test.factoring.ru/api/ext/auth/login"/>
+    </endpoint>
+    <endpoint name="Test1SDOFiles">
+        <wsdl port="FilesSoap" service="Files" uri="https://1c2.gradient.ru/DocMng_ws_test/ws/Files?wsdl"/>
+        <description>TEST Web-Service for File management of 1S:DocFlow</description>
+    </endpoint>
+    <endpoint name="NFC_API_Report">
+        <http method="GET" uri-template="https://efactoring.ru/api/ext/reports/settings/{uri.var.reportid}/result"/>
+    </endpoint>
+    <endpoint name="testNFC">
+        <http method="POST" uri-template="http://localhost:8280/api/test/nfc/debtor?userid=Gradient_API_1&amp;password=GrApi1">
+            <timeout>
+                <duration>1200000</duration>
+                <responseAction>fault</responseAction>
+            </timeout>
+            <markForSuspension>
+                <retriesBeforeSuspension>10</retriesBeforeSuspension>
+                <retryDelay>10000</retryDelay>
+            </markForSuspension>
+        </http>
+    </endpoint>
+    <endpoint name="DigSgnHTTPEP">
+        <http method="POST" uri-template="http://localhost:8081/GetSignatureValue.asmx/getSignatureValue"/>
+        <description>Подписание анкет для НФК ЭЦП. Контейнер с ключом ЭЦП на ZSKPK02</description>
+    </endpoint>
+    <endpoint name="WorkAXTestConnection">
+        <http method="GET" uri-template="http://localhost:8919/WS/Service.asmx/TestConnection"/>
+    </endpoint>
+    <endpoint name="TEST_NFC_Debtor">
+        <http method="POST" uri-template="https://test.factoring.ru/api/ext/docflow/debtor">
+            <timeout>
+                <duration>10000</duration>
+                <responseAction>fault</responseAction>
+            </timeout>
+        </http>
+    </endpoint>
+    <endpoint name="TEST">
+        <http method="POST" uri-template="http://localhost:8081/GetSignatureValue.asmx/getSignatureValue"/>
+    </endpoint>
+    <endpoint name="NFC_API_Auth2">
+        <http method="POST" statistics="enable" uri-template="https://www.efactoring.ru/api/ext/auth/login"/>
+    </endpoint>
+    <endpoint name="SD_API_Task">
+        <http method="POST" uri-template="http://servicedesk.gradient.ru/api/task"/>
+        <property name="Transfer-Encoding" scope="transport" value="identity"/>
+    </endpoint>
+    <endpoint name="SD_API_NewTask">
+        <http method="GET" uri-template="http://servicedesk.gradient.ru/api/newtask?serviceid=62&amp;tasktypeid=1040&amp;include=TASKTYPE"/>
+    </endpoint>
+    <endpoint name="SD_API_USER">
+        <http method="GET" uri-template="http://servicedesk.gradient.ru/api/user?email={uri.var.email}&amp;IsArchive=false"/>
+    </endpoint>
+    <sequence name="NFC_Debtor_API_IN">
+        <property expression="$body/*[1]" name="body" scope="default"
+            type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <property expression="get-property('$trp:FILE_NAME')" name="filename"/>
+        <property name="userid" value="GRADIENT_API_1"/>
+        <property name="password" value="GrApi1"/>
+        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+        <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+        <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+        <property name="ContentType" scope="axis2" value="application/json"/>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+        <sequence key="NFC_API_Auth_Seq"/>
+        <log level="full">
+            <property expression="get-property('auth_token')"
+                name="auth_token" xmlns:ns="http://org.apache.synapse/xsd"/>
+            <property expression="get-property('filename')"
+                name="filename" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </log>
+        <header
+            expression="fn:concat('token ',fn:translate(get-property('auth_token'),'&quot;',''))"
+            name="Authorization" scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <payloadFactory media-type="json">
+            <format>{"content":"$1","signature":""}            </format>
+            <args>
+                <arg evaluator="xml"
+                    expression="base64Encode(get-property('body'))" xmlns:ns="http://org.apache.synapse/xsd"/>
+            </args>
+        </payloadFactory>
+        <log level="full">
+            <property expression="json-eval($.)" name="JSON" xmlns:ns="http://org.apache.synapse/xsd"/>
+            <property expression="get-property('filename')"
+                name="FILENAME" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </log>
+        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+        <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+        <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+        <property name="ContentType" scope="axis2" value="application/json"/>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+        <call>
+            <endpoint key="NFC_API_Debtor2"/>
+        </call>
+        <loopback/>
+    </sequence>
+    <sequence name="NFC_API_Auth_Seq">
+        <property name="messageType" scope="axis2" type="STRING" value="text/json"/>
+        <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+        <property name="CONTENT_TYPE" scope="axis2" value="text/json"/>
+        <property name="ContentType" scope="axis2" value="text/json"/>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+        <payloadFactory media-type="json">
+            <format>{
+  "userName": "$1",
+  "password": "$2"
+}</format>
+            <args>
+                <arg evaluator="xml" expression="get-property('userid')" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <arg evaluator="xml"
+                    expression="get-property('password')" xmlns:ns="http://org.apache.synapse/xsd"/>
+            </args>
+        </payloadFactory>
+        <log level="full">
+            <property expression="json-eval($.)" name="JSON-Payload" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </log>
+        <header name="Accept" scope="transport" value="application/json"/>
+        <header name="Content-Type" scope="transport" value="application/json"/>
+        <header action="remove" name="Cookie" scope="transport"/>
+        <header action="remove" name="Cache-Control" scope="transport"/>
+        <header action="remove" name="Upgrade-Insecure-Requests" scope="transport"/>
+        <header action="remove" name="Accept-Encoding" scope="transport"/>
+        <header action="remove" name="Accept-Language" scope="transport"/>
+        <header action="remove" name="DNT" scope="transport"/>
+        <header action="remove" name="Transfer-Encoding" scope="transport"/>
+        <header action="remove" name="Host" scope="transport"/>
+        <header action="remove" name="Connection" scope="transport"/>
+        <header action="remove" name="User-Agent" scope="transport"/>
+        <call>
+            <endpoint key="TEST_NFC_Auth"/>
+        </call>
+        <log level="full">
+            <property expression="json-eval($.)" name="JSON-Payload" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </log>
+        <property expression="json-eval($.)" name="auth_token"
+            scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </sequence>
+    <sequence name="NFC_API_Debtor">
+        <log/>
+    </sequence>
+    <sequence name="fault">
+        <!-- Log the message at the full log level with the ERROR_MESSAGE and the ERROR_CODE-->
+        <log level="full">
+            <property name="MESSAGE" value="Executing default 'fault' sequence"/>
+            <property expression="get-property('ERROR_CODE')" name="ERROR_CODE"/>
+            <property expression="get-property('ERROR_MESSAGE')" name="ERROR_MESSAGE"/>
+        </log>
+        <!-- Drops the messages by default if there is a fault -->
+        <drop/>
+    </sequence>
+    <sequence name="main">
+        <in>
+            <log level="custom">
+                <property expression="get-property('To')" name="main sequence executed for call to non-existent"/>
+            </log>
+            <property name="NO_ENTITY_BODY" scope="axis2" type="BOOLEAN" value="true"/>
+            <property name="HTTP_SC" scope="axis2" value="404"/>
+            <respond/>
+        </in>
+        <description>The main sequence for the message mediation - this sequence will get invoked if there is no other
+        artifact to process the message</description>
+    </sequence>
+    <sequence name="PROD_NFC_API_Auth_Seq">
+        <property name="messageType" scope="axis2" type="STRING" value="text/json"/>
+        <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+        <property name="CONTENT_TYPE" scope="axis2" value="text/json"/>
+        <property name="ContentType" scope="axis2" value="text/json"/>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+        <payloadFactory media-type="json">
+            <format>{
+  "userName": "$1",
+  "password": "$2"
+}</format>
+            <args>
+                <arg evaluator="xml" expression="get-property('userid')" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <arg evaluator="xml"
+                    expression="get-property('password')" xmlns:ns="http://org.apache.synapse/xsd"/>
+            </args>
+        </payloadFactory>
+        <log level="full">
+            <property expression="json-eval($.)" name="JSON-Payload" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </log>
+        <header name="Accept" scope="transport" value="application/json"/>
+        <header name="Content-Type" scope="transport" value="application/json"/>
+        <header action="remove" name="Cookie" scope="transport"/>
+        <header action="remove" name="Cache-Control" scope="transport"/>
+        <header action="remove" name="Upgrade-Insecure-Requests" scope="transport"/>
+        <header action="remove" name="Accept-Encoding" scope="transport"/>
+        <header action="remove" name="Accept-Language" scope="transport"/>
+        <header action="remove" name="DNT" scope="transport"/>
+        <header action="remove" name="Transfer-Encoding" scope="transport"/>
+        <header action="remove" name="Host" scope="transport"/>
+        <header action="remove" name="Connection" scope="transport"/>
+        <header action="remove" name="User-Agent" scope="transport"/>
+        <call>
+            <endpoint key="NFC_API_Auth2"/>
+        </call>
+        <log level="full">
+            <property expression="json-eval($.)" name="JSON-Payload" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </log>
+        <property expression="json-eval($.)" name="auth_token"
+            scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </sequence>
+    <sequence name="SD_API_fault">
+        <payloadFactory media-type="xml">
+            <format>
+                <result xmlns="">
+                    <taskId/>
+                    <error>ServiceDesk is not available! $1</error>
+                </result>
+            </format>
+            <args>
+                <arg evaluator="xml"
+                    expression="get-property('ERROR_MESSAGE')" xmlns:ns="http://org.apache.synapse/xsd"/>
+            </args>
+        </payloadFactory>
+        <property name="messageType" scope="axis2" value="application/xml"/>
+        <property name="Content-Type" scope="transport" value="application/xml"/>
+        <respond/>
+        <description>При возникновении ошибки в SDAPI вызывается этот seq</description>
+    </sequence>
+    <sequence name="SD_API_getUserID">
+        <sequence key="SD_API_Auth"/>
+        <call>
+            <endpoint key="SD_API_USER"/>
+        </call>
+        <property expression="$body//UserList/Users/User/Id"
+            name="userId" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <description>Получить ID пользователя по email. Email должен быть установлен в uri.var.email</description>
+    </sequence>
+    <sequence name="NFCresultSeq">
+        <property
+            expression="fn:translate(get-property('filename'),'.xml','.txt')"
+            name="transport.vfs.ReplyFileName" scope="transport"
+            xmlns:ns3="http://org.apache.synapse/xsd" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"/>
+        <property name="OUT_ONLY" value="true"/>
+        <send>
+            <endpoint>
+                <address uri="vfs:file://d:/exchangeDocs/NFC/result"/>
+            </endpoint>
+        </send>
+    </sequence>
+    <sequence name="SD_API_Auth">
+        <property name="login" value="Webservice"/>
+        <property name="pwd" value="web123"/>
+        <header
+            expression="fn:concat('Basic ',base64Encode(fn:concat(get-property('login'),':',get-property('pwd'))))"
+            name="Authorization" scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <description>Подставляет в header Автроизационный токен</description>
+    </sequence>
+    <sequence name="digSgnSeq">
+        <property name="messageType" scope="axis2" type="STRING" value="application/x-www-form-urlencoded"/>
+        <property name="ContentType" scope="axis2" value="application/x-www-form-urlencoded"/>
+        <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+        <header action="remove" name="Connection" scope="transport"/>
+        <header action="remove" name="FILE_URI" scope="transport"/>
+        <header action="remove" name="FILE_PATH" scope="transport"/>
+        <header action="remove" name="FILE_NAME" scope="transport"/>
+        <header action="remove" name="USer-Agent" scope="transport"/>
+        <payloadFactory media-type="text">
+            <format>_xmlText=$1&amp;_thumbprint=$2</format>
+            <args>
+                <arg evaluator="xml"
+                    expression="base64Encode(get-property('body'))"
+                    literal="true" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <arg value="535e0473d462cbe507066a5bae3c6202e127e9d6"/>
+            </args>
+        </payloadFactory>
+        <property name="ContentType" scope="axis2" value="application/x-www-form-urlencoded"/>
+        <property name="CONTENT_TYPE" scope="axis2" value="application/x-www-form-urlencoded"/>
+        <header name="Content-Type" scope="transport" value="application/x-www-form-urlencoded"/>
+        <log level="full"/>
+        <call>
+            <endpoint key="TEST"/>
+        </call>
+        <log level="full"/>
+        <property expression="$body//m:string" name="signature"
+            scope="default" type="STRING" xmlns:m="http://tempuri.org/" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </sequence>
+    <api context="/api/test/nfc" name="NFK_API">
+        <resource methods="GET" uri-template="/report/{reportid}?userid={userid}&amp;password={password}">
+            <inSequence>
+                <property
+                    expression="get-property('query.param.userid')" name="userid"/>
+                <property
+                    expression="get-property('query.param.password')" name="password"/>
+                <sequence key="PROD_NFC_API_Auth_Seq"/>
+                <log level="full">
+                    <property
+                        expression="get-property('uri.var.reportid')" name="reportid"/>
+                    <property expression="get-property('auth_token')" name="auth_token"/>
+                </log>
+                <header
+                    expression="fn:concat('token ',fn:translate(get-property('auth_token'),'&quot;',''))"
+                    name="Authorization" scope="transport"/>
+                <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="GET"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <payloadFactory media-type="json">
+                    <format>$1</format>
+                    <args>
+                        <arg value=""/>
+                    </args>
+                </payloadFactory>
+                <log level="full"/>
+                <send>
+                    <endpoint key="NFC_API_Report"/>
+                </send>
+            </inSequence>
+            <outSequence>
+                <property
+                    expression="fn:concat(get-property('uri.var.reportid'),'.xlsx')"
+                    name="transport.vfs.ReplyFileName" scope="transport" type="STRING"/>
+                <property name="OUT_ONLY" value="true"/>
+                <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
+                <send>
+                    <endpoint>
+                        <address uri="vfs:file://d:/exchangeDocs/NFC/result"/>
+                    </endpoint>
+                </send>
+            </outSequence>
+            <faultSequence>
+                <payloadFactory media-type="text">
+                    <format>$1</format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                    </args>
+                </payloadFactory>
+                <send/>
+            </faultSequence>
+        </resource>
+        <resource methods="POST GET" uri-template="/debtor?userid={userid}&amp;password={password}">
+            <inSequence>
+                <log>
+                    <property name="alarm" value="I'm here!"/>
+                </log>
+                <property expression="$body/*[1]" name="body"/>
+                <property
+                    expression="get-property('query.param.userid')" name="userid"/>
+                <property
+                    expression="get-property('query.param.password')" name="password"/>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <sequence key="NFC_API_Auth_Seq"/>
+                <log level="full">
+                    <property expression="get-property('auth_token')" name="auth_token"/>
+                </log>
+                <header
+                    expression="fn:concat('token ',fn:translate(get-property('auth_token'),'&quot;',''))"
+                    name="Authorization" scope="transport"/>
+                <payloadFactory media-type="json">
+                    <format>{"content":"$1","signature":""}            </format>
+                    <args>
+                        <arg evaluator="xml" expression="base64Encode(get-property('body'))"/>
+                    </args>
+                </payloadFactory>
+                <log level="full">
+                    <property expression="json-eval($.)" name="JSON"/>
+                    <property expression="get-property('body')" name="BODY"/>
+                </log>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+                <property name="CONTENT_TYPE" scope="axis2" value="application/json"/>
+                <property name="ContentType" scope="axis2" value="application/json"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <call>
+                    <endpoint key="NFC_API_Debtor2"/>
+                </call>
+                <loopback/>
+            </inSequence>
+            <outSequence>
+                <send/>
+            </outSequence>
+            <faultSequence>
+                <payloadFactory media-type="text">
+                    <format>$1</format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                    </args>
+                </payloadFactory>
+                <send/>
+            </faultSequence>
+        </resource>
+    </api>
+    <api context="/gradexpo/api" name="gradexpo">
+        <resource methods="GET" url-mapping="/expo">
+            <inSequence>
+                <call>
+                    <endpoint>
+                        <http method="GET" uri-template="http://zskpk02:8280/services/Expo_DataService/expos"/>
+                    </endpoint>
+                </call>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <log level="full">
+                    <property name="json" value="json-eval($)"/>
+                </log>
+                <respond/>
+            </inSequence>
+        </resource>
+        <resource methods="GET" uri-template="/expo/{expoId}">
+            <inSequence>
+                <call>
+                    <endpoint>
+                        <http method="GET" uri-template="http://zskpk02:8280/services/Expo_DataService/expoByKey?expoId={uri.var.expoId}"/>
+                    </endpoint>
+                </call>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <log level="full">
+                    <property name="json" value="json-eval($)"/>
+                </log>
+                <respond/>
+            </inSequence>
+        </resource>
+        <resource methods="GET" uri-template="/expo/{expoId}/stand">
+            <inSequence>
+                <call>
+                    <endpoint>
+                        <http method="GET" uri-template="http://zskpk02:8280/services/Expo_DataService/expoStands?expoId={uri.var.expoId}"/>
+                    </endpoint>
+                </call>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <log level="full">
+                    <property expression="json-eval($)" name="json"/>
+                </log>
+                <respond/>
+            </inSequence>
+        </resource>
+        <resource methods="DELETE POST PUT GET" uri-template="/vendor"/>
+        <resource methods="POST" uri-template="/expo/{expoid}/stand"/>
+    </api>
+    <api context="/api/test" name="TestInternalAPI">
+        <resource methods="POST GET" uri-template="/gservices/action">
+            <inSequence>
+                <log level="full">
+                    <property expression="json-eval($.)" name="JSON-Payload"/>
+                </log>
+                <respond/>
+            </inSequence>
+            <outSequence>
+                <log level="full"/>
+            </outSequence>
+        </resource>
+        <resource methods="POST GET" url-mapping="/SDO/Employee">
+            <inSequence>
+                <log level="full">
+                    <property expression="json-eval($.)" name="JSON-Payload"/>
+                </log>
+                <respond/>
+            </inSequence>
+            <outSequence>
+                <log level="full"/>
+            </outSequence>
+            <faultSequence>
+                <property name="HTTP_SC" scope="axis2" type="STRING" value="500"/>
+                <property name="HTTP_SC_DESC" scope="axis2" value="iNTERNAL SERVER ERROR"/>
+                <payloadFactory media-type="text">
+                    <format>$1</format>
+                    <args>
+                        <arg value="ERROR"/>
+                    </args>
+                </payloadFactory>
+                <respond/>
+            </faultSequence>
+        </resource>
+        <resource methods="GET" uri-template="/DO/file/{fileId}">
+            <inSequence>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <soapenv:Envelope
+                            xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.1c.ru/docmng">
+                            <soapenv:Body>
+                                <tns:GetFile>
+                                    <tns:Code>$1</tns:Code>
+                                </tns:GetFile>
+                            </soapenv:Body>
+                        </soapenv:Envelope>
+                    </format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('uri.var.fileId')"/>
+                    </args>
+                </payloadFactory>
+                <send>
+                    <endpoint key="Test1SDOFiles"/>
+                </send>
+            </inSequence>
+            <outSequence>
+                <property
+                    expression="//m:GetFileResponse/m:return/m:Name"
+                    name="filename" scope="default" type="STRING" xmlns:m="http://www.1c.ru/docmng"/>
+                <property
+                    expression="//m:GetFileResponse/m:return/m:Extension"
+                    name="ext" scope="default" type="STRING" xmlns:m="http://www.1c.ru/docmng"/>
+                <property
+                    expression="//m:GetFileResponse/m:return/m:BinaryData"
+                    name="data" scope="default" type="STRING" xmlns:m="http://www.1c.ru/docmng"/>
+                <header
+                    expression="fn:concat('attachment; filename=',get-property('filename'),'.',get-property('ext'))"
+                    name="Content-Disposition" scope="transport"/>
+                <header name="Content-Type" scope="transport" value="application/pdf"/>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <ns:binary xmlns:ns="http://ws.apache.org/commons/ns/payload">$1</ns:binary>
+                    </format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('data')"/>
+                    </args>
+                </payloadFactory>
+                <script language="js"><![CDATA[var binaryNode = mc.getEnvelope().getBody().getFirstElement().getFirstOMChild();              binaryNode.setBinary(true);]]></script>
+                <property name="messageType" scope="axis2" value="application/pdf"/>
+                <respond/>
+            </outSequence>
+            <faultSequence>
+                <property name="HTTP_SC" scope="axis2" type="STRING" value="500"/>
+                <property expression="get-property('ERROR_MESSAGE')"
+                    name="HTTP_SC_DESC" scope="axis2"/>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <error xmlns="">$1</error>
+                    </format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                    </args>
+                </payloadFactory>
+                <respond/>
+            </faultSequence>
+        </resource>
+        <resource methods="GET" uri-template="/nfc/auth">
+            <inSequence>
+                <sequence key="NFC_API_Auth_Seq"/>
+                <loopback/>
+            </inSequence>
+            <outSequence>
+                <respond/>
+            </outSequence>
+        </resource>
+        <resource inSequence="NFC_API_Auth_Seq" methods="GET" uri-template="/nfc/report/{reportId}?userName={userId}&amp;password={password}">
+            <outSequence>
+                <send/>
+            </outSequence>
+        </resource>
+    </api>
+    <api context="/extAPI" name="ExternalAPI">
+        <resource methods="GET" url-mapping="/test">
+            <inSequence>
+                <call>
+                    <endpoint key="WorkAXTestConnection"/>
+                </call>
+                <respond/>
+            </inSequence>
+        </resource>
+    </api>
+    <api context="/intAPI" name="internalAPI">
+        <resource methods="POST GET" url-mapping="/Gservices/Action">
+            <inSequence>
+                <log level="full"/>
+                <respond/>
+            </inSequence>
+            <outSequence>
+                <log level="full"/>
+            </outSequence>
+        </resource>
+        <resource methods="POST GET" url-mapping="/SDO/Employee">
+            <inSequence>
+                <log level="full">
+                    <property expression="json-eval($.)" name="JSON-Payload"/>
+                </log>
+                <respond/>
+            </inSequence>
+            <outSequence>
+                <log level="full"/>
+            </outSequence>
+            <faultSequence>
+                <property name="HTTP_SC" scope="axis2" type="STRING" value="500"/>
+                <property name="HTTP_SC_DESC" scope="axis2" value="iNTERNAL SERVER ERROR"/>
+                <payloadFactory media-type="text">
+                    <format>$1</format>
+                    <args>
+                        <arg value="ERROR"/>
+                    </args>
+                </payloadFactory>
+                <respond/>
+            </faultSequence>
+        </resource>
+        <resource methods="GET" uri-template="/DO/file/{fileId}">
+            <inSequence>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <soapenv:Envelope
+                            xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.1c.ru/docmng">
+                            <soapenv:Body>
+                                <tns:GetFile>
+                                    <tns:Code>$1</tns:Code>
+                                </tns:GetFile>
+                            </soapenv:Body>
+                        </soapenv:Envelope>
+                    </format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('uri.var.fileId')"/>
+                    </args>
+                </payloadFactory>
+                <send>
+                    <endpoint key="Test1SDOFiles"/>
+                </send>
+            </inSequence>
+            <outSequence>
+                <property
+                    expression="//m:GetFileResponse/m:return/m:Name"
+                    name="filename" scope="default" type="STRING" xmlns:m="http://www.1c.ru/docmng"/>
+                <property
+                    expression="//m:GetFileResponse/m:return/m:Extension"
+                    name="ext" scope="default" type="STRING" xmlns:m="http://www.1c.ru/docmng"/>
+                <property
+                    expression="//m:GetFileResponse/m:return/m:BinaryData"
+                    name="data" scope="default" type="STRING" xmlns:m="http://www.1c.ru/docmng"/>
+                <header
+                    expression="fn:concat('attachment; filename=',get-property('filename'),'.',get-property('ext'))"
+                    name="Content-Disposition" scope="transport"/>
+                <header name="Content-Type" scope="transport" value="application/pdf"/>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <ns:binary xmlns:ns="http://ws.apache.org/commons/ns/payload">$1</ns:binary>
+                    </format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('data')"/>
+                    </args>
+                </payloadFactory>
+                <script language="js"><![CDATA[var binaryNode = mc.getEnvelope().getBody().getFirstElement().getFirstOMChild();              binaryNode.setBinary(true);]]></script>
+                <property name="messageType" scope="axis2" value="application/pdf"/>
+                <respond/>
+            </outSequence>
+            <faultSequence>
+                <property name="HTTP_SC" scope="axis2" type="STRING" value="500"/>
+                <property expression="get-property('ERROR_MESSAGE')"
+                    name="HTTP_SC_DESC" scope="axis2"/>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <error xmlns="">$1</error>
+                    </format>
+                    <args>
+                        <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+                    </args>
+                </payloadFactory>
+                <respond/>
+            </faultSequence>
+        </resource>
+    </api>
+    <api context="/sdapi" name="SDAPI">
+        <resource methods="POST" uri-template="/task">
+            <inSequence>
+                <log level="full"/>
+                <property expression="$body//TaskRequest/Author"
+                    name="AuthorEmail" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <property expression="$body//TaskRequest/Analitic"
+                    name="AnaliticEmail" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+                <property expression="$body//TaskRequest/Subject" name="Subject"/>
+                <property expression="$body//TaskRequest/Body" name="Body"/>
+                <property expression="$body//TaskRequest/BUId" name="BUId"/>
+                <property expression="$body//TaskRequest/CategoryId" name="CategoryId"/>
+                <property expression="$body//TaskRequest/TaskDate" name="TaskDate"/>
+                <property expression="get-property('AuthorEmail')" name="uri.var.email"/>
+                <sequence key="SD_API_getUserID"/>
+                <property expression="get-property('userId')" name="AuthorId"/>
+                <property expression="get-property('AnaliticEmail')" name="uri.var.email"/>
+                <sequence key="SD_API_getUserID"/>
+                <property expression="get-property('userId')" name="ExecutorId"/>
+                <payloadFactory media-type="json">
+                    <format> {      "Description": "$1",      "ExecutorIds": $2,      "Name": "$3",      "PriorityId": 8,      "ServiceId": 62,      "StatusId": 28,  "StatusName": "Открыта",    "TypeId": 1040,      "WorkflowId": 55,      "IsClient": "False",      "CreatorId": $4,      "Field1269": "$5",      "Field1270": "$6",      "Field1271": "$7",      "Field1272": $8,      "Field1274": $9    } </format>
+                    <args>
+                        <arg evaluator="xml" expression="fn:substring(get-property('Body'),1,2000)"/>
+                        <arg evaluator="xml" expression="get-property('ExecutorId')"/>
+                        <arg evaluator="xml" expression="get-property('Subject')"/>
+                        <arg evaluator="xml" expression="get-property('AuthorId')"/>
+                        <arg evaluator="xml" expression="get-property('AuthorEmail')"/>
+                        <arg evaluator="xml" expression="get-property('AnaliticEmail')"/>
+                        <arg evaluator="xml" expression="get-property('TaskDate')"/>
+                        <arg evaluator="xml" expression="get-property('BUId')"/>
+                        <arg evaluator="xml" expression="get-property('CategoryId')"/>
+                    </args>
+                </payloadFactory>
+                <property name="messageType" scope="axis2" value="application/json"/>
+                <header name="Content-Type" scope="transport" value=" application/json"/>
+                <log level="full"/>
+                <sequence key="SD_API_Auth"/>
+                <property name="FORCE_HTTP_1.0" scope="axis2" value="true"/>
+                <property name="DISABLE_CHUNKING" scope="axis2" value="true"/>
+                <call>
+                    <endpoint key="SD_API_Task"/>
+                </call>
+                <property name="messageType" scope="axis2" value="application/json"/>
+                <log level="full"/>
+                <property expression="json-eval($.Task.Id)" name="taskId"/>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <result xmlns="">
+                            <taskId>$1</taskId>
+                            <error>$2</error>
+                        </result>
+                    </format>
+                    <args>
+                        <arg evaluator="xml"
+                            expression="get-property('taskId')" xmlns:ns="http://org.apache.synapse/xsd"/>
+                        <arg evaluator="xml"
+                            expression="get-property('ERROR_MESSAGE')" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    </args>
+                </payloadFactory>
+                <property name="messageType" scope="axis2" value="application/xml"/>
+                <log level="full"/>
+                <respond/>
+            </inSequence>
+            <faultSequence>
+                <sequence key="SD_API_fault"/>
+            </faultSequence>
+        </resource>
+        <resource methods="GET" uri-template="/CategoryList">
+            <inSequence>
+                <property name="messageType" scope="axis2" value="application/xml"/>
+                <sequence key="SD_API_Auth"/>
+                <call>
+                    <endpoint key="SD_API_NewTask"/>
+                </call>
+                <xslt key="SD_API_CategoryListXSLT"/>
+                <log level="full"/>
+                <respond/>
+            </inSequence>
+        </resource>
+        <resource methods="GET" uri-template="/BUList">
+            <inSequence>
+                <property name="messageType" scope="axis2" value="application/xml"/>
+                <sequence key="SD_API_Auth"/>
+                <call>
+                    <endpoint key="SD_API_NewTask"/>
+                </call>
+                <xslt key="SD_API_BUListXSLT"/>
+                <log level="full"/>
+                <respond/>
+            </inSequence>
+        </resource>
+    </api>
+    <api context="/xsd" name="xsd">
+        <resource methods="GET" uri-template="/{xsdId}">
+            <inSequence>
+                <payloadFactory media-type="xml">
+                    <format>
+                        <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                            <xs:element name="TaskRequest">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                    <xs:element ref="Author"/>
+                                    <xs:element ref="Analitic"/>
+                                    <xs:element ref="TaskDate"/>
+                                    <xs:element ref="BUId"/>
+                                    <xs:element ref="CategoryId"/>
+                                    <xs:element ref="Subject"/>
+                                    <xs:element ref="Body"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Author" type="email"/>
+                            <xs:element name="Analitic" type="email"/>
+                            <xs:element name="TaskDate" type="xs:dateTime"/>
+                            <xs:element name="BUId" type="xs:integer"/>
+                            <xs:element name="CategoryId" type="xs:integer"/>
+                            <xs:element name="Subject" type="xs:string"/>
+                            <xs:element name="Body" type="xs:string"/>
+                            <xs:simpleType name="email">
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:schema>
+                    </format>
+                    <args/>
+                </payloadFactory>
+                <respond/>
+                <property name="messageType" scope="default"
+                    type="STRING" value="application/xml"/>
+            </inSequence>
+        </resource>
+    </api>
+    <!-- You can add any flat sequences, endpoints, etc.. to this synapse.xml file if you do
+    *not* want to keep the artifacts in several files -->
+</definitions>

@@ -1,0 +1,57 @@
+
+<project type="cont" name="РивГош" expanded="yes" catalog="no" pluginOwner="-1">
+	<file plugId="3" URL="Заказ_РивГош_АР-000233489_РЕзультат.xml" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="2" URL="РивГош.xsl">
+		<scenarios>
+			<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="Заказ_РивГош_АР-000233489_обычный.xml" htmlbaseurl="" outputurl="Заказ_РивГош_АР-000233489_РЕзультат.xml" processortype="saxon8" useresolver="yes"
+			          profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext=""
+			          validateoutput="no" validator="internal" customvalidator="">
+				<advancedProp name="sInitialMode" value=""/>
+				<advancedProp name="schemaCache" value="||"/>
+				<advancedProp name="bXsltOneIsOkay" value="true"/>
+				<advancedProp name="bSchemaAware" value="true"/>
+				<advancedProp name="bGenerateByteCode" value="true"/>
+				<advancedProp name="bXml11" value="false"/>
+				<advancedProp name="iValidation" value="0"/>
+				<advancedProp name="bExtensions" value="true"/>
+				<advancedProp name="iWhitespace" value="0"/>
+				<advancedProp name="sInitialTemplate" value=""/>
+				<advancedProp name="bTinyTree" value="true"/>
+				<advancedProp name="xsltVersion" value="2.0"/>
+				<advancedProp name="bWarnings" value="true"/>
+				<advancedProp name="bUseDTD" value="false"/>
+				<advancedProp name="iErrorHandling" value="fatal"/>
+			</scenario>
+		</scenarios>
+		<MapperMetaTag>
+			<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="Заказ_РивГош_АР-000233489_РЕзультат.xml" destSchemaRoot="Document-Order" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no">
+				<SourceSchema srcSchemaPath="Заказ_РивГош_АР-000233489_обычный.xml" srcSchemaRoot="Document-Order" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
+			</MapperInfo>
+			<MapperBlockPosition>
+				<template match="/"></template>
+				<template match="@*|node()"></template>
+				<template match="DeliveryPoint/ILN">
+					<block path="xsl:if" x="296" y="90"/>
+					<block path="xsl:if[1]/=[0]" x="290" y="106"/>
+					<block path="xsl:if[1]" x="336" y="108"/>
+				</template>
+			</MapperBlockPosition>
+			<TemplateContext></TemplateContext>
+			<MapperFilter side="source"></MapperFilter>
+		</MapperMetaTag>
+	</file>
+	<file plugId="3" URL="ORDER_66932_  _АВ-000016595 (реклама).xml" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="Заказ_РивГош_АР-000233489_обычный.xml" catalog="no">
+		<queries>
+			<query xpath="/Document-Order/Order-Parties/UltimateCustomer/ILN"/>
+			<query xpath=""/>
+		</queries>
+		<namespaces/>
+	</file>
+</project>

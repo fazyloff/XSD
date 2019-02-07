@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> <!--version 10-->
+  <xs:element name="debtordata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="date"/>		
+        <xs:element ref="sms_validation_code"/>
+		<xs:element ref="INN_gradient"/>
+        <xs:element ref="KPP_gradient"/>
+        <xs:element ref="contract_due_days"/>
+        <xs:element ref="max_debt"/>
+        <xs:element ref="delivery_type"/>
+        <xs:element ref="accept_goods_type"/>
+        <xs:element ref="primary_docs"/>
+        <xs:element ref="OPF"/>
+        <xs:element ref="company_name"/>
+        <xs:element ref="INN"/>
+        <xs:element ref="OGRN"/>
+        <xs:element ref="USN_tax"/>
+        <xs:element ref="main_phone"/>
+        <xs:element ref="add_phone"/>
+        <xs:element ref="web_site"/>
+        <xs:element ref="years_in_business"/>
+        <xs:element ref="ceo"/>
+        <xs:element ref="main_act"/>
+        <xs:element ref="retail_sales_ratio"/>
+        <xs:element ref="stores_num"/>
+        <xs:element ref="stores_num_1year"/>
+        <xs:element ref="sales_area"/>
+        <xs:element ref="warehouse_area"/>
+        <xs:element ref="total_office_area"/>
+        <xs:element ref="total_debt"/>
+        <xs:element ref="employees_num"/>
+        <xs:element ref="INN_controlled"/>
+        <xs:element ref="competitors"/>
+        <xs:element ref="advantages"/>
+        <xs:element ref="plans"/>
+        <xs:element ref="difficulties"/>
+        <xs:element ref="personal_data_confirmed"/>
+        <xs:element ref="cred_bureau_confirmed"/>
+        <xs:element ref="application_confirmed"/>
+        <xs:element ref="first_delivery_date"/>
+        <xs:element ref="year_volumes"/>
+		<xs:element ref="quarter_volumes"/>
+        <xs:element ref="payments_balance"/>
+      </xs:sequence>
+      <xs:attribute name="FileID" use="required" type="xs:string"/>
+      <xs:attribute name="FormVer" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id">
+    <xs:complexType>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:dateTime"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sms_validation_code">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+<xs:element name="INN_gradient">
+<xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+	<xs:element name="KPP_gradient">
+<xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="contract_due_days">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="max_debt">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delivery_type">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="enum_DeliveryType"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accept_goods_type">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="enum_Accept"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="primary_docs">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="enum_Docs"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OPF">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="company_name">
+    <xs:complexType>
+      <xs:attribute name="value" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INN">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OGRN">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USN_tax">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="enum_USN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="main_phone">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="add_phone">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="web_site">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="years_in_business">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ceo">
+    <xs:complexType>
+      <xs:attribute name="bday" use="optional" type="xs:date"/>
+      <xs:attribute name="first_name" use="required" type="xs:NCName"/>
+      <xs:attribute name="is_owner" use="required" type="xs:boolean"/>
+      <xs:attribute name="last_name" use="required" type="xs:string"/>
+      <xs:attribute name="middle_name" use="required" type="xs:string"/>
+      <xs:attribute name="passport_date" use="optional" type="xs:date"/>
+      <xs:attribute name="passport_number" use="optional" type="xs:integer"/>
+      <xs:attribute name="passport_serial" use="optional" type="xs:string"/>
+      <xs:attribute name="passport_who" use="optional" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="main_act">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="enum_MainAct"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retail_sales_ratio">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stores_num">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stores_num_1year">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sales_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="warehouse_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="total_office_area">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="total_debt">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="employees_num">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INN_controlled" type="value"/>
+  <xs:element name="competitors" type="value"/>
+  <xs:element name="advantages" type="value"/>
+  <xs:element name="plans" type="value"/>
+  <xs:element name="difficulties" type="value"/>
+  <xs:element name="personal_data_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cred_bureau_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="application_confirmed">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="first_delivery_date">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:date"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="year_volumes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="12" maxOccurs="12" ref="volume"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quarter_volumes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="4" maxOccurs="4" ref="volume"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="volume">
+    <xs:complexType>
+      <xs:attribute name="date" use="required" type="xs:date"/>
+      <xs:attribute name="num" use="required" type="xs:integer"/>
+      <xs:attribute name="payment" type="xs:decimal"/>
+      <xs:attribute name="sales" type="xs:decimal"/>
+	  <xs:attribute name="gradientsales" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="payments_balance">
+    <xs:complexType>
+      <xs:attribute name="value" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="value">
+    <xs:sequence>
+      <xs:element ref="value"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="value" type="xs:string"/>
+  <xs:simpleType name="enum_USN">
+<xs:restriction base="xs:string">
+<xs:enumeration value="1"/><!--не используется-->
+<xs:enumeration value="2"/><!--используется УСН-->
+<xs:enumeration value="3"/><!--используется ЕНВД-->
+<xs:enumeration value="3"/><!--используется Патент--+27.11.2018, Фазылов М.В. Градиент -->
+</xs:restriction>
+</xs:simpleType>
+ <xs:simpleType name="enum_MainAct">
+<xs:restriction base="xs:integer">
+<xs:enumeration value="1"/><!--Миксовая (продукты+НРС)-->
+<xs:enumeration value="2"/><!--HPC (товары ухода за домом и собой)-->
+<xs:enumeration value="3"/><!--Фарм-->
+<xs:enumeration value="4"/><!--АЗС-->
+<xs:enumeration value="5"/><!--Автомагазин-->
+<xs:enumeration value="6"/><!--Бытовая техника-->
+<xs:enumeration value="7"/><!--Бытовая химия-->
+<xs:enumeration value="8"/><!--Детские товары-->
+<xs:enumeration value="9"/><!--Зоотовары-->
+<xs:enumeration value="10"/><!--Интим-->
+<xs:enumeration value="11"/><!--Косметика-->
+<xs:enumeration value="12"/><!--Книги-->
+<xs:enumeration value="13"/><!--Мебель-->
+<xs:enumeration value="14"/><!--Обувь, кожгалантерея-->
+<xs:enumeration value="15"/><!--Одежда-->
+<xs:enumeration value="16"/><!--Оптика-->
+<xs:enumeration value="17"/><!--Парикмахерская-->
+<xs:enumeration value="18"/><!--Парфюмерия-->
+<xs:enumeration value="19"/><!--Продукты-->
+<xs:enumeration value="20"/><!--Пресса-->
+<xs:enumeration value="21"/><!--Садоводство-->
+<xs:enumeration value="22"/><!--Спорт, туризм, рыбалка-->
+<xs:enumeration value="23"/><!--Строительство и ремонт-->
+<xs:enumeration value="24"/><!--Сувениры, посуда, подарки-->
+<xs:enumeration value="25"/><!--Хозтовары-->
+</xs:restriction>
+</xs:simpleType>
+  <xs:simpleType name="enum_DeliveryType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="1"/><!--Доставка-->
+<xs:enumeration value="2"/><!--Самовывоз-->
+</xs:restriction>
+</xs:simpleType>
+
+ <xs:simpleType name="enum_Accept">
+	<xs:restriction base="xs:string">
+	<xs:enumeration value="1"/><!--Штуки-->
+	<xs:enumeration value="2"/><!--Коробки-->
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="enum_Docs">
+	<xs:restriction base="xs:string">
+	<xs:enumeration value="1"/><!--УПД-->
+	<xs:enumeration value="2"/><!--Счет-фактура +Акт-->
+	</xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

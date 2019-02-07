@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Contract>
+<VendorId>VENDOR1</VendorId>
+<Holding>ГД</Holding>
+<Number>123456-КУКУ</Number>
+<Status>Active</Status>
+<StartDate>2017-12-02</StartDate>
+<EndDate>2020-01-01</EndDate>
+<Company>100</Company>
+<PartnerType>Cust</PartnerType>
+<ContractCode>100</ContractCode>
+<ContractAccount>ДК12345678</ContractAccount>
+</Contract>
