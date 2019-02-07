@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document-Order>
+  <Document-Order>
+    <Order-Header>
+      <OrderNumber>5099008721</OrderNumber>
+      <OrderDate>2018-09-20</OrderDate>
+      <OrderTime>00:00</OrderTime>
+      <ExpectedDeliveryDate>2018-09-24</ExpectedDeliveryDate>
+      <ExpectedDeliveryTime>00:00</ExpectedDeliveryTime>
+      <ContractNumber>LS-04/2011/А/28/002</ContractNumber>
+      <Currency>RUB</Currency>
+      <DocumentFunctionCode>O</DocumentFunctionCode>
+      <Remarks>Тип покупки: 001 Товар на реализа; Промо: Нет; Сотрудник: Горелова Анастасия Андреевна</Remarks>
+      <CreationDateTime>2018-09-20T11:54:26.656Z</CreationDateTime>
+    </Order-Header>
+    <Order-Parties>
+      <Buyer>
+        <ILN>4650074689999</ILN>
+      </Buyer>
+      <Seller>
+        <ILN>4607012269997</ILN>
+        <CodeByBuyer>80001046</CodeByBuyer>
+        <Name>ООО "НТС "Градиент"</Name>
+      </Seller>
+      <DeliveryPoint>
+        <ILN>4650074689265</ILN>
+        <LocationName>509_ТЦ "Колумбус"</LocationName>
+      </DeliveryPoint>
+    </Order-Parties>
+    <Order-Lines>
+      <Line>
+        <Line-Item>
+          <LineNumber>1</LineNumber>
+          <EAN>3586980</EAN>
+          <BuyerItemCode>80066208</BuyerItemCode>
+          <SupplierItemCode>32110127</SupplierItemCode>
+          <ItemDescription>Набор перчаток с бальзамом Vileda L (10 шт. + 2 в подарок)</ItemDescription>
+          <OrderedQuantity>12.000</OrderedQuantity>
+          <UnitOfMeasure>PCE</UnitOfMeasure>
+          <OrderedUnitGrossPrice>223.2700</OrderedUnitGrossPrice>
+          <OrderedUnitNetPrice>189.2100</OrderedUnitNetPrice>
+          <NetAmount>2270.5200</NetAmount>
+          <GrossAmount>2679.2100</GrossAmount>
+          <TaxRate>18</TaxRate>
+        </Line-Item>
+      </Line>
+      <Line>
+        <Line-Item>
+          <LineNumber>2</LineNumber>
+          <EAN>3587045</EAN>
+          <BuyerItemCode>80090664</BuyerItemCode>
+          <SupplierItemCode>62030006</SupplierItemCode>
+          <ItemDescription>Универс. стир. порошок конц. с пятновыв. и кондиц. Attack Multi-Action 900г, 62030006</ItemDescription>
+          <OrderedQuantity>8.000</OrderedQuantity>
+          <UnitOfMeasure>PCE</UnitOfMeasure>
+          <OrderedUnitGrossPrice>384.0200</OrderedUnitGrossPrice>
+          <OrderedUnitNetPrice>325.4400</OrderedUnitNetPrice>
+          <NetAmount>2603.5200</NetAmount>
+          <GrossAmount>3072.1500</GrossAmount>
+          <TaxRate>18</TaxRate>
+        </Line-Item>
+      </Line>
+    </Order-Lines>
+    <Order-Summary>
+      <TotalLines>2</TotalLines>
+      <TotalOrderedAmount>20.000</TotalOrderedAmount>
+      <TotalNetAmount>4874.04</TotalNetAmount>
+    </Order-Summary>
+  </Document-Order>
+</Document-Order>

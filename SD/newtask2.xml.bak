@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<TaskForm>
+	<Task>
+		<FieryFields>Priority</FieryFields>
+		<Categories></Categories>
+		<CategoryIds></CategoryIds>
+		<Deadline></Deadline>
+		<Description>
+		</Description>
+		<ExecutorGroup></ExecutorGroup>
+		<ExecutorGroupId></ExecutorGroupId>
+		<ExecutorIds></ExecutorIds>
+		<Executors></Executors>
+		<Name></Name>
+		<ObserverIds></ObserverIds>
+		<Observers></Observers>
+		<ParentId></ParentId>
+		<PriorityDescription></PriorityDescription>
+		<PriorityId>8</PriorityId>
+		<PriorityName>средний</PriorityName>
+		<ReactionDate></ReactionDate>
+		<ServiceCode>УБА (ОПБС)</ServiceCode>
+		<ServiceDescription></ServiceDescription>
+		<ServiceId>62</ServiceId>
+		<ServiceName>УБА (ОПБС)</ServiceName>
+		<ServiceStage></ServiceStage>
+		<ServiceStageId></ServiceStageId>
+		<StatusDescription></StatusDescription>
+		<StatusId>31</StatusId>
+		<StatusName>Открыта</StatusName>
+		<Type>УБА (ОПБС)</Type>
+		<TypeId>1040</TypeId>
+		<WorkflowId>55</WorkflowId>
+		<IsClient>False</IsClient>
+		<CreatorId>1567</CreatorId>
+		<Field1269>test</Field1269>
+		<Field1270>test</Field1270>
+		<Field1271>15.08.2018 23:59:00</Field1271>
+		<Field1272>2426</Field1272>
+		<Field1273>2454</Field1273>
+		<Field1274>2485</Field1274>
+	</Task>	
+</TaskForm>

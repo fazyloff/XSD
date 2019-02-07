@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<questStatusResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QuestStatusResponse.xsd">
+	<id>E1F1CB92-5E00-40CF-997E-17568597D55E</id><!--id Анкеты-->
+	<status>completed</status><!--error - Ошибка, process- В процессе, completed - Завершено -->
+	<result/>true</result><!-- true - Одобрено, false- Отклонено -->
+	<limit>1100000</limit><!-- Установленный лимит, руб.-->
+<comment>Одобрено!</comment> <!-- Комментарий -->
+</questStatusResponse>

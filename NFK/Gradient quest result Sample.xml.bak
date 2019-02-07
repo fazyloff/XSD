@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<questResultData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gradient%20quest%20result%20Sample.xsd">
+<id value="cc7e314d-90b3-42bb-a011-603fa2fff389"/> <!--id анкеты-->
+<result>Заявка одобрена</result><!--Результат рассмотрения анкеты Заявка одобрена|Получен отказ-->
+<comment>Прекрасная заявка! все отличн!</comment> <!--Комментарий-->
+</questResultData>

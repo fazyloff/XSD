@@ -1,0 +1,88 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="SDAPI" context="/sdapi">
+   <resource methods="POST" uri-template="/task">
+      <inSequence>
+         <log level="full"/>
+         <property xmlns:ns="http://org.apache.synapse/xsd" name="AuthorEmail" expression="$body//TaskRequest/Author" scope="default" type="STRING"/>
+         <property xmlns:ns="http://org.apache.synapse/xsd" name="AnaliticEmail" expression="$body//TaskRequest/Analitic" scope="default" type="STRING"/>
+         <property name="Subject" expression="$body//TaskRequest/Subject"/>
+         <property name="Body" expression="$body//TaskRequest/Body"/>
+         <property name="BUId" expression="$body//TaskRequest/BUId"/>
+         <property name="CategoryId" expression="$body//TaskRequest/CategoryId"/>
+         <property name="uri.var.email" expression="get-property('AuthorEmail')"/>
+         <sequence key="SD_API_getUserID"/>
+         <property name="AuthorId" expression="get-property('userId')"/>
+         <property name="uri.var.email" expression="get-property('AnaliticEmail')"/>
+         <sequence key="SD_API_getUserID"/>
+         <property name="ExecutorId" expression="get-property('userId')"/>
+         <payloadFactory media-type="json">
+            <format> {      "Description": "$1",      "ExecutorIds": $2,      "Name": "$3",      "PriorityId": 8,      "ServiceId": 62,      "StatusId": 28,  "StatusName": "Открыта",    "TypeId": 1040,      "WorkflowId": 55,      "IsClient": "False",      "CreatorId": $4,      "Field1269": "$5",      "Field1270": "$6",      "Field1271": "$7",      "Field1272": $8,      "Field1274": $9    } </format>
+            <args>
+               <arg evaluator="xml" expression="fn:substring(get-property('Body'),1,2000)"/>
+               <arg evaluator="xml" expression="get-property('ExecutorId')"/>
+               <arg evaluator="xml" expression="get-property('Subject')"/>
+               <arg evaluator="xml" expression="get-property('AuthorId')"/>
+               <arg evaluator="xml" expression="get-property('AuthorEmail')"/>
+               <arg evaluator="xml" expression="get-property('AnaliticEmail')"/>
+               <arg evaluator="xml" expression="get-property('TaskDate')"/>
+               <arg evaluator="xml" expression="get-property('BUId')"/>
+               <arg evaluator="xml" expression="get-property('CategoryId')"/>
+            </args>
+         </payloadFactory>
+         <property name="messageType" value="application/json" scope="axis2"/>
+         <header name="Content-Type" scope="transport" value=" application/json"/>
+         <log level="full"/>
+         <sequence key="SD_API_Auth"/>
+         <property name="FORCE_HTTP_1.0" value="true" scope="axis2"/>
+         <property name="DISABLE_CHUNKING" value="true" scope="axis2"/>
+         <call>
+            <endpoint key="SD_API_Task"/>
+         </call>
+         <property name="messageType" value="application/json" scope="axis2"/>
+         <log level="full"/>
+         <property name="taskId" expression="json-eval($.Task.Id)"/>
+         <payloadFactory media-type="xml">
+            <format>
+               <result xmlns="">
+                  <taskId>$1</taskId>
+                  <error>$2</error>
+               </result>
+            </format>
+            <args>
+               <arg xmlns:ns="http://org.apache.synapse/xsd" evaluator="xml" expression="get-property('taskId')"/>
+               <arg xmlns:ns="http://org.apache.synapse/xsd" evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+            </args>
+         </payloadFactory>
+         <property name="messageType" value="application/xml" scope="axis2"/>
+         <log level="full"/>
+         <respond/>
+      </inSequence>
+      <faultSequence>
+         <sequence key="SD_API_fault"/>
+      </faultSequence>
+   </resource>
+   <resource methods="GET" uri-template="/CategoryList">
+      <inSequence>
+         <property name="messageType" value="application/xml" scope="axis2"/>
+         <sequence key="SD_API_Auth"/>
+         <call>
+            <endpoint key="SD_API_NewTask"/>
+         </call>
+         <xslt key="SD_API_CategoryListXSLT"/>
+         <log level="full"/>
+         <respond/>
+      </inSequence>
+   </resource>
+   <resource methods="GET" uri-template="/BUList">
+      <inSequence>
+         <property name="messageType" value="application/xml" scope="axis2"/>
+         <sequence key="SD_API_Auth"/>
+         <call>
+            <endpoint key="SD_API_NewTask"/>
+         </call>
+         <xslt key="SD_API_BUListXSLT"/>
+         <log level="full"/>
+         <respond/>
+      </inSequence>
+   </resource>
+</api>
+                        

@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<TaskForm>
+	<Task>		
+		<Description>$Description
+		</Description>		
+		<ExecutorIds>$Executor</ExecutorIds>
+		<Executors></Executors>
+		<Name>$Name</Name>		
+		<PriorityId>8</PriorityId>		
+		<ServiceId>62</ServiceId>		
+		<StatusId>31</StatusId>
+		<TypeId>1040</TypeId>
+		<WorkflowId>55</WorkflowId>
+		<IsClient>False</IsClient>
+		<CreatorId>$Author</CreatorId>
+		<Field1269>$Author</Field1269>
+		<Field1270>$Executor</Field1270>
+		<Field1271>$Date</Field1271>
+		<Field1272>$BU</Field1272>
+		<Field1273>$BU</Field1273>
+		<Field1274>$Category</Field1274>
+	</Task>	
+</TaskForm>

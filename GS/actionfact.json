@@ -1,0 +1,22 @@
+	
+{	"actionsfact":[{	"actionId": "123456789",
+		"items": [{
+			"itemId": "123456",
+			"qty": 100
+		},
+		{
+			"itemId": "654321",
+			"qty": 101
+		}]
+	},
+	{	"actionId": "абвгд",
+		"items": [{
+			"itemId": "123123",
+			"qty": 10
+		},
+		{
+			"itemId": "126123",
+			"qty": 1001
+		}]
+	}
+]}

@@ -1,0 +1,36 @@
+/expo, GET, POST, DELETE Выставки
+	/expo/{expoId} GET, PUT, DELETE ВЫставка
+	/expo/{expoId}/stand, GET, POST, PUT, DELETE Стенды выставки
+	/expo/{expoId}/stand/{standId}, GET, PUT, DELETE Стенд
+	/expo/{expoId}/stand/{standId}/statusHistory, GET Истрия статусов стенда
+	/expo/{expoid}/file GET, POST, PUT, DELETE Файлы выставки
+	/expo/{expoId}/file/{fileId} GET, DELETE Файл выставки
+	/expo/{expoId}/visit GET, POST, PUT, DELETE Визиты выставки
+	/expo/{expoId}/visit/{visitId} GET, PUT, DELETE Визит
+	/expo/{expoId}/visit/{visitId}/file GET, POST, PUT, DELETE ФАйлы визита
+	/expo/{expoId}/visit/{visitId}/file/{fileId} GET, DELETE файл визита
+	/expo/{expoId}/visit/{visitId}/sample GET, POST, PUT, DELETE Образцы визита
+	/expo/{expoId}/visit/{visitId}/sample/{sampleId} GET, PUT, DELETE Образец
+	/expo/{expoId}/visit/{visitId}/sample/{sampleId}/product GET,POST, PUT, DELETE	Связь образца с продуктом
+	/expo/{expoId}/sample GET, POST, PUT, DELETE Образцы без визита
+	/expo/{expoId}/sample/{sampleId} GET, PUT, DELETE	Образец
+	/expo/{expoId}/sample/{sampleId}/product GET,POST, PUT, DELETE	Связь образца с продуктом	
+/vendor, GET, POST, PUT, DELETE Поставщики
+	/vendor/{vendorId} GET, PUT, DELETE Поставщик
+	/vendor/{vendorId}/contact GET, POST, PUT, DELETE Контакты поставщика
+	/vendor/{vendorId}/contact/{contactId} GET, PUT, DELETE Контакт
+/project  GET, POST, PUT, DELETE Проекты
+	/project/{projectId} GET, PUT, DELETE Проект
+	/project/{projectId}/product GET, POST, PUT, DELETE Продукты
+	/project/{projectId}/product/{productId} GET, PUT, DELETE Продукт
+	/project/{projectId}/product/{productId}/file GET, POST, PUT, DELETE Файлы продукта
+	/project/{projectId}/product/{productId}/file/{fileId} GET, DELETE Файл продукта
+/user GET, POST, PUT, DELETE Пользователи
+	/user/{userId} GET, PUT, DELETE Пользователь
+	/user/{userId}/visit GET,POST, PUT, DELETE Визиты пользователя
+	/user/{userId}/visit/{visitId} GET, PUT, DELETE	Визит пользователя
+/auth POST Авторизация
+/file GET, POST, PUT, DELETE Файлы
+	/file/{fileId} GET, POST, PUT, DELETE Файл
+
+

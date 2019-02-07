@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="questStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="status"/>
+        <xs:element ref="result" minOccurs="0"/>
+        <xs:element ref="limit" minOccurs="0"/>
+        <xs:element ref="comment" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="status" type="status"/>
+  <xs:element name="result" type="xs:boolean" nillable="true" />
+  <xs:element name="limit" type="xs:decimal"/>
+  <xs:element name="comment" type="xs:string"/>
+  <xs:simpleType id="status" name="status">
+  <xs:restriction base="xs:string">
+  <xs:enumeration value="error"/>
+  <xs:enumeration value="process"/>
+  <xs:enumeration value="completed"/>
+  </xs:restriction>
+  </xs:simpleType>
+
+
+  
+</xs:schema>

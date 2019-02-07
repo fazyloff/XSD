@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Vendor>
+<VendorId>VENDOR1</VendorId>
+<Name>Xiaomi</Name>
+<Alias>Сяоми</Alias>
+<FactoryName>Xiaomi smartphone factory</FactoryName>
+<AXVendAccount>ПСТ.1001</AXVendAccount>
+<Website>www.xiaomi.cn</Website>
+<Status>WrokContract</Status>
+<PurchManager>102345</PurchManager>
+<DevManager>102345</DevManager>
+<LegalAddress>China, Schenghai, Lenina str, 26</LegalAddress>
+<VendorType>OEM_ODM</VendorType>
+<Country>CN</Country>
+</Vendor>

@@ -1,0 +1,15 @@
+{"Vendor":
+	{"VendorId":"VENDOR1",
+	"Name":"Xiaomi",
+	"Alias":"\u0421\u044f\u043e\u043c\u0438",
+	"FactoryName":"Xiaomi smartphone factory",
+	"AXVendAccount":"PST.1001",
+	"Website":"www.xiaomi.cn",
+	"Status":"WrokContract",
+	"PurchManager":"102345",
+	"DevManager":"102345",
+	"LegalAddress":"China,Schenghai,Lenina str,26",
+	"VendorType":"OEM_ODM",
+	"Country":"CN"
+	}
+}

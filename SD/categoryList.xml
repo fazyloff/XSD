@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<TaskCategoryCollection>
+<TaskCategory>
+<Id>1</Id>
+<categoryName>2-я линия</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>2</Id>
+<categoryName>Импорт данных</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>3</Id>
+<categoryName>Исправление данных</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>4</Id>
+<categoryName>Консультация по данным (почему такие)</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>5</Id>
+<categoryName>Консультация по исправлению данных</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>6</Id>
+<categoryName>Консультация по новым схемам</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>7</Id>
+<categoryName>Консультация по процессам</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>8</Id>
+<categoryName>Консультация по функционалу</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>9</Id>
+<categoryName>Консультация УКО</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>10</Id>
+<categoryName>Настройка системы: компании, склады</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>11</Id>
+<categoryName>Настройка системы: обмены</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>12</Id>
+<categoryName>Настройка системы: параметры и пр.</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>13</Id>
+<categoryName>Настройка системы: смежное резервирование</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>14</Id>
+<categoryName>Настройка системы: цепочки</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>15</Id>
+<categoryName>Обсуждение, согласование задач, поиск решения</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>16</Id>
+<categoryName>Подбор и написание инструкций</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>17</Id>
+<categoryName>Предпроектная работа</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>18</Id>
+<categoryName>Прочее</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>19</Id>
+<categoryName>Разовое нестандартное предоставление данных</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>20</Id>
+<categoryName>Решение нештатных ситуаций</categoryName>
+</TaskCategory>
+<TaskCategory>
+<Id>21</Id>
+<categoryName>
+Сверка данных между системами, корректировка (ТК, УК, 1C, ЕСС, WMS)
+</categoryName>
+</TaskCategory>
+</TaskCategoryCollection>

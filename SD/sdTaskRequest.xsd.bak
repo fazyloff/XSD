@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="TaskRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Author"/>
+        <xs:element ref="Analitic"/>
+        <xs:element ref="TaskDate"/>
+        <xs:element ref="BUId"/>
+        <xs:element ref="CategoryId"/>
+        <xs:element ref="Subject"/>
+        <xs:element ref="Body"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Author" type="email"/>
+  <xs:element name="Analitic" type="email"/>
+  <xs:element name="TaskDate" type="xs:dateTime"/>
+  <xs:element name="BUId" type="xs:integer"/>
+  <xs:element name="CategoryId" type="xs:integer"/>
+  <xs:element name="Subject" type="xs:string"/>
+  <xs:element name="Body" type="xs:string"/>
+   <xs:simpleType name="email"> 
+    <xs:restriction base="xs:string"> 
+      <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+    </xs:restriction> 
+  </xs:simpleType> 
+</xs:schema>
